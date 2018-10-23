@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import logo from '../img/logo.png';
+import iTeste from '../img/1.jpg';
 import './maindashboard.css';
  
 export default class Header extends React.Component {
@@ -14,12 +15,46 @@ export default class Header extends React.Component {
                 </div>
                 <div className="dashboard-items">
                     <ul>
-                        {/* ADD IMAGENS PARA CADA LINK */}
-                        <li><Link href="#"><a>Administração</a></Link></li>
-                        <li><Link href="#"><a>Faturas</a></Link></li>
-                        <li><Link href="#"><a>Gestão Financeira</a></Link></li>
-                        <li><Link href="#"><a>Nota Fiscal</a></Link></li>
-                        <li><Link href="#"><a>Admistradora</a></Link></li>
+                        <li>
+                            <Link href="./Administracao/principal">
+                                <a>
+                                    <img src={iTeste} alt="teste"/>
+                                    <span>Administração</span>
+                                </a>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="#">
+                                <a>
+                                    <img src={iTeste} alt="teste"/>
+                                    <span>Faturas</span>
+                                </a>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="#">
+                                <a>
+                                    <img src={iTeste} alt="teste"/>
+                                    <span>Gestão Financeira</span>
+                                </a>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="#">
+                                <a>
+                                    <img src={iTeste} alt="teste"/>
+                                    <span>Nota Fiscal</span>
+                                </a>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="#">
+                                <a>
+                                    <img src={iTeste} alt="teste"/>
+                                    <span>Admistradora</span>
+                                </a>
+                            </Link>
+                        </li>
                     </ul>
                 </div>
             </div>

@@ -1,0 +1,27 @@
+/* USUARIOS */
+
+.form-control#id-user {
+    width: 10%;
+}
+
+.form-control#inicioper-user {
+    margin-right: 1px;
+}
+
+.form-control#terminoper-user {
+    position: relative;
+    left: 800px;
+    top: -34.5px;
+}
+
+p {
+    position: relative;
+    left: -525px;
+    top: 10px;
+}
+
+div#checkbox {
+    border: 2px solid #e7e7e7;
+    border-radius: 2px;
+    padding: 2px;
+}
