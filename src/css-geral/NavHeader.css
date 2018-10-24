@@ -1,0 +1,36 @@
+.header {
+    background-color: #184aeea4;
+    margin-top: -20px;
+    height: 152px;
+}
+
+.img-logo-header {
+    position: relative;
+    left: -510px;
+}
+
+.img-logo-adm {
+    position: relative;
+    left: 600px;
+    top: -145px;
+}
+
+.header h1 {
+    height: 152px;
+}
+
+.header h3 {
+    font-size: 10px;
+    position: relative;
+    top: -80px;
+    margin: 4px;
+}
+
+/* @media (min-width: 768px) */
+.nav-tabs.nav-justified>li {
+    display: table-cell;
+    width: 90px;
+    position: relative;
+    left: 100%;
+}
+

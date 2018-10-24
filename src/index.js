@@ -6,6 +6,8 @@ import * as serviceWorker from './serviceWorker';
 import Login from './pages/login';
 import MainDash from './pages/maindashboard';
 import CadUsuario from './pages/Administracao/Usuarios/dados';
+import AltUsuario from './pages/Administracao/Usuarios/dadosAlterar';
+
 
 ReactDOM.render(<CadUsuario />, document.getElementById('root'));
 

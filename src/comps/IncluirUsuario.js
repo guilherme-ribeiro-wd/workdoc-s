@@ -22,6 +22,7 @@ export default class CadastroUsuario extends React.Component {
                 <Form horizontal>
                     <fieldset>
                         <legend>Cadastrar Usuario</legend>
+                        {/* FOTO DO USUARIO */}
                         <FormGroup controlId="id-user">
                             <Col componentClass={ControlLabel} sm={smL}>
                             Cód. Usuário
@@ -94,10 +95,10 @@ export default class CadastroUsuario extends React.Component {
                             <Col componentClass={ControlLabel} sm={smL}>
                             Preencher atividade diária?
                             </Col>
-                            <Radio name="radioGroup" inline checked>
+                            <Radio name="radio" inline checked>
                                 Sim
                             </Radio>{' '}
-                            <Radio name="radioGroup" inline>
+                            <Radio name="radio" inline>
                                 Não
                             </Radio>
                         </FormGroup>

@@ -1,1 +1,85 @@
-/* USUARIO */
+/* USUARIOS */
+
+.dtnasc {
+    border-bottom: 2px solid #e7e7e7;
+    padding-bottom: 20px;
+}
+
+.form-control#numender-user {
+    width: 10%;
+}
+
+.comple-ender {
+    position: relative;
+    top: -49px;
+    left: 550px;
+}
+
+.comple-ender label {
+    width: 100px;
+}
+
+.bairro, .fb {
+    margin-top: -65px;
+    padding-top: 15px;
+}
+
+.nextel {
+    position: relative;
+    top: -49px;
+    left: 680px;
+}
+
+.nextel label {
+    width: 100px;
+}
+
+.nextel input {
+    margin-left: -23px;
+}
+.depto {
+    position: relative;
+    top: -49px;
+    left: 710px;
+}
+.depto label {
+    width: 100px;
+}
+
+.ativo {
+    border-top: 2px solid #e7e7e7;
+    padding-top: 5px;
+    margin-top: -20px;
+}
+
+.btn {
+    font-size: 12px;
+}
+
+.btn-alt {
+    position: relative;
+    margin-top: 10px;
+    right: 100px;
+    width: 100px;
+    height: 30px;
+}
+
+.btn-cancel {
+    position: relative;
+    top: -65px;
+    left: 50px;
+    width: 100px;
+    height: 30px;
+}
+
+.icon-check {
+    position: relative;
+    left: 570px;
+    top: -25px;
+}
+
+.icon-cancel {
+    position: relative;
+    left: 720px;
+    top: -90px;
+}
