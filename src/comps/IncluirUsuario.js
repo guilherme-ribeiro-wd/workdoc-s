@@ -2,8 +2,13 @@ import React from 'react';
 import {
     FormControl, FormGroup, ControlLabel, Button, Col, Form, Radio, Checkbox
 } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faCheckCircle, faTimesCircle } from '@fortawesome/free-solid-svg-icons';
 var $ = require("jquery");
 require('jquery-mask-plugin');
+
+library.add(faCheckCircle, faTimesCircle);
 
 const smL = 4;
 const smI = 7;
@@ -102,31 +107,36 @@ export default class CadastroUsuario extends React.Component {
                                 Não
                             </Radio>
                         </FormGroup>
-                        <FormGroup controlId="nivel-user">
+                        <FormGroup controlId="nivel-user" className="nivel-user">
                             <Col componentClass={ControlLabel} sm={smL}>
-                            Nível de acesso
+                                Nível de acesso
                             </Col>
-                            <div id="checkbox">
-                                <Checkbox inline>Administrador Depósito</Checkbox> <Checkbox inline>Atendente</Checkbox>
-                                <Checkbox inline>Gerente Cliente</Checkbox><br/>
-                                <Col componentClass={ControlLabel} sm={smL}>
-                                </Col>
-                                <Checkbox inline>Contabilidade</Checkbox>
-                                <Checkbox inline>Usuário Indexação</Checkbox>
-                                <Checkbox inline>Usuário Expedição</Checkbox><br/>
-                                <Col componentClass={ControlLabel} sm={smL}>
-                                </Col>
-                                <Checkbox inline>Digitador</Checkbox>
-                                <Checkbox inline>Usuário Cliente</Checkbox>
-                                <Checkbox inline>Usuário Imagem</Checkbox>
-                                <Checkbox inline>Usuário Recepção</Checkbox>
-                            </div>
+                            <Checkbox inline>Administrador Depósito</Checkbox> <Checkbox inline>Atendente</Checkbox>
+                            <Checkbox inline>Gerente Cliente</Checkbox><br/>
+                            <Col componentClass={ControlLabel} sm={smL}>
+                            </Col>
+                            <Checkbox inline>Contabilidade</Checkbox>
+                            <Checkbox inline>Usuário Indexação</Checkbox>
+                            <Checkbox inline>Usuário Expedição</Checkbox><br/>
+                            <Col componentClass={ControlLabel} sm={smL}>
+                            </Col>
+                            <Checkbox inline>Digitador</Checkbox>
+                            <Checkbox inline>Usuário Cliente</Checkbox>
+                            <Checkbox inline>Usuário Imagem</Checkbox>
+                            <Checkbox inline>Usuário Recepção</Checkbox>
                         </FormGroup>
                         {/* ICONE NO BOTÃO - TODO */}
-                        <FormGroup>
+                        <FormGroup controlId="btnCadastrar">
                             <Col smOffset={5} sm={smI}>
-                            <Button type="submit">Confirmar Cadastro</Button> 
+                            <Button type="submit" className="btn-conf-cad">Cadastrar</Button>
+                            <FontAwesomeIcon icon="check-circle" className="icon-check-cad"/>
                             </Col>
+                        </FormGroup>
+                        <FormGroup controlId="btnCancel">
+                            <Col smOffset={5} sm={smI}>
+                            <Button type="submit" className="btn-cancel-cad">Cancelar</Button> 
+                            </Col>
+                            <FontAwesomeIcon icon="times-circle" className="icon-cancel-cad"/>
                         </FormGroup>
                     </fieldset>
                 </Form>

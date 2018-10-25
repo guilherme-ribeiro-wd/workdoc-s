@@ -7,9 +7,12 @@ import Login from './pages/login';
 import MainDash from './pages/maindashboard';
 import CadUsuario from './pages/Administracao/Usuarios/dados';
 import AltUsuario from './pages/Administracao/Usuarios/dadosAlterar';
+import CadCliente from './pages/Administracao/Clientes/dados';
+import AltCliente from './pages/Administracao/Clientes/dadosAlterar';
+import DadosContTrab from './comps/DadosContTrab';
 
 
-ReactDOM.render(<CadUsuario />, document.getElementById('root'));
+ReactDOM.render(<AltUsuario />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

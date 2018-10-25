@@ -1,4 +1,4 @@
-/* USUARIOS */
+/* USUARIOS INCLUIR */
 
 .form-control#id-user {
     width: 10%;
@@ -20,8 +20,39 @@ p {
     top: 10px;
 }
 
-div#checkbox {
-    border: 2px solid #e7e7e7;
-    border-radius: 2px;
-    padding: 2px;
+.btn {
+    font-size: 12px;
+}
+
+.btn-conf-cad {
+    position: relative;
+    margin-top: 10px;
+    right: 100px;
+    width: 100px;
+    height: 30px;
+}
+
+.btn-cancel-cad {
+    position: relative;
+    top: -45px;
+    left: 50px;
+    width: 100px;
+    height: 30px;
+}
+
+.icon-check-cad {
+    position: relative;
+    left: -120px;
+    top: 7px;
+}
+
+.icon-cancel-cad {
+    position: relative;
+    left: 720px;
+    top: -70px;
+}
+
+.nivel-user {
+    border-bottom: 2px solid #e7e7e7;
+    padding-bottom: 25px;
 }

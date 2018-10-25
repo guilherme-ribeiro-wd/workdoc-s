@@ -1,0 +1,29 @@
+/* .form-control#nextel-user-alt, .form-control#depto-user-alt {
+    width: 230.05px;
+}
+
+.nextel label, .depto label{
+    width: 100px;
+}
+
+.nextel, .depto {
+    position: relative;
+    left: 55%;
+    top: -97px;
+    width: 620px;
+} */
+
+.nextel, .depto {
+    position: relative;
+    left: 55%;
+    top: -49px;
+    width: 620px;
+}
+
+.nextel label, .depto label {
+    width: 100px;
+}
+
+.form-control#nextel, .form-control#depto {
+    width: 230.05px;
+}

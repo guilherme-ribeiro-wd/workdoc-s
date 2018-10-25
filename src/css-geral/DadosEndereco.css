@@ -1,0 +1,14 @@
+.bairro, .cidade, .estado {
+    position: relative;
+    left: 55%;
+    top: -97px;
+    width: 620px;
+}
+
+.form-control#bairro, .form-control#cidade, .form-control#estado {
+    width: 230.05px;
+}
+
+.bairro label, .cidade label, .estado label {
+    width: 100px;
+}

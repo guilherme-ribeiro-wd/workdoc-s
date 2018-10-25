@@ -1,13 +1,15 @@
-// USUARIO ALTERAR
+// CLIENTE ALTERAR 
+
 import React from 'react';
-import Alterar from '../../../comps/AlterarUsuario';
+import Alterar from '../../../comps/AlterarCliente';
 import Header from '../../../comps/NavHeader';
 import './dadosAlterar.css';
 
-export default class AltUsuario extends React.Component {
+
+export default class AltCliente extends React.Component {
     render() {
         return (
-            <div name="header-altuser">
+            <div name="header-altcli">
                 <Header />
                 <Alterar />
             </div>
