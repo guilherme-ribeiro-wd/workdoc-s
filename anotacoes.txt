@@ -1,0 +1,18 @@
+Usuario -> INCLUIR::: CODUSUARIO, NOME, FOTO, DTNASC, PERIODO, DEPARTAMENTO, FACEBOOK?, LOGIN, SENHA, CONF. SENHA, PREENCHER RELAT. (*SIM, N�O), N�VEL DE ACESSO (&ADM DEP�SITO, ATENDENTE, GERENTE CLIENTE, CONTABILIDADE, USU�RIO INDEXA��O, EXPEDI��O, DIGITADOR, USU�RIO CLIENTE, USU�RIO IMAGEM, USU�RIO RECPEC��O)
+
+
+ALTERAR::: CPF, CEP (ENDERE�O, NUMERO, COMPLEMENTO, BAIRRO, CIDADE, ESTADO), TELEFONE, NEXTEL?, FACEBOOK?, EMAIL, C�D. CENTRO CUSTO, CARGO, DEPARTAMENTO, ATIVO (*SIM, N�O), {LOGIN, SENHA}, CONFIRMAR SENHA. 
+//**CodUsuario, Nome, Usu�rio, Senha, DataUltAcesso(Mestre) // CodUsuario, ***CodAdm, Permiss�o (Detalhe)**/
+
+
+Cliente -> ***CODADM, CODCLI, RAZ�O SOCIAL, NOME FANTASIA, CNPJ, CEP (ENDERE�O, NUMERO, COMPLEMENTO, BAIRRO, CIDADE, ESTADO), TELEFONE, RAMAL, EMAIL, CONTATO?, INSC. EST?, INSC. MUN?, GRUPO?, TIPO CLIENTE (*CAIXAS, DIGITALIZADO, AMBOS, PROSPECT), ATIVO (*SIM, N�O)
+
+
+Contatos Cliente -> CODADM, CODCLI, CODCONTATO, Nome, E-mail, Telefone, �rea respons�vel, Cargo
+
+
+Administradora ->  CODADM, NOMEADM, RAZÃO, NOME FANTASIA CNPJ, ENDERECO, TEL.
+
+
+--------------------------------------------------------------------------------------------------------------------
+Adicionar Breadcrumbs(react-bootstrap componente) ao projeto. -> Mostra a página atual acessada.

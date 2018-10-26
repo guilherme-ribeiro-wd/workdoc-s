@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar, NavbarHeader, PageHeader, Nav, NavItem } from 'react-bootstrap';
+import { PageHeader, Nav, NavItem } from 'react-bootstrap';
 import LogoHeader from '../img/logo-header.png';
 import LogoAdm from '../img/logo_administracao.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

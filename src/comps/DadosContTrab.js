@@ -15,8 +15,11 @@ const smI = 7;
 
 export default class DadosContTrab extends React.Component {
     render() {
+        $(document).ready(function($){
+            $('#tel').mask('+55 99 9999-9999')
+        });
         return (
-            <div name="dados-cont-trab">
+            <div name="dados-cont-trab" id="dados-cont-trab">
                 <Form horizontal>
                     <FormGroup controlId="tel" className="tel">
                         <Col componentClass={ControlLabel} sm={smL}>

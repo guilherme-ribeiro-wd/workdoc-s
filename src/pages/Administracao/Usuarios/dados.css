@@ -56,3 +56,32 @@ p {
     border-bottom: 2px solid #e7e7e7;
     padding-bottom: 25px;
 }
+
+.depto-user {
+    margin-top: -10px;
+}
+
+.chk-ui {
+    position: relative;
+    left: 4.8%;
+}
+
+.chk-uc {
+    position: relative;
+    left: 6.93%;
+}
+
+.chk-gc {
+    position: relative;
+    left: 5.33%;
+}
+
+.chk-ue {
+    position: relative;
+    left: 6.22%;
+}
+
+.chk-uimg {
+    position: relative;
+    left: 10%;
+}

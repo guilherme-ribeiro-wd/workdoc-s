@@ -20,6 +20,7 @@ export default class CadastroCliente extends React.Component {
         return (
             <Form horizontal> 
                 <fieldset>
+                    {/* COLOCAR ICONE INDICANDO QUE É O CADASTRO DE CLIENTE */}
                     <legend>Cadastrar Cliente</legend>
                     <FormGroup controlId="id-cliente">
                         <Col componentClass={ControlLabel} sm={smL}>

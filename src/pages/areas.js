@@ -2,18 +2,18 @@ import React from 'react';
 import Link from 'next/link';
 import logo from '../img/logo.png';
 import iTeste from '../img/1.jpg';
-import './maindashboard.css';
+import './areas.css';
  
 export default class Header extends React.Component {
     render() {
         return (
-            <div className="dashboard">
+            <div className="areas">
                 <div className="top">
                     <img src={logo} alt="logo"/>
                     <h1>Nome: Teste</h1>
                     <h1>Ult. Acesso: 22/10/2018 11:32</h1>
                 </div>
-                <div className="dashboard-items">
+                <div className="areas-items">
                     <ul>
                         <li>
                             <Link href="./Administracao/principal">

@@ -26,6 +26,7 @@ export default class CadastroUsuario extends React.Component {
         return (
                 <Form horizontal>
                     <fieldset>
+                        {/* COLOCAR ICONE INDICANDO QUE É O CADASTRO DE USUARIO */}
                         <legend>Cadastrar Usuario</legend>
                         {/* FOTO DO USUARIO */}
                         <FormGroup controlId="id-user">
@@ -64,7 +65,7 @@ export default class CadastroUsuario extends React.Component {
                             <FormControl id="terminoper-user" type="text" placeholder="Término"/>
                             </Col> 
                         </FormGroup>
-                        <FormGroup controlId="depto-user">
+                        <FormGroup controlId="depto-user" className="depto-user">
                             <Col componentClass={ControlLabel} sm={smL}>
                             Departamento
                             </Col>
@@ -111,21 +112,23 @@ export default class CadastroUsuario extends React.Component {
                             <Col componentClass={ControlLabel} sm={smL}>
                                 Nível de acesso
                             </Col>
-                            <Checkbox inline>Administrador Depósito</Checkbox> <Checkbox inline>Atendente</Checkbox>
-                            <Checkbox inline>Gerente Cliente</Checkbox><br/>
+                            <Checkbox inline>Administrador Depósito</Checkbox> 
+                            <Checkbox inline>Atendente</Checkbox>
+                            <Checkbox inline className="chk-gc">Gerente Cliente</Checkbox><br/>
                             <Col componentClass={ControlLabel} sm={smL}>
                             </Col>
                             <Checkbox inline>Contabilidade</Checkbox>
-                            <Checkbox inline>Usuário Indexação</Checkbox>
-                            <Checkbox inline>Usuário Expedição</Checkbox><br/>
+                            <Checkbox inline className="chk-ui">Usuário Indexação</Checkbox>
+                            <Checkbox inline className="chk-ue">Usuário Expedição</Checkbox><br/>
                             <Col componentClass={ControlLabel} sm={smL}>
                             </Col>
                             <Checkbox inline>Digitador</Checkbox>
-                            <Checkbox inline>Usuário Cliente</Checkbox>
-                            <Checkbox inline>Usuário Imagem</Checkbox>
+                            <Checkbox inline className="chk-uc">Usuário Cliente</Checkbox>
+                            <Checkbox inline className="chk-uimg">Usuário Imagem</Checkbox><br/>
+                            <Col componentClass={ControlLabel} sm={smL}>
+                            </Col>
                             <Checkbox inline>Usuário Recepção</Checkbox>
                         </FormGroup>
-                        {/* ICONE NO BOTÃO - TODO */}
                         <FormGroup controlId="btnCadastrar">
                             <Col smOffset={5} sm={smI}>
                             <Button type="submit" className="btn-conf-cad">Cadastrar</Button>

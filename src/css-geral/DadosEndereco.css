@@ -12,3 +12,11 @@
 .bairro label, .cidade label, .estado label {
     width: 100px;
 }
+
+/* .form-horizontal .form-group#bairro, .form-group#cidade, .form-group#estado {
+    margin-right: 0px; 
+}
+
+div#dados-endereco .form-group .cep .ender .numender .comple {
+    width: 1366px;
+} */

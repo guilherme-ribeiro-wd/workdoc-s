@@ -1,0 +1,10 @@
+/* INCLUIR CONTATO DE UM CLIENTE */
+
+.form-control#idcli-cad-cont, .form-control#idcont-cad-cont {
+    width: 10%;
+}
+
+.cargo_cad_cont {
+    border-bottom: 2px solid #e7e7e7;
+    padding-bottom: 20px;
+}

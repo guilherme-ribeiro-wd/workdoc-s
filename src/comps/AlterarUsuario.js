@@ -1,4 +1,3 @@
-import { Estados as estados } from '../estados';
 import DadosEndereco from './DadosEndereco';
 import DadosContTrab from './DadosContTrab';
 import React from 'react';
@@ -33,13 +32,13 @@ export default class AlterarUsuario extends React.Component {
         $(document).ready(function($) {
             $('#dtnasc-user-alt').mask('99/99/9999'); // FUNÇÃO VALIDA DATA - TODO
             $('#cpf-user-alt').mask('999.999.999-99'); // FUNÇÃO VALIDA CPF - TODO
-            $('#tel-user-alt').mask('+55 99 99999-9999'); 
         });
 
         return (
                 <Form horizontal>
-                    <fieldset>
-                        <legend>Alterar Dados Usuario</legend>
+                    <fieldset id="alt-user">
+                        {/*COLOCAR UM ICONE INDICANDO QUE A TELA DE ALTERAR DADOS USUARIO*/}
+                        <legend>Alterar Dados Usuario</legend> 
                         {/* FOTO DO USUARIO */} {/* VALOR VIRIA CARREGADO */}
                         <FormGroup controlId="nome-user-alt">
                             <Col componentClass={ControlLabel} sm={smL}>
@@ -68,9 +67,9 @@ export default class AlterarUsuario extends React.Component {
                             </Col>
                         </FormGroup>
                         {/* CHAMA O COMPONENTE DADOS ENDEREÇO */}
-                        < DadosEndereco />
+                        <DadosEndereco />
                         {/* CHAMA O COMPONENTE DADOS CONT TRAB */}
-                        <DadosContTrab />
+                        <DadosContTrab className="dado-cont-trab" />
                         <FormGroup controlId="ativo-user-alt" className="ativo">
                             <Col componentClass={ControlLabel} sm={smL}>
                             Ativo?

@@ -13,15 +13,15 @@ h1 {
     left: 500px;
 }
 
-.dashboard-items ul {
+.areas-items ul {
     list-style: none;
 }
 
-.dashboard-items li:hover {
+.areas-items li:hover {
     transform: scale(0.8);
 }
 
-.dashboard-items li {
+.areas-items li {
     margin: 14px;
     position: relative;
     float: left;
@@ -34,12 +34,12 @@ h1 {
     transition: all .4s ease-in;
 }
 
-.dashboard-items li span {
+.areas-items li span {
     position: relative;
     left: -200px;
     opacity: 0;
 }
 
-/* .dashboard-items li span:hover {
+/* .areas-items li span:hover {
     opacity: 1;
 } */

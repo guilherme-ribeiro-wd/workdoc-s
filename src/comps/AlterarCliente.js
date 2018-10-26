@@ -1,12 +1,13 @@
-import { Estados as estados } from '../estados';
+import DadosEndereco from './DadosEndereco';
+import DadosContatoCli from './DadosContatoCli';
 import React from 'react';
 import {Form, Col, FormGroup, FormControl, ControlLabel, Radio, Button} from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faTimesCircle, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faCheckCircle, faTimesCircle } from '@fortawesome/free-solid-svg-icons';
 var $ = require("jquery");
 require('jquery-mask-plugin');
-
+library.add(faCheckCircle, faTimesCircle);
 const smL = 4;
 const smI = 7;
 
@@ -64,121 +65,10 @@ export default class AlterarCliente extends React.Component {
                         <FormControl name="cnpj-cliente-alt" type="text" placeholder="__.___.___/____-__" />
                         </Col>
                     </FormGroup>
-                    <FormGroup controlId="cep-cliente-alt">
-                        <Col componentClass={ControlLabel} sm={smL}>
-                        CEP
-                        </Col>
-                        <Col sm={smI}>
-                        <FormControl name="cep-cliente-alt" type="text" placeholder="CEP" />
-                        </Col>
-                    </FormGroup>
-                    <FormGroup controlId="ender-cliente-alt">
-                        <Col componentClass={ControlLabel} sm={smL}>
-                        Endereço
-                        </Col>
-                        <Col sm={smI}>
-                        <FormControl name="ender-cliente-alt" type="text" placeholder="Endereço" />
-                        </Col>
-                    </FormGroup>
-                    <FormGroup controlId="numender-cliente-alt">
-                        <Col componentClass={ControlLabel} sm={smL}>
-                        Número
-                        </Col>
-                        <Col sm={smI}>
-                        <FormControl name="numender-cliente-alt" type="text" placeholder="Número" />
-                        </Col>
-                    </FormGroup>
-                    <FormGroup controlId="comple-cliente-alt">
-                        <Col componentClass={ControlLabel} sm={smL}>
-                        Complemento
-                        </Col>
-                        <Col sm={smI}>
-                        <FormControl name="comple-cliente-alt" type="text" placeholder="Complemento" />
-                        </Col>
-                    </FormGroup>
-                    <FormGroup controlId="bairro-cliente-alt">
-                        <Col componentClass={ControlLabel} sm={smL}>
-                        Bairro
-                        </Col>
-                        <Col sm={smI}>
-                        <FormControl name="bairro-cliente-alt" type="text" placeholder="Bairro" />
-                        </Col>
-                    </FormGroup>
-                    <FormGroup controlId="cidade-cliente-alt">
-                        <Col componentClass={ControlLabel} sm={smL}>
-                        Cidade
-                        </Col>
-                        <Col sm={smI}>
-                        <FormControl name="cidade-cliente-alt" type="text" placeholder="Cidade" />
-                        </Col>
-                    </FormGroup>
-                    <FormGroup controlId="estado-cliente-alt">
-                        <Col componentClass={ControlLabel} sm={smL}>
-                        Estado
-                        </Col>
-                        <Col sm={smI}>
-                        <FormControl name="estado-cliente-alt" componentClass="select">
-                            <option value="Selecione...">Selecione...</option>
-                            {this.estadosOption(estados)}
-                        </FormControl>
-                        </Col>
-                    </FormGroup>
-                    <FormGroup controlId="tel-cliente-alt">
-                        <Col componentClass={ControlLabel} sm={smL}>
-                        Telefone
-                        </Col>
-                        <Col sm={smI}>
-                        <FormControl name="tel-cliente-alt" type="text" placeholder="Telefone" />
-                        </Col>
-                    </FormGroup>
-                    <FormGroup controlId="ramal-cliente-alt">
-                        <Col componentClass={ControlLabel} sm={smL}>
-                        Ramal
-                        </Col>
-                        <Col sm={smI}>
-                        <FormControl name="ramal-cliente-alt" type="text" placeholder="Ramal" />
-                        </Col>
-                    </FormGroup>
-                    <FormGroup controlId="email-cliente-alt">
-                        <Col componentClass={ControlLabel} sm={smL}>
-                        Email
-                        </Col>
-                        <Col sm={smI}>
-                        <FormControl name="email-cliente-alt" type="text" placeholder="Email" />
-                        </Col>
-                    </FormGroup>
-                    <FormGroup controlId="contato-cliente-alt">
-                        <Col componentClass={ControlLabel} sm={smL}>
-                        Contato
-                        </Col>
-                        <Col sm={smI}>
-                        <FormControl name="contato-cliente-alt" type="text" placeholder="Contato" />
-                        </Col>
-                    </FormGroup>
-                    <FormGroup controlId="inscest-cliente-alt">
-                        <Col componentClass={ControlLabel} sm={smL}>
-                        Insc. Est.
-                        </Col>
-                        <Col sm={smI}>
-                        <FormControl name="inscest-cliente-alt" type="text" placeholder="Inscrição Estadual" />
-                        </Col>
-                    </FormGroup>
-                    <FormGroup controlId="inscmun-cliente-alt">
-                        <Col componentClass={ControlLabel} sm={smL}>
-                        Insc. Mun.
-                        </Col>
-                        <Col sm={smI}>
-                        <FormControl name="inscmun-cliente-alt" type="text" placeholder="Inscrição Municipal" />
-                        </Col>
-                    </FormGroup>
-                    <FormGroup controlId="grupo-cliente-alt">
-                        <Col componentClass={ControlLabel} sm={smL}>
-                        Grupo
-                        </Col>
-                        <Col sm={smI}>
-                        <FormControl name="grupo-cliente-alt" type="text" placeholder="Grupo" />
-                        </Col>
-                    </FormGroup>
+                    {/* CARREGA OS CAMPOS DE ENDEREÇO */}
+                    <DadosEndereco />
+                    {/* CARREGA OS CAMPOS DE CONTATO CLIENTE */}
+                    <DadosContatoCli />
                     <FormGroup controlId="tipo-cliente-alt" className="tipo_cliente_alt">
                         <Col componentClass={ControlLabel} sm={smL}>
                         Tipo Cliente
@@ -206,6 +96,18 @@ export default class AlterarCliente extends React.Component {
                         <Radio name="radioGroup" inline>
                         Não
                         </Radio>
+                    </FormGroup>
+                    <FormGroup controlId="btnAlt">
+                        <Col smOffset={5} sm={smI}>
+                        <Button type="submit" className="btn-alt">Gravar</Button> 
+                        </Col>
+                        <FontAwesomeIcon icon="check-circle" className="icon-check"/>
+                    </FormGroup>
+                    <FormGroup controlId="btnCancel">
+                        <Col smOffset={5} sm={smI}>
+                        <Button type="submit" className="btn-cancel">Cancelar</Button> 
+                        </Col>
+                        <FontAwesomeIcon icon="times-circle" className="icon-cancel"/>
                     </FormGroup>
                 </fieldset>
             </Form>

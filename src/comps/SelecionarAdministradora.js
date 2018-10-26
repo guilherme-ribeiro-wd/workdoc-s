@@ -1,0 +1,52 @@
+import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faUser, faBuilding, faFile, faBox } from '@fortawesome/free-solid-svg-icons';
+library.add(faUser, faBuilding, faBox, faFile);
+
+export default class SelecionarAdministradora extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+    render() {
+        return (
+            // TABELA ??????
+            // BLOCO OLD STYLE style="margin-left:10px;display:inline-table;height:170px;margin:5px;"
+            <div className="sel_adm">
+                <div className="header_seladm">
+                    <a href="#">
+                        <img src={this.props.logo} alt="logo"></img>
+                    </a>
+                </div>
+                {/* CONTEUDO OLD STYLE -> style="text-align:center;" */}
+                <div className="conteudo_seladm">
+                    <div className="nome_seladm">
+                        <a href="#">
+                            {this.props.nomeEmpresa}
+                        </a>
+                    </div>
+                    {/* STATS TOP OLD STYLE -> style="margin-top:10px;" */}
+                    <div className="stats_seladm">
+                    {/* STATS OLD STYLE -> style="text-align:left;padding-left:25px;" */}
+                        <div className="stats">
+                            <FontAwesomeIcon icon="user"></FontAwesomeIcon>
+                            10 CLIENTES
+                        </div>
+                        <div className="stats">
+                            <FontAwesomeIcon icon="building"></FontAwesomeIcon>
+                            10 FILIAIS
+                        </div>
+                        <div className="stats">
+                            <FontAwesomeIcon icon="box"></FontAwesomeIcon>
+                            10 CAIXAS
+                        </div>
+                        <div className="stats">
+                            <FontAwesomeIcon icon="file"></FontAwesomeIcon>
+                            10 DOCS
+                        </div>
+                    </div>
+                </div>
+            </div>
+        );
+    }
+}
