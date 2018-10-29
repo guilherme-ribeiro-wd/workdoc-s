@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import logo from '../img/logo.png';
 import iTeste from '../img/1.jpg';
-import './areas.css';
+import '../css-pages/areas.css';
  
 export default class Header extends React.Component {
     render() {

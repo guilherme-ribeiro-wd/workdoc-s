@@ -4,7 +4,7 @@
 
 import React from 'react';
 import { Form, FormControl, FormGroup, Col, ControlLabel } from 'react-bootstrap';
-import '../css-geral/DadosContTrab.css'
+import '../css-geral-comps/DadosContTrab.css'
 
 var $ = require("jquery");
 require('jquery-mask-plugin');

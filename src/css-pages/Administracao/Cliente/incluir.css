@@ -1,6 +1,5 @@
 /* CLIENTE INCLUIR */
 
-
 .form-control#id-cliente {
     width: 10%;
 }
@@ -32,11 +31,11 @@
 .icon-arrow-cli {
     position: relative;
     top: 2px;
-    left: -13%;
+    left: -13.5%;
 }
 
 .icon-cancel-cli {
     position: relative;
     top: -70px;
-    left: 54%;
+    left: 53.5%;
 }

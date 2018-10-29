@@ -1,0 +1,10 @@
+.rodape {
+    background-color: #184aeea4;
+    text-align: center;
+    color: white;
+    /* position: fixed; */
+    width: 100%;
+    left: 0px;
+    bottom: 0px;
+    border-radius: 10px 10px;
+}

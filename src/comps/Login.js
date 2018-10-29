@@ -1,17 +1,24 @@
 import React from 'react';
+import logo from '../img/logo.png'
 import { FormControl, FormGroup, ControlLabel, Button} from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faUser, faLock, faSignInAlt } from '@fortawesome/free-solid-svg-icons';
 
 library.add(faUser, faLock, faSignInAlt);
 
 export default class Login extends React.Component {
-    state = {
-        usuario: '',
-        senha: '',
+    constructor(props) {
+        super(props);
+        this.change = this.change.bind(this);
+        this.state = {
+            usuario: '',
+            senha: '',
+            path: '',
+        }
     }
+    
 
     change = (e) => {
         e.preventDefault();
@@ -22,26 +29,43 @@ export default class Login extends React.Component {
 
     validaLogin = () => this.state.usuario !== '' && this.state.senha !== '';
 
+    error = () => {
+        if (this.validaLogin()) {
+            this.setState({path: '/areas'});
+        } else {
+            // alert('error!');
+        }
+    }
+
     render() {
         return (
-            <form className="form-login" onSubmit={this.validaLogin} align="center">
-                <FormGroup controlId="user-usuario">
-                    <ControlLabel>Usuário</ControlLabel>
-                    <FormControl name="usuario" type="text" placeholder="Usuário"
-                    value={this.state.usuario} onChange={e => this.change(e)}/>
-                <FontAwesomeIcon icon="user" />
-                </FormGroup>
+            <div name="login" className="login">
+                <img src={logo} alt="logo" className="logo_login" />
+                <form className="form-login" align="center">
+                    <FormGroup controlId="user-usuario" className="user_usuario">
+                        <ControlLabel>Usuário</ControlLabel>
+                        <FormControl name="usuario" className="usuario_login" type="text" placeholder="Usuário"
+                        value={this.state.usuario} onChange={e => this.change(e)}/>
+                    <FontAwesomeIcon icon="user" className="icon_user"/>
+                    </FormGroup>
 
-                <FormGroup controlId="user-senha">
-                  <ControlLabel>Senha</ControlLabel>
-                  <FormControl type="password" name="senha" placeholder="Senha"
-                  value={this.state.senha} onChange={e => this.change(e)}/>
-                  <FontAwesomeIcon icon="lock"/>
-                </FormGroup>
-
-                <Button type="button" id="btn-login">Entrar</Button>
-                <FontAwesomeIcon icon="sign-in-alt"/>
-            </form>
+                    <FormGroup controlId="user-senha" className="user_senha">
+                    <ControlLabel>Senha</ControlLabel>
+                    <FormControl type="password" name="senha" className="senha_login" placeholder="Senha"
+                    value={this.state.senha} onChange={e => this.change(e)}/>
+                    <FontAwesomeIcon icon="lock" className="icon_pwd"/>
+                    </FormGroup>
+                    {/* BUG POIS QUANDO O PATH É SETADO PARA ALGUM VALOR, ELE NECESSITA DE OUTRO CLICK */}
+                    {/* <Link to={this.state.path}> */}
+                    <Link to='/areas'>
+                        <Button type="button" id="btn-login" 
+                        className="btn_login" onClick={this.error}>
+                        Entrar
+                        </Button>
+                    </Link>
+                    <FontAwesomeIcon icon="sign-in-alt" className="icon_signin"/>
+                </form>
+            </div>
         );
     }
 }

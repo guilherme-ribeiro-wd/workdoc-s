@@ -1,9 +1,9 @@
 // RENDERIZA APENAS OS DADOS RELACIONADOS À ENDEREÇO
 // CEP, ENDEREÇO, NÚMERO, COMPLEMENTO, CIDADE, BAIRRO, ESTADO
-import { Estados as estados } from '../estados';
+import { Estados as estados } from '../util/estados';
 import React from 'react';
 import { Form, FormControl, FormGroup, Col, ControlLabel } from 'react-bootstrap';
-import '../css-geral/DadosEndereco.css'
+import '../css-geral-comps/DadosEndereco.css'
 
 var $ = require("jquery");
 require('jquery-mask-plugin');

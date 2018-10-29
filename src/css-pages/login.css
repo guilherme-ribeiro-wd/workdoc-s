@@ -1,0 +1,65 @@
+.login {
+    background-color: #fcf9f9;
+    padding-bottom: 365px;
+}
+
+.form-control {
+    width: 30%;
+    display: inline;
+}
+
+.login label {
+    margin-right: 5px;
+    color: #184aeea4;
+}
+
+.user_usuario label {
+    margin-right: 14px;
+}
+
+.logo_login {
+    display: block;
+    margin: 0px auto 0px auto;
+}
+
+.usuario_login {
+    
+}
+
+.senha_login {
+    position: relative;
+    left: 9px;
+}
+
+.btn_login {
+    position: relative;
+    left: 1%;
+    width: 100px;
+    height: 30px;
+    top: -13.5px;
+}
+
+.icon_user {
+    position: relative;
+    height: 25px;
+    top: 2.5px;
+}
+
+.icon_pwd {
+    height: 25px;
+    position: relative;
+    left: 0.7%;
+    top: 2.5px;
+}
+
+.icon_signin {
+    position: relative;
+    left: -9.3%;
+    top: 1.5px;
+    height: 40px;
+}
+.icon_user,
+.icon_pwd,
+.icon_signin {
+    color: #184aeea4;
+}

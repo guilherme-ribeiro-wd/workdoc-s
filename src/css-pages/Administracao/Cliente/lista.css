@@ -1,0 +1,33 @@
+/* LISTA CLIENTES */
+/* 
+.pesquisa_cliente {
+    display: inline;
+} */
+
+.form-control#cliente-pesq, .form-control#cidade-pesq, .form-control#status-pesq {
+    width: 20%;
+}
+
+.cliente_pesq_group label, .cidade_pesq_group label, .status_pesq_group label {
+    width: 100px;
+}
+
+.cliente_pesq_group {
+    position: relative;
+    left: 10%;
+    top: 10px;
+}
+
+
+/* AQUI ----->>>>>>>>>>>>>>>>>>>>>> */
+/* .cidade_pesq_group {
+    position: relative;
+    left: 10%;
+    top: 10px;
+}
+
+.status_pesq_group {
+    position: relative;
+    left: 10%;
+    top: 10px;
+} */

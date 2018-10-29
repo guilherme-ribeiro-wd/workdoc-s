@@ -3,11 +3,8 @@
 // INSC. ESTADUAL, INSC. MUNICIPAL, GRUPO
 
 import React from 'react';
-import '../css-geral/DadosContatoCli.css'
+import '../css-geral-comps/DadosContatoCli.css'
 import { Form, FormControl, FormGroup, Col, ControlLabel } from 'react-bootstrap';
-
-var $ = require("jquery");
-require('jquery-mask-plugin');
 
 const smL = 4;
 const smI = 7;

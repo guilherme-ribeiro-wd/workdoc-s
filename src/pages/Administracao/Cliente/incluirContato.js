@@ -3,7 +3,8 @@
 import React from 'react';
 import Cadastro from '../../../comps/IncluirContatoCliente';
 import Header from '../../../comps/NavHeader';
-import './incluirContato.css';
+import Footer from '../../../comps/Footer';
+import '../../../css-pages/Administracao/Cliente/incluirContato.css';
 
 
 export default class CadCliente extends React.Component {
@@ -12,6 +13,7 @@ export default class CadCliente extends React.Component {
             <div name="header-cadcontcli">
                 <Header />
                 <Cadastro />
+                <Footer />
             </div>
         );
     }

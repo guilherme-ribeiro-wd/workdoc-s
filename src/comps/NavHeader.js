@@ -5,7 +5,7 @@ import LogoAdm from '../img/logo_administracao.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faHome, faEllipsisH, faSyncAlt, faReply, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
-import '../css-geral/NavHeader.css';
+import '../css-geral-comps/NavHeader.css';
 
 library.add(faHome, faEllipsisH, faSyncAlt, faReply, faSignOutAlt);
 

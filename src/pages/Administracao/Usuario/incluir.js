@@ -2,7 +2,8 @@
 import React from 'react';
 import Cadastro from '../../../comps/IncluirUsuario';
 import Header from '../../../comps/NavHeader';
-import './dados.css';
+import Footer from '../../../comps/Footer';
+import '../../../css-pages/Administracao/Cliente/incluir.css';
 
 export default class CadUsuario extends React.Component {
     render() {
@@ -10,6 +11,7 @@ export default class CadUsuario extends React.Component {
             <div name="header-cadcli">
                 <Header />
                 <Cadastro/>
+                <Footer />
             </div>
         )
     }

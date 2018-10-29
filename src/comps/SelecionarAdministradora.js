@@ -1,8 +1,8 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faUser, faBuilding, faFile, faBox } from '@fortawesome/free-solid-svg-icons';
-library.add(faUser, faBuilding, faBox, faFile);
+import { faBuilding, faFile, faBox, faUsers } from '@fortawesome/free-solid-svg-icons';
+library.add(faUsers, faBuilding, faBox, faFile);
 
 export default class SelecionarAdministradora extends React.Component {
     constructor(props) {
@@ -29,20 +29,20 @@ export default class SelecionarAdministradora extends React.Component {
                     <div className="stats_seladm">
                     {/* STATS OLD STYLE -> style="text-align:left;padding-left:25px;" */}
                         <div className="stats">
-                            <FontAwesomeIcon icon="user"></FontAwesomeIcon>
-                            10 CLIENTES
+                            <FontAwesomeIcon icon="users" className="icons"></FontAwesomeIcon>
+                            {this.props.clientes} CLIENTES
                         </div>
                         <div className="stats">
-                            <FontAwesomeIcon icon="building"></FontAwesomeIcon>
-                            10 FILIAIS
+                            <FontAwesomeIcon icon="building" className="icons"></FontAwesomeIcon>
+                            {this.props.filiais} FILIAIS
                         </div>
                         <div className="stats">
-                            <FontAwesomeIcon icon="box"></FontAwesomeIcon>
-                            10 CAIXAS
+                            <FontAwesomeIcon icon="box" className="icons"></FontAwesomeIcon>
+                            {this.props.caixas} CAIXAS
                         </div>
                         <div className="stats">
-                            <FontAwesomeIcon icon="file"></FontAwesomeIcon>
-                            10 DOCS
+                            <FontAwesomeIcon icon="file" className="icons"></FontAwesomeIcon>
+                            {this.props.docs} DOCS
                         </div>
                     </div>
                 </div>
