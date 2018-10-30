@@ -17,6 +17,8 @@ import CadContatoCli from './pages/Administracao/Cliente/incluirContato';
 import CadAdministradora from './pages/Administradora/incluir';
 import SelAdministradora from './pages/Administracao/selecionarAdm';
 import ListaCli from './pages/Administracao/Cliente/lista';
+import ListaUsuario from './pages/Administracao/Usuario/lista';
+import Lista from './comps/Lista';
 ReactDOM.render(
     <BrowserRouter>
         <Switch>
@@ -32,6 +34,8 @@ ReactDOM.render(
             <Route path="/alterarusuario" component={AltUsuario} />
             <Route path="/incluircontatocliente" component={CadContatoCli} />
             <Route path="/listacliente" component={ListaCli} />
+            <Route path="/listausuario" component={ListaUsuario} />
+            <Route path="/teste" component={Lista} />
         </Switch>
     </BrowserRouter>,
     document.getElementById('root'));

@@ -1,0 +1,15 @@
+/* COMPONENTE PESQUISA UTILIZANDO FORM */  
+
+.form-control#cliente-pesq,
+.form-control#cidade-pesq {
+    width: 90%;
+}
+
+.form-control#status-pesq {
+    width: 90%;
+}
+
+.btn_pesq_fcliente {
+    margin: 8px;
+    margin-top: 29px;
+}

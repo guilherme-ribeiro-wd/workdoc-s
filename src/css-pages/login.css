@@ -3,7 +3,7 @@
     padding-bottom: 365px;
 }
 
-.form-control {
+.form-control#user-senha, .form-control#user-usuario {
     width: 30%;
     display: inline;
 }
