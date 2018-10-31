@@ -16,3 +16,6 @@ Administradora ->  CODADM, NOMEADM, RAZÃO, NOME FANTASIA CNPJ, ENDERECO, TEL.
 
 --------------------------------------------------------------------------------------------------------------------
 Adicionar Breadcrumbs(react-bootstrap componente) ao projeto. -> Mostra a página atual acessada.
+
+
+Precisamos de uma tela para configurar, quais as permissões em cada ADM, cada usuário teria

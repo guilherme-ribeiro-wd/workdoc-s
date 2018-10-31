@@ -1,0 +1,31 @@
+/* .ReactTable .-pagination {
+    visibility: hidden;
+} */
+
+.ReactTable .rt-thead {
+    font-weight: bold;
+    /* text-align: left; */
+}
+
+.ReactTable .rt-resizer {
+    visibility: hidden;
+}
+
+.rt-thead .rt-tr {
+    text-align: left !important
+}
+
+.ReactTable {
+    width: 99%;
+    margin-left: 5px;
+    outline: none !important;
+    margin-bottom: 30px;
+}
+
+/* ARRUMAR:
+    OUTLINE COLOR? FOCUS? AZUL? 
+*/
+
+.header_listauser {
+    overflow-x: hidden;
+}
