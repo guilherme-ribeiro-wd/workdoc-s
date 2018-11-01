@@ -1,7 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
 import logo from '../img/logo.png';
-import iTeste from '../img/1.jpg';
+import adm from '../img/1.jpg';
+import nf from '../img/7.jpg';
+// import admdora from '../img/2.jpg';
+// import gf from '../img/3.jpg';
+// import fatura from '../img/4.jpg';
 import '../css-pages/areas.css';
  
 export default class Header extends React.Component {
@@ -18,7 +22,7 @@ export default class Header extends React.Component {
                         <li>
                             <Link href="./Administracao/principal">
                                 <a>
-                                    <img src={iTeste} alt="teste"/>
+                                    <img src={adm} alt="teste"/>
                                     <span>Administração</span>
                                 </a>
                             </Link>
@@ -26,7 +30,7 @@ export default class Header extends React.Component {
                         <li>
                             <Link href="#">
                                 <a>
-                                    <img src={iTeste} alt="teste"/>
+                                    <img src={adm} alt="teste"/>
                                     <span>Faturas</span>
                                 </a>
                             </Link>
@@ -34,7 +38,7 @@ export default class Header extends React.Component {
                         <li>
                             <Link href="#">
                                 <a>
-                                    <img src={iTeste} alt="teste"/>
+                                    <img src={nf} alt="teste"/>
                                     <span>Gestão Financeira</span>
                                 </a>
                             </Link>
@@ -42,7 +46,7 @@ export default class Header extends React.Component {
                         <li>
                             <Link href="#">
                                 <a>
-                                    <img src={iTeste} alt="teste"/>
+                                    <img src={adm} alt="teste"/>
                                     <span>Nota Fiscal</span>
                                 </a>
                             </Link>
@@ -50,7 +54,7 @@ export default class Header extends React.Component {
                         <li>
                             <Link href="#">
                                 <a>
-                                    <img src={iTeste} alt="teste"/>
+                                    <img src={adm} alt="teste"/>
                                     <span>Admistradora</span>
                                 </a>
                             </Link>

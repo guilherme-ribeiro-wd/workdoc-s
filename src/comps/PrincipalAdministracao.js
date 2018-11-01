@@ -2,9 +2,10 @@ import React from 'react';
 import { Button } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faUser, faUsers, faStickyNote, faAddressBook } from '@fortawesome/free-solid-svg-icons';
+import { faUser, faUsers, faStickyNote, faAddressBook, faCogs, faCog, faArchive, faEnvelope, faUpload, faClipboard } from '@fortawesome/free-solid-svg-icons';
 
-library.add(faUser, faUsers, faStickyNote, faAddressBook);
+library.add(faUser, faUsers, faStickyNote, faAddressBook, 
+            faCog, faCogs, faArchive, faEnvelope, faUpload, faClipboard);
 
 class DashHeader extends React.Component {
     render() {
@@ -31,7 +32,7 @@ class DashButton extends React.Component {
     render() {
         return (
             <div className="dash_button">
-                <Button className="btn_itself">
+                <Button className="btn_itself" title={this.props.btntitle}>
                     <FontAwesomeIcon icon={this.props.icon} className="dash_icon" />
                 </Button>
             </div>
@@ -42,15 +43,27 @@ class DashButton extends React.Component {
 class DashBoard extends React.Component {
     render() {
         return (
-            <div className="dash_complete">
-                <DashHeader title="Cadastro" icon="address-book"/>
-                <DashContentArea />
-                <DashButton icon="user" />
-                <DashButton icon="users" />
-                <DashButton icon="user" />
-                <DashButton icon="users" />
-                <DashButton icon="user" />
-                <DashButton icon="users" />
+            <div name="all_dash" className="all_dash">
+                <div className="dash_complete">
+                    <DashHeader title="Cadastros" icon="address-book"/>
+                    <DashContentArea />
+                    <DashButton icon="user" btntitle="Lista usuários"/>
+                    <DashButton icon="users" btntitle="Lista clientes"/>
+                </div>
+
+                <div className="dash_complete">
+                    <DashHeader title="Relatórios" icon="archive"/>
+                    <DashContentArea />
+                    <DashButton icon="clipboard" btntitle="Gerar relatório"/>
+                    <DashButton icon="envelope" btntitle="Enviar e-mail"/>
+                    <DashButton icon="upload" btntitle="Upload arquivo"/>
+                </div>
+
+                <div className="dash_complete">
+                    <DashHeader title="Configurações" icon="cog"/>
+                    <DashContentArea />
+                    <DashButton icon="cogs" btntitle="Configurar níveis"/>
+                </div>
             </div>
         ); 
     }

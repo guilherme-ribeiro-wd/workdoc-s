@@ -18,4 +18,24 @@ Administradora ->  CODADM, NOMEADM, RAZÃO, NOME FANTASIA CNPJ, ENDERECO, TEL.
 Adicionar Breadcrumbs(react-bootstrap componente) ao projeto. -> Mostra a página atual acessada.
 
 
-Precisamos de uma tela para configurar, quais as permissões em cada ADM, cada usuário teria
+Precisamos de uma tela para configurar, quais as permissões em cada ADM, cada usuário teria -> DASH CFONFIG.
+Upload de arquivos? Quais arquivos? Relacionado ao que? -> EMAIL/RELATORIOS/ARQUIVOS
+Quais relatórios serão gerados ? 
+Envio e-mail? Relacionado ao que? 
+
+
+Geração de espelho (fatura em pdf e excel)
+
+NF -> Enviar os dados para o sistema da prefeitura e imprimir NF gerada.
+
+
+FATURAMENTO -> NF
+FATURAMENTO COMP -> LISTA DOS CLIENTES.
+
+Faturas = CODADM, CODCLI, CODCONTAB, + Dados da Fatura
+Itens Fatura = CODADM, CODCLI, CODCONTAB, CODITEM, + Dados do Item
+Notas Fiscais = CODADM, CODCLI, CODCONTAB, CODNF, + Dados da NF
+Emails enviados = CODADM, CODCLI, CODCONTAB, CODEMAIL, + Dados Destinatário, + Dados Recebimento/Leitura
+Gestão Financeira = CODADM, CODCLI, CODCONTAB, DATVENCIMENTO, DATPAGAMENTO, VALORTOTAL, VALORIMPOSTOS, OBS
+
+

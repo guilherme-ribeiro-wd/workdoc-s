@@ -1,5 +1,8 @@
  /* TELA PRINCIPAL DA AREA ADMINISTRAÇÃO
  POR ONDE É ACESSADO AS OPÇÕES REFERENTE À ADMINISTRAÇÃO, EX: CADASTRO CLIENTE, CADASTRO USUARIO. */
+.all_dash {
+    /* padding-right: 120px; */
+}
 
  .dash_complete {
     height: 200px;
@@ -7,31 +10,41 @@
     border: 2px solid #e7e7e7;
     border-radius: 10px;
     margin-top: 10px;
-    margin-left: 15px;
+    margin-left: 150px;
+    margin-bottom: 25px;
+    display: inline-block;
 }
 
 .dash_header {
-    border-bottom: 1px solid #eeee;
+    border-bottom: 1px dotted rgb(88, 88, 88);
+    font-style: italic;
+    font-size: 16px;
+    padding-top: 0px;
 }
 
 .dash_header p{
     margin-left: 15px;
     padding: 5px 10px 0px 10px;
     color: rgb(80, 80, 80);
+    padding-top: 0px ; 
 }
 
 .dash_button {
     display: inline-block;
     padding: 8px;
     margin-left: 9px;
+    padding-top: 20px;
 }
 
 .dash_header_icon {
     position: relative;
-    left: 85px;
+    left: 170px;
     top: 25px;
+    width: 30px !important; 
+    height: 30px !important;
+    color: gray;
 }
 
-.dash-icon {
-    color: rgba(48, 8, 141, 0.979);
+.dash_icon {
+    color: gray;
 }

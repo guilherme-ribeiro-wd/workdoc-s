@@ -19,8 +19,8 @@ import SelAdministradora from './pages/Administracao/selecionarAdm';
 import ListaCli from './pages/Administracao/Cliente/lista';
 import ListaUsuario from './pages/Administracao/Usuario/lista';
 import PrincipalAdm from './pages/Administracao/principal';
-import PrincipalAdministracao from './comps/PrincipalAdministracao';
-
+import ConfigNivel from './pages/Administracao/Configuracao/confignivel';
+import EmailTeste from './comps/Email';
 
 ReactDOM.render(
     <BrowserRouter>
@@ -39,7 +39,8 @@ ReactDOM.render(
             <Route path="/listacliente" component={ListaCli} />
             <Route path="/listausuario" component={ListaUsuario} />
             <Route path="/principaladm" component={PrincipalAdm}/>
-            <Route path="/teste" component={PrincipalAdministracao} />
+            <Route path="/confignivel" component={ConfigNivel}/>
+            <Route path="/teste" component={EmailTeste} />
         </Switch>
     </BrowserRouter>,
     document.getElementById('root'));

@@ -56,13 +56,13 @@ export default class CadastroCliente extends React.Component {
                     </FormGroup>
                     <FormGroup controlId="btnAvancar">
                         <Col smOffset={5} sm={smI}>
-                        <Button type="submit" className="btn-avan-cli">Avançar</Button>
+                        <Button type="" className="btn-avan-cli">Avançar</Button>
                         <FontAwesomeIcon icon="arrow-right" className="icon-arrow-cli"/>
                         </Col>
                     </FormGroup>
                     <FormGroup controlId="btnCancel">
                         <Col smOffset={5} sm={smI}>
-                        <Button type="submit" className="btn-cancel-cli">Cancelar</Button> 
+                        <Button type="" className="btn-cancel-cli">Cancelar</Button> 
                         </Col>
                         <FontAwesomeIcon icon="times-circle" className="icon-cancel-cli"/>
                     </FormGroup>
