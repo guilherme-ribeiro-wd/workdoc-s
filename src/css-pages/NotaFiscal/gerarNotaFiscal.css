@@ -1,0 +1,25 @@
+.campos_ib {
+    display: inline-block;
+    padding: 20px;
+}
+
+.form-control#campoid-nf,
+.form-control#campovalor-nf,
+.form-control#campocontato-nf,
+.form-control#campoemail-nf {
+    width: 100%;
+}
+
+.desc_nf {
+    padding-left: 20px;
+}
+
+.form-control#campodesc-nf {
+    height: 150px;
+    width: 80%;
+}
+
+.div_gerarnf {
+    padding: 50px;
+    padding-left: 150px;
+}

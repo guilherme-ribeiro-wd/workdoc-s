@@ -15,9 +15,9 @@ export default class NavHeader extends React.Component {
             <div>
                 <PageHeader id="header" name="header" className="header">
                     <img src={LogoHeader} alt="logo-header" className="img-logo-header"/>
-                        <h3>Nível: ---------</h3>
-                        <h3>Nome: --------</h3>
-                        <h3>Login: ---------</h3>
+                        <p>Nível: ---------</p>
+                        <p>Nome: --------</p>
+                        <p>Login: ---------</p>
                     <img src={LogoAdm} alt="logo-adm" className="img-logo-adm"/>
                 </PageHeader>
                 <Nav bsStyle="tabs" justified className="nav-opt">

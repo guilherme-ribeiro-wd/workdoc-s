@@ -19,9 +19,13 @@ Adicionar Breadcrumbs(react-bootstrap componente) ao projeto. -> Mostra a págin
 
 
 Precisamos de uma tela para configurar, quais as permissões em cada ADM, cada usuário teria -> DASH CFONFIG.
-Upload de arquivos? Quais arquivos? Relacionado ao que? -> EMAIL/RELATORIOS/ARQUIVOS
-Quais relatórios serão gerados ? 
-Envio e-mail? Relacionado ao que? 
+
+
+Upload de arquivos? Quais arquivos? Relacionado ao que? -> Os uploads geralmente são feitos com arquivos .xlsx ou .pdf; E referem-se aos demonstrativos ou NF. -> {EMAIL/RELATORIOS/ARQUIVOS} ?
+
+Quais relatórios serão gerados ? Os relatórios são os referentes a que já fora emitido e enviado de faturas no período e também do que já fora faturado (recebido); = RELATÓRIO DAS FATURAS EMITIDAS E ENVIDAS. RELATÓRIO DE FATURADOS (RECEBIDO)
+
+Envio e-mail? Relacionado ao que?  -> Quanto ao e-mail, ele está relacionado a dois itens: ao envio do demonstrativo de faturamento e a NF após emitida; = Funcionalidade que permita enviar email após NF emitida ou para demonstrativo de faturamento. 
 
 
 Geração de espelho (fatura em pdf e excel)
@@ -29,7 +33,8 @@ Geração de espelho (fatura em pdf e excel)
 NF -> Enviar os dados para o sistema da prefeitura e imprimir NF gerada.
 
 
-FATURAMENTO -> NF
+FATURAMENTO -> NF = GERAR NF DOS FATURAMENTOS
+
 FATURAMENTO COMP -> LISTA DOS CLIENTES.
 
 Faturas = CODADM, CODCLI, CODCONTAB, + Dados da Fatura
@@ -38,4 +43,12 @@ Notas Fiscais = CODADM, CODCLI, CODCONTAB, CODNF, + Dados da NF
 Emails enviados = CODADM, CODCLI, CODCONTAB, CODEMAIL, + Dados Destinatário, + Dados Recebimento/Leitura
 Gestão Financeira = CODADM, CODCLI, CODCONTAB, DATVENCIMENTO, DATPAGAMENTO, VALORTOTAL, VALORIMPOSTOS, OBS
 
+Vou citar um exemplo do nosso serviço: 
+Fatura competência setembro/2018
+>>Item 1: X1 - Custódia de Caixas  // Qtde: 1000
+>>Item 2: C1 - Caixa de Papelão // Qtde: 20 
+>>Item 3: D1 - Movimentação de Caixa // Qtde: 33
 
+!!!*** ARRUMAR POSIÇÃO FOOTER ***!!!
+
+****Nodemailer

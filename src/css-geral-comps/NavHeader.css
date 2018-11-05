@@ -19,12 +19,13 @@
     height: 152px;
 }
 
-.header h3 {
+.header p {
     font-size: 10px;
     position: relative;
-    top: -80px;
+    top: -100px;
     margin: 4px;
     color: white;
+    padding: 5px;
 }
 
 .nav-tabs.nav-justified {
