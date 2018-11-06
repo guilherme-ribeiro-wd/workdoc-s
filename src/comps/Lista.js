@@ -1,3 +1,5 @@
+// NÃO UTILIZADO - EXCLUIR
+
 import React from 'react';
 import { Table } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

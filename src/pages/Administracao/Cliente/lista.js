@@ -39,7 +39,7 @@ export default class ListaCliente extends React.Component {
             }, {
                 Header: 'Documentos', // provavelmente não será uma coluna
                 accessor: 'docs'
-            }]
+            }];
         return (
             <div name="header-listacli" className="header_listacli">
                 <Header />

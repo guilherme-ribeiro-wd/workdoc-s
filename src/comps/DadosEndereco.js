@@ -1,6 +1,6 @@
 // RENDERIZA APENAS OS DADOS RELACIONADOS À ENDEREÇO
 // CEP, ENDEREÇO, NÚMERO, COMPLEMENTO, CIDADE, BAIRRO, ESTADO
-import { Estados as estados } from '../util/estados';
+import { Estados as estados, renderOpitions } from '../util/selectOpts';
 import React from 'react';
 import { Form, FormControl, FormGroup, Col, ControlLabel } from 'react-bootstrap';
 import '../css-geral-comps/DadosEndereco.css'
@@ -12,19 +12,10 @@ const smL = 4;
 const smI = 7;
 
 export default class DadosEndereco extends React.Component {
-    estadosOption(estados) {
-        const options = [];
-        for (let i = 0; i < estados.length; i++) {
-            options.push(<option key={i} value={estados[i]}>{estados[i]}</option>);
-        }
-        return options;
-    };
-
     render() {
         $(document).ready(function($) {
             $('#cep').mask('99999-999'); // FUNÇÃO BUSCA CEP - TODO
         });
-
         return (
             <div name="dados-endereco" id="dados-endereco">
                 <Form horizontal >
@@ -82,8 +73,7 @@ export default class DadosEndereco extends React.Component {
                         </Col>
                         <Col sm={smI}>
                         <FormControl name="estado-user" componentClass="select">
-                            <option value="Selecione...">Selecione...</option>
-                            {this.estadosOption(estados)}
+                            {renderOpitions(estados)}
                         </FormControl>
                         </Col>
                     </FormGroup>

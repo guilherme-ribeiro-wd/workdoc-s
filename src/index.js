@@ -23,6 +23,8 @@ import ConfigNivel from './pages/Administracao/Configuracao/confignivel';
 import EmailTeste from './comps/Email';
 import Teste from './pages/Testes/teste';
 import GerarNF from './pages/NotaFiscal/gerarNotaFiscal';
+import DadosEndereco from './comps/DadosEndereco';
+import ListaFaturamento from './pages/Fatura/lista';
 
 ReactDOM.render(
     <BrowserRouter>
@@ -40,10 +42,11 @@ ReactDOM.render(
             <Route path="/incluircontatocliente" component={CadContatoCli} />
             <Route path="/listacliente" component={ListaCli} />
             <Route path="/listausuario" component={ListaUsuario} />
+            <Route path="/listafaturamento" component={ListaFaturamento} />
             <Route path="/principaladm" component={PrincipalAdm}/>
             <Route path="/confignivel" component={ConfigNivel}/>
             <Route path="/gerarnf" component={GerarNF}/>
-            <Route path="/teste" component={EmailTeste} />
+            <Route path="/teste" component={Teste} />
             <Route path="/testepage" component={Teste} />
         </Switch>
     </BrowserRouter>,

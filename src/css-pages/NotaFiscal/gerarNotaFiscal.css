@@ -1,6 +1,40 @@
+/* GERAR NOTA FISCAL */
+
+.header_nf {
+    border-bottom: 2px solid #e7e7e7;
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+.btn_nf {
+   margin-right: 20px;
+}
+
+.obscliente_nf {
+    margin-top: 5px;
+    border: 2px dotted black;
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.infofat_nf {
+    text-align: center;
+}
+.infofat_nf label {
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+.campos_nf {
+    padding-left: 30px;
+    padding-right: 30px;
+    border-bottom: 2px solid #e7e7e7;
+}
+
 .campos_ib {
     display: inline-block;
-    padding: 20px;
+    padding-right: 70px;
 }
 
 .form-control#campoid-nf,
@@ -11,15 +45,101 @@
 }
 
 .desc_nf {
-    padding-left: 20px;
+    /* padding-left: 20px; */
 }
 
 .form-control#campodesc-nf {
     height: 150px;
-    width: 80%;
+    resize: none;
 }
 
 .div_gerarnf {
     padding: 50px;
     padding-left: 150px;
+    padding-right: 150px;
+}
+
+.chk_value {
+    width: 45%;
+    font-size: 11px;
+}
+
+.chk_box {
+    position: relative;
+    top: 2px;
+    left: 60px;
+}
+
+input#imp-1, input#imp-2, input#imp-3,
+input#imp-4, input#imp-5, input#imp-6 {
+    position: relative;
+    top: 26.5px;
+}
+
+.chkimposto_nf {
+    display: inline-block;
+    margin-top: -30px
+}
+
+.left_chk {
+    float: left;
+    margin-left: 25px;
+}
+
+.right_chk {
+    float: right;
+}
+
+.chk_lbl {
+    position: relative;
+    top: 53px;
+    right: 154.7px;
+    float: right;
+}
+
+.item_nf {
+    display: inline-block;
+}
+
+.item_nf label {
+    width: 20px;
+}
+
+
+.item_nf input#campoitem-nf {
+    width: 262%;
+}
+
+.item_nf input#campoqtde-nf {
+    width: 50%;
+}
+
+.item_nf input#campovlrunit-nf, .item_nf input#campovlrtotal-nf {
+    width: 60%;
+}
+
+.item_pos {
+    position: relative;
+    left: 210px;
+}
+
+.item_pos_qtde {
+    position: relative;
+    left: 325.5px;
+}
+
+.item_pos_unit {
+    position: relative;
+    left: 260px;
+}
+
+select#campocnae-nf,
+select#camporeciss-nf,
+select#campotributacao-nf,
+select#campolocalserv-nf {
+    width: 80%;
+}
+
+label#rad-uni-fat {
+    margin-right: 8px;
 }

@@ -1,0 +1,37 @@
+/* COMPONENTE PESQUISA FATURAMENTO UTILIZANDO FORM */
+
+.teste_form {
+    text-align: center;
+    border-top: 2px solid #e7e7e7;
+    margin-top: 10px;
+}
+
+.pesquisa_fatura {
+    margin-top: 5px;
+    /* // marginLeft: '290px' */
+}
+
+.teste {
+    margin-right: 20px;
+}
+
+.teste label {
+    margin-right: 5px;
+}
+
+/*  -----> CSS DO FORMPESQUISACLIENTE/USUARIO
+.form-control#id-usuario-pesq,
+.form-control#nome-usuario-pesq,
+.form-control#cliente-usuario-pesq {
+    width: 90%;
+}
+
+.form-control#nivel-usuario-pesq, .form-control#status-usuario-pesq {
+    width: 90%;
+}
+
+.btn_pesq_fusuario {
+    margin: 8px;
+    margin-top: 29px;
+}
+*/

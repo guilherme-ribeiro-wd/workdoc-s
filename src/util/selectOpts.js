@@ -1,3 +1,5 @@
+import React from 'react';
+
 export const Estados = [
     'Acre', 'Alagoas', 'Amapá', 'Amazonas', 'Bahia', 'Ceará', 'Distrito Federal',
     'Espírito Santo', 'Goiás', 'Maranhão', 'Mato Grosso', 'Mato Grosso do Sul',
@@ -27,6 +29,14 @@ export const LocalServOpt = [
 export const TributacaoOpt = [
     'Isenta de ISS', 'Não incidência no município', 'Imune', 
     'Exigibilidade Susp.Dec.J/Proc.A', 'Não tributável', 'Tributável',
-     'Tributável Fixo', 'Tributável S.N.', 'Micro Empreendedor Individual (MEI)'
+    'Tributável Fixo', 'Tributável S.N.', 'Micro Empreendedor Individual (MEI)'
 ];
 
+export const renderOpitions = (arr) => {
+    const options = [];
+    options.push(<option value="Selecione...">Selecione...</option>)
+    for (let i = 0; i < arr.length; i++) {
+        options.push(<option key={i} value={arr[i]}>{arr[i]}</option>);
+    }
+    return options;
+}
