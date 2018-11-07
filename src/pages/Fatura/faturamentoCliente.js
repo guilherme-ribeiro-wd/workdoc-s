@@ -1,16 +1,15 @@
-// LISTA FATURAMENTOS - CRITERIO PESQUISA
-
-import React from 'react';
+import React, {Component} from 'react';
 import Header from '../../comps/NavHeader';
-import { FormPesquisaFaturamento } from '../../comps/FormPesquisaFaturamento';
+import PesquisaCliente from '../../comps/FaturamentoClienteLista';
 import Footer from '../../comps/Footer';
-import '../../css-pages/Fatura/lista.css';
+import '../../css-pages/Fatura/faturamentoCliente.css';
+// import { extname } from 'path';
 
 import ReactTable from 'react-table';
 import "react-table/react-table.css";
-import { makeData } from '../../util/faturamentoData';
+import { makeData } from '../../util/faturamentoClienteData';
 
-export default class ListaFaturamento extends React.Component {
+export default class FaturamentoCliente extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -20,7 +19,7 @@ export default class ListaFaturamento extends React.Component {
             page: 'Página',
             of: 'de',
             row: 'registros',
-            noData: 'Não existe Faturamento para este cliente ou para esse critério de busca.'
+            noData: 'Não existem Clientes cadastrados ou para este critério de busca.'
         }
     }
     render() {
@@ -29,28 +28,19 @@ export default class ListaFaturamento extends React.Component {
             Header: 'Cliente',
             accessor: 'cliente'
         }, {
-            Header: 'Código',
-            accessor: 'codigo'
+            Header: 'Observação',
+            accessor: 'obs'
         }, {
-            Header: 'Competência',
-            accessor: 'competencia'
-        }, {
-            Header: 'Previsão Pagamento',
-            accessor: 'prevPag'
-        }, {
-            Header: 'Tipo/Contrato',
-            accessor: 'tipoContrato'
-        }, {
-            Header: 'Total',
-            accessor: 'total'
+            Header: 'Pedido',
+            accessor: 'pedido'
         }, {
             Header: '',
             accessor: 'btn'
         }];
         return (
-            <div className="header_listafaturamento">
+            <div className="header_listaclifaturamento">
                 <Header />
-                <FormPesquisaFaturamento />
+                <PesquisaCliente />
                 <ReactTable data={data} columns={colunas} className="-striped -highlight"
                 previousText={this.state.previous} nextText={this.state.next} 
                 pageText={this.state.page} ofText={this.state.of} rowsText={this.state.row}

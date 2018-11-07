@@ -4,15 +4,16 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './index.css';
 // import App from './App';
 import * as serviceWorker from './serviceWorker';
+// import DadosContTrab from './comps/DadosContTrab';
+// import DadosEndereco from './comps/DadosEndereco';
+// import DadosContatoCli from './comps/DadosContatoCli';
+// import DadosEndereco from './comps/DadosEndereco';
 import Login from './pages/login';
 import Areas from './pages/areas';
 import CadUsuario from './pages/Administracao/Usuario/incluir';
 import AltUsuario from './pages/Administracao/Usuario/alterar';
 import CadCliente from './pages/Administracao/Cliente/incluir';
 import AltCliente from './pages/Administracao/Cliente/alterar';
-// import DadosContTrab from './comps/DadosContTrab';
-// import DadosEndereco from './comps/DadosEndereco';
-// import DadosContatoCli from './comps/DadosContatoCli';
 import CadContatoCli from './pages/Administracao/Cliente/incluirContato';
 import CadAdministradora from './pages/Administradora/incluir';
 import SelAdministradora from './pages/Administracao/selecionarAdm';
@@ -23,8 +24,8 @@ import ConfigNivel from './pages/Administracao/Configuracao/confignivel';
 import EmailTeste from './comps/Email';
 import Teste from './pages/Testes/teste';
 import GerarNF from './pages/NotaFiscal/gerarNotaFiscal';
-import DadosEndereco from './comps/DadosEndereco';
 import ListaFaturamento from './pages/Fatura/lista';
+import FaturamentoCliente from './pages/Fatura/faturamentoCliente';
 
 ReactDOM.render(
     <BrowserRouter>
@@ -43,10 +44,11 @@ ReactDOM.render(
             <Route path="/listacliente" component={ListaCli} />
             <Route path="/listausuario" component={ListaUsuario} />
             <Route path="/listafaturamento" component={ListaFaturamento} />
+            <Route path="/listaclifaturamento" component={FaturamentoCliente} />
             <Route path="/principaladm" component={PrincipalAdm}/>
             <Route path="/confignivel" component={ConfigNivel}/>
             <Route path="/gerarnf" component={GerarNF}/>
-            <Route path="/teste" component={Teste} />
+            <Route path="/teste" component={EmailTeste} />
             <Route path="/testepage" component={Teste} />
         </Switch>
     </BrowserRouter>,

@@ -1,9 +1,30 @@
-.email_btn {
-    position: relative;
-    left: 48%;
-    top: 200px;
+.header_email {
+    overflow-x: hidden;
 }
 
-.div_email {
-    margin: 20px 20px;
+.email {
+    padding: 20px;
+    border: 2px solid #e7e7e7;
+    width: 700px;
+    margin: 20px auto;
+}
+
+.form-control#conteudo-email {
+    resize: none;
+    height: 150px;
+    width: 100%;
+}
+
+.form-control#titulo-email {
+    width: 31.5%;
+}
+
+.form-control#cliente-email,
+.form-control#destinatario-email {
+    width: 112%;
+}
+
+.display_ib_clidest {
+    display: inline-block;
+    margin-right: 58.5px;
 }

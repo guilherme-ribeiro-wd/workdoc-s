@@ -6,11 +6,10 @@ import Email from '../../comps/Email';
 
 const Teste = () => {
     return (
-        <div>
+        <div className="header_email">
             <Header />
-            <Email title="Demonstrativo" cliente="ABCDE" destinatario="abced@seila.moc"conteudo="Segue o demonstrativo do faturamento 23123" anexo=""/>
-            {/* WARINING EMAIL -> HTML CANNOT APPEAR AS CHILD OF DIV */}
-            {/* <Footer /> */}
+            <Email titulo="Demonstrativo" cliente="ABCDE" destinatario="abced@seila.moc"conteudo="Segue o demonstrativo do faturamento 23123" arquivo="exemplo.xlsx"/>
+            <Footer />
         </div>
     );
 }
