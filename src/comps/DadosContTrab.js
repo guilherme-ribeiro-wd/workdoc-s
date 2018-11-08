@@ -4,7 +4,7 @@
 
 import React from 'react';
 import { Form, FormControl, FormGroup, Col, ControlLabel } from 'react-bootstrap';
-import '../css-geral-comps/DadosContTrab.css'
+import '../comps_css/DadosContTrab.css'
 
 var $ = require("jquery");
 require('jquery-mask-plugin');
@@ -19,14 +19,14 @@ export default class DadosContTrab extends React.Component {
             $('#tel').mask('+55 99 9999-9999')
         });
         return (
-            <div name="dados-cont-trab" id="dados-cont-trab">
+            <div id="dados-cont-trab">
                 <Form horizontal>
                     <FormGroup controlId="tel" className="tel">
                         <Col componentClass={ControlLabel} sm={smL}>
                         Telefone
                         </Col>
                         <Col sm={smI}>
-                        <FormControl name="tel" type="tel" placeholder="Telefone"/>
+                        <FormControl type="tel" placeholder="Telefone"/>
                         </Col>
                     </FormGroup>
                     <FormGroup controlId="nextel" className="nextel">
@@ -34,7 +34,7 @@ export default class DadosContTrab extends React.Component {
                         Nextel
                         </Col>
                         <Col sm={smI}>
-                        <FormControl name="nextel" type="tel" placeholder="Nextel"/>
+                        <FormControl type="tel" placeholder="Nextel"/>
                         </Col>
                     </FormGroup>
                     <FormGroup controlId="fb" className="fb">
@@ -42,7 +42,7 @@ export default class DadosContTrab extends React.Component {
                         Facebook.com/
                         </Col>
                         <Col sm={smI}>
-                        <FormControl name="fb" type="text" placeholder="Facebook"/>
+                        <FormControl type="text" placeholder="Facebook"/>
                         </Col>
                     </FormGroup>
                     <FormGroup controlId="email">
@@ -50,7 +50,7 @@ export default class DadosContTrab extends React.Component {
                         Email
                         </Col>
                         <Col sm={smI}>
-                        <FormControl name="email" type="email" placeholder="Email"/>
+                        <FormControl type="email" placeholder="Email"/>
                         </Col>
                     </FormGroup>
                     <FormGroup controlId="codcentro">
@@ -58,7 +58,7 @@ export default class DadosContTrab extends React.Component {
                         Cód. Centro Custo
                         </Col>
                         <Col sm={smI}>
-                        <FormControl name="codcentro" type="text" placeholder="Código Centro de Custo"/>
+                        <FormControl type="text" placeholder="Código Centro de Custo"/>
                         </Col>
                     </FormGroup>
                     <FormGroup controlId="cargo" className="cargo">
@@ -66,7 +66,7 @@ export default class DadosContTrab extends React.Component {
                         Cargo
                         </Col>
                         <Col sm={smI}>
-                        <FormControl name="cargo" type="text" placeholder="Cargo"/>
+                        <FormControl type="text" placeholder="Cargo"/>
                         </Col>
                     </FormGroup>
                     <FormGroup controlId="depto" className="depto">
@@ -75,7 +75,7 @@ export default class DadosContTrab extends React.Component {
                         </Col>
                         <Col sm={smI}>
                         {/* VALOR VIRIA CARREGADO */}
-                        <FormControl name="depto" type="text" placeholder="Departamento"/>
+                        <FormControl type="text" placeholder="Departamento"/>
                         </Col>
                     </FormGroup>
                 </Form>

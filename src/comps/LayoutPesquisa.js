@@ -4,9 +4,9 @@ FormPesquisaUsuario, FaturamentoClienteLista, FormPequisaCliente, FormPesquisaFa
 */
 import React from 'react';
 import { Form } from 'react-bootstrap';
-import '../css-geral-comps/FormPesquisa_v2.css';
+import '../comps_css/LayoutPesquisa.css';
 
-const FormPesquisa_v2 = (props) => {
+const LayoutPesquisa = (props) => {
     return (
         <div className="border_forms_pesq">
             <Form inline action method="get" className="forms_pesq">
@@ -16,4 +16,4 @@ const FormPesquisa_v2 = (props) => {
     );
 }
 
-export default FormPesquisa_v2;
+export default LayoutPesquisa;

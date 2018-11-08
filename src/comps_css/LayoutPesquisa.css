@@ -1,0 +1,24 @@
+/* STYLE PARENT COMPONENT */
+.border_forms_pesq {
+    text-align: center;
+    border-top: 2px solid #e7e7e7;
+    margin-top: 10px;
+}
+
+.forms_pesq {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/* STYLE CHILDREN COMPONENTS */
+.formpesq_child {
+    margin-right: 15px;
+}
+.formpesq_child label{
+    margin-right: 5px;
+}
+
+/* STYLE PESQUISA CONFIGAR NIVEL */
+.form-control#id-usuario-config {
+    width: 30%;
+}

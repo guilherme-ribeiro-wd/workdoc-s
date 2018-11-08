@@ -3,7 +3,7 @@ import React from 'react';
 import Header from '../../comps/NavHeader';
 import Footer from '../../comps/Footer';
 import SelAdm from '../../comps/SelecionarAdministradora';
-import '../../css-pages/Administracao/selecionarAdm.css';
+import '../../pages_css/Administracao/selecionarAdm.css';
 
 import logo1 from '../../img/logotipo-sel.gif'
 import logo2 from '../../img/logotipo-sel2.gif';

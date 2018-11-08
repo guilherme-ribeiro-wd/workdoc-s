@@ -32,6 +32,12 @@ export const TributacaoOpt = [
     'Tributável Fixo', 'Tributável S.N.', 'Micro Empreendedor Individual (MEI)'
 ];
 
+export const NvlUsuarioOpt = [
+    'Todos', 'Master', 'Adm. Depósito', 'Expedição/Recepção', 'Atendente', 
+    'Gerente Cliente', 'Usuário Cliente', 'Digitador', 'Contabilidade', 
+    'Usuário Imagem', 'Usuário Indexação', 'Usuário Recepção'
+];
+
 export const renderOpitions = (arr) => {
     const options = [];
     options.push(<option value="Selecione...">Selecione...</option>)

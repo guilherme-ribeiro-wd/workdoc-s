@@ -5,7 +5,7 @@ import React from 'react';
 import Header from '../../comps/NavHeader';
 import PrincipalAdministracao from '../../comps/PrincipalAdministracao';
 import Footer from '../../comps/Footer';
-import '../../css-pages/Administracao/principal.css';
+import '../../pages_css/Administracao/principal.css';
 
 export default class PrincipalAdm extends React.Component {
     render() {

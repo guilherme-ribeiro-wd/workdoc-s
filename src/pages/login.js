@@ -1,6 +1,6 @@
 import React from 'react';
 import Login from '../comps/Login';
-import '../css-pages/login.css';
+import '../pages_css/login.css';
 
 export default class loginP extends React.Component {
     render() {

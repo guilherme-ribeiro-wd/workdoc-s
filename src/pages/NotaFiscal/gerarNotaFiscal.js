@@ -1,6 +1,6 @@
 import React from 'react';
 import GerarNotaFiscal from '../../comps/GerarNotaFiscal';
-import '../../css-pages/NotaFiscal/gerarNotaFiscal.css';
+import '../../pages_css/NotaFiscal/gerarNotaFiscal.css';
 import Header from '../../comps/NavHeader';
 import Footer from '../../comps/Footer';
 

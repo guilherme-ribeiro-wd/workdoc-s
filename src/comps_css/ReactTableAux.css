@@ -1,7 +1,4 @@
-/* .ReactTable .-pagination {
-    visibility: hidden;
-} */
-
+/* CSS STYLE REACT TABLE DEPENDENCY -> LISTAS USUARIO, CLIENTE, FATURAMENTO, CLIENTE FATURAMENTO.*/
 .ReactTable .rt-thead {
     font-weight: bold;
     /* text-align: left; */
@@ -20,12 +17,4 @@
     margin-left: 5px;
     outline: none !important;
     margin-bottom: 30px;
-}
-
-/* ARRUMAR:
-    OUTLINE COLOR? FOCUS? AZUL? 
-*/
-
-.header_listauser {
-    overflow-x: hidden;
 }

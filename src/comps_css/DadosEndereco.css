@@ -1,4 +1,4 @@
-.bairro, .cidade, .estado {
+/*.bairro, .cidade, .estado {
     position: relative;
     left: 55%;
     top: -97px;
@@ -12,11 +12,16 @@
 .bairro label, .cidade label, .estado label {
     width: 100px;
 }
-
-/* .form-horizontal .form-group#bairro, .form-group#cidade, .form-group#estado {
+*/
+ /*.form-horizontal .form-group#bairro, .form-group#cidade, .form-group#estado {
     margin-right: 0px; 
-}
+}*/
 
-div#dados-endereco .form-group .cep .ender .numender .comple {
+/*div#dados-endereco .form-group .cep .ender .numender .comple {
     width: 1366px;
 } */
+
+
+.teste6 input, .teste6 select {
+	width: 300px;
+}

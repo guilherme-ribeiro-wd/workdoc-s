@@ -4,7 +4,7 @@ import React from 'react';
 import Cadastro from '../../comps/IncluirAdmistradora';
 import Header from '../../comps/NavHeader';
 import Footer from '../../comps/Footer';
-import '../../css-pages/Administradora/incluir.css';
+import '../../pages_css/Administradora/incluir.css';
 
 
 export default class IncluirAdmistradora extends React.Component {

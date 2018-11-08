@@ -1,0 +1,29 @@
+/* CONFIGURA NÍVEL DO USUÁRIO */
+
+#forms-result-usuario-config {
+    margin-bottom: 100px;
+} /**arrumando footer - excluir este css*/
+
+.perm_usuario_result {
+    position: relative;
+    left: 27%;
+    top: 50px;
+}
+
+.cli_usuario_result {
+    position: relative;
+    left: 27%;
+    top: 80px;
+}
+
+.border_checkbox {
+    height: 100px;
+    width: 380px;
+    border: 2px solid gray;
+    padding-left: 15px;
+    padding-top: 5px;
+}
+
+.checkbox_percli {
+    display: inline-block;
+}

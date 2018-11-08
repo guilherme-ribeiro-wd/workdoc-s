@@ -6,7 +6,7 @@ import { Form, FormControl, FormGroup, ControlLabel, Button } from 'react-bootst
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faSearch, faCalculator } from '@fortawesome/free-solid-svg-icons';
-import '../css-geral-comps/FormPesquisaFaturamento.css';
+import '../comps_css/FormPesquisaFaturamento.css';
 
 library.add(faSearch, faCalculator);
 

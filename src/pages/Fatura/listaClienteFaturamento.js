@@ -1,15 +1,28 @@
-import React, {Component} from 'react';
+// LISTA DE CLIENTES PARA FATURAMENTO
+// IMPORTS PADRÕES/COMPONENTES
+import React from 'react';
 import Header from '../../comps/NavHeader';
-import PesquisaCliente from '../../comps/FaturamentoClienteLista';
+import LayoutPesquisa from '../../comps/LayoutPesquisa';
 import Footer from '../../comps/Footer';
-import '../../css-pages/Fatura/faturamentoCliente.css';
-// import { extname } from 'path';
-
-import ReactTable from 'react-table';
+// IMPORTS CSS
+import '../../comps_css/ReactTableAux.css';
 import "react-table/react-table.css";
+// IMPORTS AUXILIARES
+import ReactTable from 'react-table';
+import { Button, FormGroup, FormControl, ControlLabel } from 'react-bootstrap';
 import { makeData } from '../../util/faturamentoClienteData';
+// IMPORTS PARA ICONES
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
+library.add(faSearch);
 
-export default class FaturamentoCliente extends Component {
+// 
+const style = {
+    overflowX: 'hidden'
+}
+
+export default class ListaCliFaturamento extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -38,9 +51,21 @@ export default class FaturamentoCliente extends Component {
             accessor: 'btn'
         }];
         return (
-            <div className="header_listaclifaturamento">
+            <div className="header_listaclifaturamento" style={style}>
                 <Header />
-                <PesquisaCliente />
+                <LayoutPesquisa>
+                    <FormGroup controlId="cliente-pesq-clifaturamento" className="formpesq_child">
+                        <ControlLabel>
+                            Cliente
+                        </ControlLabel>
+                        <FormControl type="text" placeholder="Cliente"/>
+                    </FormGroup>
+                    <FormGroup controlId="btn-pesq-clifaturamento" className="formpesq_child">
+                        <Button className="" title="Pesquisar">
+                            <FontAwesomeIcon icon="search"/>
+                        </Button>
+                    </FormGroup>
+                </LayoutPesquisa>
                 <ReactTable data={data} columns={colunas} className="-striped -highlight"
                 previousText={this.state.previous} nextText={this.state.next} 
                 pageText={this.state.page} ofText={this.state.of} rowsText={this.state.row}

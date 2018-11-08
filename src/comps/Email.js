@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import { Form, FormGroup, FormControl, ControlLabel, Button } from 'react-bootstrap';
-import '../css-geral-comps/Email.css';
+import '../comps_css/Email.css';
 
 library.add(faPaperPlane);
 

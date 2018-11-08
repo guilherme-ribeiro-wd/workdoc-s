@@ -6,7 +6,7 @@ import nf from '../img/7.jpg';
 // import admdora from '../img/2.jpg';
 // import gf from '../img/3.jpg';
 // import fatura from '../img/4.jpg';
-import '../css-pages/areas.css';
+import '../pages_css/areas.css';
  
 export default class Header extends React.Component {
     render() {

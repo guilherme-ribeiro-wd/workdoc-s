@@ -1,18 +1,27 @@
 // LISTA DE CLIENTES
 
+// IMPORTS PADRÕES/COMPONENTES
 import React from 'react';
 import Header from '../../../comps/NavHeader';
-// import FormPesquisaCliente from '../../../comps/FormPesquisaCliente'; --> será excluido?
-import FormPesquisa_v2 from '../../../comps/FormPesquisa_v2'; // teste
+import LayoutPesquisa from '../../../comps/LayoutPesquisa';
 import Footer from '../../../comps/Footer';
-import '../../../css-pages/Administracao/Cliente/lista.css';
-import ReactTable from 'react-table';
+// IMPORTS CSS
 import "react-table/react-table.css";
-import { makeData } from '../../../util/clienteData';
+import '../../../comps_css/ReactTableAux.css';
+// IMPORTS AUXILIARES
+import ReactTable from 'react-table';
 import { Button, FormGroup, FormControl, ControlLabel } from 'react-bootstrap';
+import { makeData } from '../../../util/clienteData';
+// IMPORTS PARA ICONES
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { faSearch, faPrint, faUser } from '@fortawesome/free-solid-svg-icons';
+library.add(faPrint, faSearch, faUser)
+
+// 
+const style = {
+    overflowX: 'hidden'
+};
 
 export default class ListaCliente extends React.Component {
     constructor(props) {
@@ -42,12 +51,53 @@ export default class ListaCliente extends React.Component {
                 accessor: 'docs'
             }];
         return (
-            <div name="header-listacli" className="header_listacli">
+            <div name="header-listacli" className="header_listacli" style={style}>
                 <Header />
                 {/* <FormPesquisaCliente /> */}
-                <FormPesquisa_v2>
+                <LayoutPesquisa>
+                    <FormGroup controlId="cliente-pesq" className="formpesq_child">
+                        <ControlLabel>
+                            Cliente
+                        </ControlLabel>
+                        <FormControl type="text" placeholder="Cliente" />
+                    </FormGroup>
 
-                </FormPesquisa_v2>
+                    <FormGroup controlId="cidade-pesq" className="formpesq_child">
+                        <ControlLabel>
+                            Cidade
+                        </ControlLabel>
+                        <FormControl type="text" placeholder="Cidade" />
+                    </FormGroup>
+
+                    <FormGroup controlId="status-pesq" className="formpesq_child" >
+                        <ControlLabel>
+                            Status
+                        </ControlLabel>
+                        <FormControl componentClass="select">
+                            <option>Ativo</option>
+                            <option>Inativo</option>
+                            <option>Todos</option>
+                        </FormControl>
+                    </FormGroup>
+
+                    <FormGroup controlId="btn-pesq" className="formpesq_child">
+                        <Button type="" className="" title="Pesquisar">
+                            <FontAwesomeIcon icon="search" />
+                        </Button> 
+                    </FormGroup>
+
+                    <FormGroup controlId="btn-incluir" className="formpesq_child">
+                        <Button type="" className="" title="Incluir">
+                            <FontAwesomeIcon icon="user" />
+                        </Button> 
+                    </FormGroup>
+
+                    <FormGroup controlId="btn-relatorio" className="formpesq_child">
+                        <Button type="" className="" title="Relatorio">
+                            <FontAwesomeIcon icon="print" />
+                        </Button> 
+                    </FormGroup>
+                </LayoutPesquisa>
                 <ReactTable data={data} columns={colunas} className="-striped -highlight"
                 previousText={this.state.previous} nextText={this.state.next} 
                 pageText={this.state.page} ofText={this.state.of} rowsText={this.state.row}
@@ -57,7 +107,3 @@ export default class ListaCliente extends React.Component {
         );
     }
 }
-
-
-// CRIAR UM COMPONENTE QUE RETORNE O REACTTABLE (AQUI (LISTACLIENTE) E LISTAUSUARIO) 
-// TENDO COMO PARAMETRO AS PROPS: DATA E COLUMNS
