@@ -2,16 +2,15 @@
 // TELEFONE, NEXTEL, EMAIL, FACEBOOK ---- CONTATO
 // CODIGO CENTRO DE CUSTO, CARGO, DEPARTAMENTO ---- TRABALHO
 
+// IMPORTS PADRÕES/COMPONENTES
 import React from 'react';
-import { Form, FormControl, FormGroup, Col, ControlLabel } from 'react-bootstrap';
+// IMPORTS CSS
 import '../comps_css/DadosContTrab.css'
-
+// IMPORTS AUXILIARES
+import { Form, FormControl, FormGroup, ControlLabel } from 'react-bootstrap';
 var $ = require("jquery");
 require('jquery-mask-plugin');
-
-const smL = 4;
-const smI = 7;
-
+// IMPORTS PARA ICONES
 
 export default class DadosContTrab extends React.Component {
     render() {
@@ -19,64 +18,50 @@ export default class DadosContTrab extends React.Component {
             $('#tel').mask('+55 99 9999-9999')
         });
         return (
-            <div id="dados-cont-trab">
+            <div id="dados-cont-trab" className="dados_cont_trab">
                 <Form horizontal>
-                    <FormGroup controlId="tel" className="tel">
-                        <Col componentClass={ControlLabel} sm={smL}>
-                        Telefone
-                        </Col>
-                        <Col sm={smI}>
+                    <FormGroup controlId="tel" className="tel fg_dadoscont_trab">
+                        <ControlLabel>
+                            Telefone
+                        </ControlLabel>
                         <FormControl type="tel" placeholder="Telefone"/>
-                        </Col>
                     </FormGroup>
-                    <FormGroup controlId="nextel" className="nextel">
-                        <Col componentClass={ControlLabel} sm={smL}>
-                        Nextel
-                        </Col>
-                        <Col sm={smI}>
+                    <FormGroup controlId="nextel" className="nextel fg_dadoscont_trab">
+                        <ControlLabel>
+                            Nextel
+                        </ControlLabel>
                         <FormControl type="tel" placeholder="Nextel"/>
-                        </Col>
                     </FormGroup>
-                    <FormGroup controlId="fb" className="fb">
-                        <Col componentClass={ControlLabel} sm={smL}>
-                        Facebook.com/
-                        </Col>
-                        <Col sm={smI}>
+                    <FormGroup controlId="fb" className="fb_ fg_dadoscont_trab">
+                        <ControlLabel>
+                            Facebook.com/
+                        </ControlLabel>
                         <FormControl type="text" placeholder="Facebook"/>
-                        </Col>
                     </FormGroup>
-                    <FormGroup controlId="email">
-                        <Col componentClass={ControlLabel} sm={smL}>
-                        Email
-                        </Col>
-                        <Col sm={smI}>
+                    <FormGroup controlId="email" className="email_ fg_dadoscont_trab">
+                        <ControlLabel>
+                            Email
+                        </ControlLabel>
                         <FormControl type="email" placeholder="Email"/>
-                        </Col>
                     </FormGroup>
-                    <FormGroup controlId="codcentro">
-                        <Col componentClass={ControlLabel} sm={smL}>
-                        Cód. Centro Custo
-                        </Col>
-                        <Col sm={smI}>
+                    <FormGroup controlId="codcentro" className="codcentro fg_dadoscont_trab">
+                        <ControlLabel>
+                            Cód. Centro Custo
+                        </ControlLabel>
                         <FormControl type="text" placeholder="Código Centro de Custo"/>
-                        </Col>
                     </FormGroup>
-                    <FormGroup controlId="cargo" className="cargo">
-                        <Col componentClass={ControlLabel} sm={smL}>
-                        Cargo
-                        </Col>
-                        <Col sm={smI}>
+                    <FormGroup controlId="cargo" className="cargo fg_dadoscont_trab">
+                        <ControlLabel>
+                            Cargo
+                        </ControlLabel>
                         <FormControl type="text" placeholder="Cargo"/>
-                        </Col>
                     </FormGroup>
-                    <FormGroup controlId="depto" className="depto">
-                        <Col componentClass={ControlLabel} sm={smL}>
-                        Depto.
-                        </Col>
-                        <Col sm={smI}>
+                    <FormGroup controlId="depto" className="depto fg_dadoscont_trab">
+                        <ControlLabel>
+                            Depto.
+                        </ControlLabel>
                         {/* VALOR VIRIA CARREGADO */}
                         <FormControl type="text" placeholder="Departamento"/>
-                        </Col>
                     </FormGroup>
                 </Form>
             </div>

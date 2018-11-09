@@ -1,29 +1,15 @@
-/* .form-control#nextel-user-alt, .form-control#depto-user-alt {
-    width: 230.05px;
+.dados_cont_trab {
+    width: 700px;
+    margin: 10px auto;
 }
 
-.nextel label, .depto label{
-    width: 100px;
+.fg_dadoscont_trab {
+    width: 300px;
 }
 
 .nextel, .depto {
-    position: relative;
-    left: 55%;
-    top: -97px;
-    width: 620px;
-} */
-
-.nextel, .depto {
-    position: relative;
-    left: 55%;
-    top: -49px;
-    width: 620px;
+    float: right;
+    margin-top: -76px;
 }
 
-.nextel label, .depto label {
-    width: 100px;
-}
-
-.form-control#nextel, .form-control#depto {
-    width: 230.05px;
-}
+/* CRIAR UM ARQUIVO CSS PARA COM TODOS OS STYLES DE DADOS (DadosContatoCli, DadosContTrab, DadosEndereco) */

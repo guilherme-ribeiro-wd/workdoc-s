@@ -75,19 +75,20 @@ Uma outra dúvida surgiu enquanto estava escrevendo isso em relação a fatura. 
 
 
 
-TESTANDO FORMPESQUISAV2 - SUCESSO!
+TESTANDO FORMPESQUISAV2 - SUCESSO! = OK
 FORM CADASTROS?
-INCLUIR USUARIO, CLIENTE, ADMINISTRADORA;
+INCLUIR USUARIO OK, CLIENTE OK, ADMINISTRADORA **atual;
 ALTERAR CLIENTE, USUARIO; {
-    DadosEndereco; --- <<<<<< ATUAL;
-    DadosContatoCli;
-    DadosContTrab;
+    DadosEndereco; = OK
+    DadosContTrab; = OK
+    DadosContatoCli; = OK
 }
 
 TEMPLETES TO DO:
 -LISTA DOS EMAILS ENVIADOS
 -CONTABILIDADE
 -GESTÃOFINANCEIRA*
+-COMPONENTE QUE RENDERIZA Breadcrumbs/TEXTO INFORMANDO A PÁGINA ATUAL: EX -> Cadastrar Cliente *com icone;
 
 -----------------
 FUNÇÕES AUXILIARES (VALIDAR CEP, CPF, CNPJ, ETC);

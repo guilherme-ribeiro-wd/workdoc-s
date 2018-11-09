@@ -1,0 +1,89 @@
+/* PARENT SYTLE */
+.border_forms_cadastro {
+    width: 700px;
+    margin: 10px auto;
+    border: 1px solid #e7e7e7;
+}
+
+.forms_cadastro {
+    /* margin-top: 5px;
+    margin-bottom: 5px; */
+    padding: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+/* ------------------------------------------------ */
+/* CHILDREN STYLE */
+/* ---> INCLUIR USUARIO */
+.fg_formcadusuario {
+    width: 300px;
+}
+
+.periodo_right {
+    float: right;
+}
+.periodo_left {
+    float: left
+}
+.periodo_right label {
+    position: relative;
+    top: 28px;
+    left: -28px;
+}
+
+.fg_formcadusuario label#pad {
+    margin-right: 5px;
+}
+
+.border_chk_cadusuario {
+    height: 130px;
+    width: 500px;
+    border: 2px solid gray;
+    padding-left: 15px;
+    padding-top: 5px;
+}
+
+.chk_nivel_cadusuario {
+    display: inline-block;
+}
+
+.border_chk_cadusuario label {
+    font-size: 14px; /* padrao*/
+}
+
+/* <--- INCLUIR USUARIO */
+/* ------------------------------------------------ */
+/* ---> INCLUIR CLIENTE */
+.fg_formcadcliente {
+    width: 300px;
+}
+
+/* <--- INCLUIR CLIENTE */
+/* ------------------------------------------------ */
+/* ---> INCLUIR ADMINISTRADORA */
+
+
+/* <--- INCLUIR ADMINISTRADORA */
+/* ------------------------------------------------ */
+/* ---> ALTERAR USUARIO */
+
+
+/* <--- ALTERAR USUARIO */
+/* ------------------------------------------------ */
+/* ---> ALTERAR CLIENTE */
+
+
+/* <--- ALTERAR CLIENTE */
+/* ------------------------------------------------ */
+
+/* GERAL */
+.btn {
+    font-size: 12px;
+    /* width: 100px;
+    height: 30px; */
+}
+
+.inbtn {
+    text-align: center;
+    display: inline-block;
+}

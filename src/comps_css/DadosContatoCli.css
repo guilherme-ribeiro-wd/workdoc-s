@@ -1,28 +1,18 @@
-.ramal-cliente-alt, 
-.contato-cliente-alt,
-.inscmun-cliente-alt {
-    position: relative;
-    left: 55%;
-    top: -49px;
-    width: 620px;
+.dados_cont_cli {
+    width: 700px;
+    margin: 10px auto;
 }
 
-.ramal-cliente-alt label, 
-.contato-cliente-alt label,
-.inscmun-cliente-alt label {
-    width: 100px;
+.fg_dadoscont_cli {
+    width: 300px;
 }
 
-.form-control#ramal-cliente-alt,
-.form-control#contato-cliente-alt,
-.form-control#inscmun-cliente-alt {
-    width: 230.05px;
+.ramal_cliente_alt, 
+.contato_cliente_alt, 
+.inscmun_cliente_alt {
+    float: right;
+    margin-top: -76px;
 }
 
-.grupo-cliente-alt, 
-.inscest-cliente-alt, 
-.email-cliente-alt {
-    margin-top: -15px;
-}
 
-/* ESPAÇO ENTRE OS CAMPOS ESTÁ MAIOR QUE O DESEJADO ---------- ARRUMAR */
+/* CRIAR UM ARQUIVO CSS PARA COM TODOS OS STYLES DE DADOS (DadosContatoCli, DadosContTrab, DadosEndereco) */

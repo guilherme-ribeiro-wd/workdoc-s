@@ -1,27 +1,18 @@
-/*.bairro, .cidade, .estado {
-    position: relative;
-    left: 55%;
-    top: -97px;
-    width: 620px;
+.dados_endereco {
+    width: 700px;
+    margin: 10px auto;
 }
 
-.form-control#bairro, .form-control#cidade, .form-control#estado {
-    width: 230.05px;
-}
-
-.bairro label, .cidade label, .estado label {
-    width: 100px;
-}
-*/
- /*.form-horizontal .form-group#bairro, .form-group#cidade, .form-group#estado {
-    margin-right: 0px; 
-}*/
-
-/*div#dados-endereco .form-group .cep .ender .numender .comple {
-    width: 1366px;
-} */
-
-
-.teste6 input, .teste6 select {
+.fg_dadosendereco {
 	width: 300px;
 }
+
+.campos_esq {
+    float: left;
+}
+
+.campos_dir {
+    float: right;
+}
+
+/* CRIAR UM ARQUIVO CSS PARA COM TODOS OS STYLES DE DADOS (DadosContatoCli, DadosContTrab, DadosEndereco) */

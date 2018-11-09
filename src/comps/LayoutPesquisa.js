@@ -1,7 +1,5 @@
-/**
-TESTE DE OTIMIZAÇÃO; OBJETIVO EXCLUIR OS 4 COMPONENTES DE PESQUISAS:
-FormPesquisaUsuario, FaturamentoClienteLista, FormPequisaCliente, FormPesquisaFaturamento;
-*/
+// LAYOUT UTILIZADO PARA RENDERIZAR O PARTE DE PESQUISA DAS PAGINAS: 
+// LISTA CLIENTE, LISTA USUARIO, LISTA CLIENTE FATURAMENTO, LISTA FATURAMENTO
 import React from 'react';
 import { Form } from 'react-bootstrap';
 import '../comps_css/LayoutPesquisa.css';
