@@ -43,7 +43,7 @@ class DashButton extends React.Component {
 class DashBoard extends React.Component {
     render() {
         return (
-            <div name="all_dash" className="all_dash">
+            <div className="all_dash">
                 <div className="dash_complete">
                     <DashHeader title="Cadastros" icon="address-book"/>
                     <DashContentArea />

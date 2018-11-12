@@ -1,6 +1,7 @@
+// CADASTRAR CLIENTE
 // IMPORTS PADRÕES/COMPONENTES
 import React from 'react';
-import LayoutFormTeste from '../comps/LayoutFormTeste';
+import LayoutForm from '../comps/LayoutForm';
 // IMPORTS CSS
 // IMPORTS AUXILIARES
 import { FormGroup, FormControl, ControlLabel, Button} from 'react-bootstrap';
@@ -8,10 +9,10 @@ import { FormGroup, FormControl, ControlLabel, Button} from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faTimesCircle, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+library.add(faArrowRight, faTimesCircle);
 // 
 var $ = require("jquery");
 require('jquery-mask-plugin');
-library.add(faArrowRight, faTimesCircle);
 
 export default class CadastroCliente extends React.Component {
     render() {
@@ -19,7 +20,7 @@ export default class CadastroCliente extends React.Component {
             $('#cnpj-cliente').mask('99.999.999/9999-99');
         });
         return (
-            <LayoutFormTeste> 
+            <LayoutForm> 
                 <FormGroup controlId="id-cliente" className="fg_formcadcliente">
                     <ControlLabel>
                         Cód. Cliente
@@ -45,16 +46,16 @@ export default class CadastroCliente extends React.Component {
                     <FormControl type="text" placeholder="__.___.___/____-__" />
                 </FormGroup>
                 <FormGroup controlId="btn-avancar" className="fg_formcadcliente inbtn">
-                    <Button className="btn_avan_cli">
+                    <Button className="">
                         Avançar <FontAwesomeIcon icon="arrow-right" className="icon-arrow-cli"/>
                     </Button>
                 </FormGroup>
                 <FormGroup controlId="btn-cancel" className="fg_formcadcliente inbtn">
-                    <Button type="" className="btn_cancel_cli">
+                    <Button type="" className="">
                         Cancelar <FontAwesomeIcon icon="times-circle" className="icon-cancel-cli"/>
                     </Button> 
                 </FormGroup>
-            </LayoutFormTeste>
+            </LayoutForm>
         )
     }
 }

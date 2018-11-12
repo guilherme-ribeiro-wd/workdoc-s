@@ -1,5 +1,4 @@
 // COMPONENTE ENVIAR E-MAIL
-
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -9,7 +8,7 @@ import '../comps_css/Email.css';
 
 library.add(faPaperPlane);
 
-export default class EmailTeste extends React.Component {
+export default class EnviarEmail extends React.Component {
     render() {
         return (
             <div className="email">

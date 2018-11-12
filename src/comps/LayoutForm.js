@@ -1,9 +1,8 @@
 import React from 'react';
 import { Form } from 'react-bootstrap';
-import '../comps_css/LayoutFormTeste.css';
+import '../comps_css/LayoutForm.css';
 
-
-const LayoutFormTeste = (props) => {
+const LayoutForm = (props) => {
     return (
         <div className="border_forms_cadastro">
             <Form horizontal className="forms_cadastro">
@@ -13,4 +12,4 @@ const LayoutFormTeste = (props) => {
     );
 };
 
-export default LayoutFormTeste;
+export default LayoutForm;

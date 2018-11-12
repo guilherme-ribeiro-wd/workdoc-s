@@ -1,9 +1,8 @@
-// LISTA DE USUARIOS
-
+// LISTA USUARIOS
 // IMPORTS PADRÕES/COMPONENTES
 import React from 'react';
 import Header from '../../../comps/NavHeader';
-import LayoutPesquisa from '../../../comps/LayoutPesquisa'; // teste
+import LayoutPesquisa from '../../../comps/LayoutPesquisa';
 import Footer from '../../../comps/Footer';
 // IMPORT CSS
 import "react-table/react-table.css";
@@ -18,7 +17,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faUser, faSearch, faUsers } from '@fortawesome/free-solid-svg-icons';
 library.add(faUser, faSearch, faUsers);
-
 // 
 const style = {
     overflowX: 'hidden'
@@ -36,7 +34,6 @@ export default class ListaUsuario extends React.Component {
             row: 'registros'
         }
     }
-
     render() {
         const { data } = this.state;
         const colunas = [{

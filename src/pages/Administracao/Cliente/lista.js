@@ -1,5 +1,4 @@
 // LISTA DE CLIENTES
-
 // IMPORTS PADRÕES/COMPONENTES
 import React from 'react';
 import Header from '../../../comps/NavHeader';
@@ -17,7 +16,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faSearch, faPrint, faUser } from '@fortawesome/free-solid-svg-icons';
 library.add(faPrint, faSearch, faUser)
-
 // 
 const style = {
     overflowX: 'hidden'

@@ -1,16 +1,16 @@
-// INCLUIR ADMINISTRADORA
+// INCLUIR GESTÃO FINANCEIRA
 import React from 'react';
-import Cadastro from '../../comps/IncluirAdmistradora';
+import Cadastro from '../../comps/IncluirGestaoFinanceira';
 import Header from '../../comps/NavHeader';
 import Footer from '../../comps/Footer';
-//
+// 
 const style = {
     overflowX: 'hidden'
 };
 
-const IncluirAdmistradora = () => {
+const CadGestaoFinanc = () => {
     return (
-        <div className="header_cadadm" style={style}>
+        <div className="header_cadgestao" style={style}>
             <Header />
             <Cadastro />
             <Footer />
@@ -18,4 +18,4 @@ const IncluirAdmistradora = () => {
     );
 }
 
-export default IncluirAdmistradora;
+export default CadGestaoFinanc;

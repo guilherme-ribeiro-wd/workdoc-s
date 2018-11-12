@@ -1,20 +1,21 @@
 // INCLUIR UM CONTATO DE UM CLIENTE
-
 import React from 'react';
 import Cadastro from '../../../comps/IncluirContatoCliente';
 import Header from '../../../comps/NavHeader';
 import Footer from '../../../comps/Footer';
-import '../../../pages_css/Administracao/Cliente/incluirContato.css';
+// 
+const style = {
+    overflowX: 'hidden'
+};
 
-
-export default class CadCliente extends React.Component {
-    render() {
-        return (
-            <div name="header-cadcontcli">
-                <Header />
-                <Cadastro />
-                <Footer />
-            </div>
-        );
-    }
+const CadContatoCliente = () => {
+    return (
+        <div className="header_cadcontcli" style={style}>
+            <Header />
+            <Cadastro />
+            <Footer />
+        </div>
+    );
 }
+
+export default CadContatoCliente;

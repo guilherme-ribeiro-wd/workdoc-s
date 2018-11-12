@@ -1,18 +1,22 @@
+// GERAR NOTA FISCAL
 import React from 'react';
 import GerarNotaFiscal from '../../comps/GerarNotaFiscal';
-import '../../pages_css/NotaFiscal/gerarNotaFiscal.css';
 import Header from '../../comps/NavHeader';
 import Footer from '../../comps/Footer';
+import '../../pages_css/NotaFiscal/gerarNotaFiscal.css';
 
+const style = {
+    overflowX: 'hidden'
+};
 
-export default class GerarNF extends React.Component {
-    render() {
-        return (
-            <div className="header_gerarnf">
-                <Header />
-                <GerarNotaFiscal cliente="ABCDE" faturamento="teste" competencia="22/22/2222" vencimento="1 dia(s) a partir da emissão (05/11/2018)" />
-                <Footer /> 
-            </div>
-        );
-    }
+const GerarNF = () => {
+    return (
+        <div className="header_gerarnf" style={style}>
+            <Header />
+            <GerarNotaFiscal cliente="ABCDE" faturamento="teste" competencia="22/22/2222" vencimento="1 dia(s) a partir da emissão (05/11/2018)" />
+            <Footer /> 
+        </div>
+    );
 }
+
+export default GerarNF;

@@ -14,10 +14,7 @@ Contatos Cliente -> CODADM, CODCLI, CODCONTATO, Nome, E-mail, Telefone, �rea r
 Administradora ->  CODADM, NOMEADM, RAZÃO, NOME FANTASIA CNPJ, ENDERECO, TEL.
 
 
---------------------------------------------------------------------------------------------------------------------
-Adicionar Breadcrumbs(react-bootstrap componente) ao projeto. -> Mostra a página atual acessada.
-
-
+-----------------------------------------------------------------------------------------------------------
 Precisamos de uma tela para configurar, quais as permissões em cada ADM, cada usuário teria -> DASH CFONFIG.
 
 
@@ -29,8 +26,6 @@ Envio e-mail? Relacionado ao que?  -> Quanto ao e-mail, ele está relacionado a 
 
 
 Geração de espelho (fatura em pdf e excel)
-
-NF -> Enviar os dados para o sistema da prefeitura e imprimir NF gerada.
 
 
 FATURAMENTO -> NF = GERAR NF DOS FATURAMENTOS === OK
@@ -44,41 +39,19 @@ Notas Fiscais = CODADM, CODCLI, CODCONTAB, CODNF, + Dados da NF
 Emails enviados = CODADM, CODCLI, CODCONTAB, CODEMAIL, + Dados Destinatário, + Dados Recebimento/Leitura
 Gestão Financeira = CODADM, CODCLI, CODCONTAB, DATVENCIMENTO, DATPAGAMENTO, VALORTOTAL, VALORIMPOSTOS, OBS
 
-Vou citar um exemplo do nosso serviço: 
-Fatura competência setembro/2018
->>Item 1: X1 - Custódia de Caixas  // Qtde: 1000
->>Item 2: C1 - Caixa de Papelão // Qtde: 20 
->>Item 3: D1 - Movimentação de Caixa // Qtde: 33
 
-!!!*** ARRUMAR POSIÇÃO FOOTER ***!!!
-!!!*** ARRUMAR CSS (DadosEndereco) ***!!!
-!!!*** PADRONIZAR O CSS DO DIV PRINCIPAL DOS COMPONENTES () ***!!!
-DÚVIDAS ->>>> 
-    1- GRÁFICO QUE APARECE NA GERAÇÃO DE NF's -- 
-    2- GESTÃOFINANCEIRA? O QUE SERIA ESSA AREA EXATAMENTE, CONSIDERANDO QUE A FATURA LEVA A GERAÇÃO DE NF OK
-    3- NA LISTA DE FATURAMENTOS HÁ UM BOTÃO NO QUAL LEVA PARA A ÁREA CONTABILIDADE, IRÁ TER ESSA ÁREA? OK
-    4- O QUE É DEMONSTRATIVO? COMO É GERADO? OK
-    5- AREA NOTA FISCAL? NO ATUAL, TEM A PARTE PARA GERAR NOTA QUE ESTÁ LOCALIZADA NO ADMINISTRAÇÃO -> FINANCEIRO -> GERARNF, ATÉ AQUI OK. E A AREA NOTA FISCAL? TERIA NO NOVO TBM? NO LOCALHOST IMPORTAR NOTAS E LISTAR LOTES NÃO ESTÃO FUNCIONANDO.
 
-****Nodemailer
+!!!*** ARRUMAR CSS (DadosEndereco) ***!!! - OK
+!!!*** PADRONIZAR O CSS DO DIV PRINCIPAL DOS COMPONENTES () ***!!! -OK
 
 FAZER COMP CLIENTES FATURAMENTOS ---> LISTA DOS CLIENTES NO FATURAMENTO! === OK
 FAZER COMPO ENVIAREMAIL! === OK
----> PAUSAR AQUI PARA REVISÃO DO QUE FOI FEITO E MELHORAR ALGUNS COMPONENTES!
-
-
-
-Estou com algumas dúvidas aqui em relação a Gestão Financeira.
-Você mandou a Gestão Financeira com esses dados -> CODADM, CODCLI, CODCONTAB, DATVENCIMENTO, DATPAGAMENTO, VALORTOTAL, VALORIMPOSTOS, OBS. Mas em questão de layout/templete não estou conseguindo imaginar isso. Está relacionado com os Faturamentos -> NF's ? Com isso quero dizer, dos faturamentos são geradas as notas fiscais, assim é uma Gestão Financeira das NF's? 
-
-Uma outra dúvida surgiu enquanto estava escrevendo isso em relação a fatura. O cliente tem os faturamentos que são as faturas, que são geradas as nf's, mas e a fatura em si, daonde surge/como é gerada? 
-
-
+---> PAUSAR AQUI PARA REVISÃO DO QUE FOI FEITO E MELHORAR ALGUNS COMPONENTES! === OK
 
 TESTANDO FORMPESQUISAV2 - SUCESSO! = OK
-FORM CADASTROS?
-INCLUIR USUARIO OK, CLIENTE OK, ADMINISTRADORA **atual;
-ALTERAR CLIENTE, USUARIO; {
+FORM CADASTROS? - SUCESSO! = OK
+INCLUIR USUARIO OK, CLIENTE OK, ADMINISTRADORA OK;
+ALTERAR CLIENTE OK, USUARIO OK, INCLUIRCONTATOCLI OK{
     DadosEndereco; = OK
     DadosContTrab; = OK
     DadosContatoCli; = OK
@@ -88,16 +61,63 @@ TEMPLETES TO DO:
 -LISTA DOS EMAILS ENVIADOS
 -CONTABILIDADE
 -GESTÃOFINANCEIRA*
--COMPONENTE QUE RENDERIZA Breadcrumbs/TEXTO INFORMANDO A PÁGINA ATUAL: EX -> Cadastrar Cliente *com icone;
+-COMPONENTE QUE RENDERIZA Breadcrumbs/TEXTO INFORMANDO A PÁGINA ATUAL: EX -> Cadastrar Cliente *com icone; {
+    Adicionar Breadcrumbs(react-bootstrap componente) ao projeto. -> Mostra a página atual acessada.
+}
+
+***
+    NF -> Enviar os dados para o sistema da prefeitura e imprimir NF gerada.
+    Nodemailer
+    ARRUMAR POSIÇÃO FOOTER
+***
 
 -----------------
 FUNÇÕES AUXILIARES (VALIDAR CEP, CPF, CNPJ, ETC);
 SUBTELAS DE RELATÓRIO.
 DEFINIR STATE/CHANGE NOS FORMS.
-ADD BOTÃO GERAR DEMONSTRATIVO DO FATURAMENTO/FATURA
+ADD BOTÃO GERAR DEMONSTRATIVO DO FATURAMENTO/FATURA = Botão Enviar Demonstrativo? (ListaFaturamento) { 
+    - ENTENDE-SE QUE AO CLICAR NESSE BOTÃO DE UM FATURAMENTO ESPECIFICO O ARQUIVO É GERADO E A TELA DE ENVIAR EMAIL É ACESSADA. 
+}
 
 
+----------------------------------------------------------
+PERGUNTAS:
+Estou com algumas dúvidas aqui em relação a Gestão Financeira.
+Você mandou a Gestão Financeira com esses dados -> CODADM, CODCLI, CODCONTAB, DATVENCIMENTO, DATPAGAMENTO, VALORTOTAL, VALORIMPOSTOS, OBS. Mas em questão de layout/templete não estou conseguindo imaginar isso. Está relacionado com os Faturamentos -> NF's ? Com isso quero dizer, dos faturamentos são geradas as notas fiscais, assim é uma Gestão Financeira das NF's? 
 
+Uma outra dúvida surgiu enquanto estava escrevendo isso em relação a fatura. O cliente tem os faturamentos que são as faturas, que são geradas as nf's, mas e a fatura em si, daonde surge/como é gerada?
+
+1- GRÁFICO QUE APARECE NA GERAÇÃO DE NF's -- 
+2- GESTÃOFINANCEIRA? O QUE SERIA ESSA AREA EXATAMENTE, CONSIDERANDO QUE A FATURA LEVA A GERAÇÃO DE NF OK
+3- NA LISTA DE FATURAMENTOS HÁ UM BOTÃO NO QUAL LEVA PARA A ÁREA CONTABILIDADE, IRÁ TER ESSA ÁREA? OK
+4- O QUE É DEMONSTRATIVO? COMO É GERADO? OK
+5- AREA NOTA FISCAL? NO ATUAL, TEM A PARTE PARA GERAR NOTA QUE ESTÁ LOCALIZADA NO ADMINISTRAÇÃO -> FINANCEIRO -> GERARNF, ATÉ AQUI OK. E A AREA NOTA FISCAL? TERIA NO NOVO TBM? NO LOCALHOST IMPORTAR NOTAS E LISTAR LOTES NÃO ESTÃO FUNCIONANDO.
+
+RESPOSTAS:
+Vamos lá: 
+- Eu sugeri esta opção de Gestão Financeira, para depois ao gerar um relatório, já consiga ter uma relação completa de tudo o que foi cobrado e os impostos relacionados, para ter uma ideia (em um período) do que deveria entrar no banco.
+- O Layout é bem simples: basicamente uma tela para selecionar os clientes e a partir dela, um botão incluir que teria as datas (vencimento e pagamento) o valor total e os impostos. As Observações seria um campo Textarea para adicionar uma informação pertinente à fatura. 
+- Dentro de cada Faturamento (por cliente) é que são geradas as NFs e são adicionados os espelhos de faturamento: No caso da Work já temos uma área em que são gerados alguns arquivos (agrupado, por empresa, por departamento e/ou por funcionário). A minha ideia é que estes arquivos, sejam gerados na Work e depois sejam adicionados ao Faturamento; 
+- O mesmo vai ocorrer com a Informatec, porém lá os arquivos são gerados de uma outra forma, por isso penso em ter uma área que junte tudo (apenas para histórico); 
+- Na geração da NFs, será necessário enviar para o Serviço da prefeitura (através do certificado digital) os dados da empresa (Work ou Informatec), os dados do cliente, os dados da NF (itens e valores) e as observações, por isso tendo tudo em uma área só, ficará mais fácil gerenciar para quem já foi enviado a NF, o pedido e já realizou o pagamento.
+
+Isto: espelhos = demonstrativo... antigamente chamávamos de espelho, agora virou só demonstrativo. 
+Quando falo que são gerados na Work, é por que existe um relatório relacionado ao faturamento. Neste dá para gerar 3 relatório para o produto Guarda-física e 3 para o RH Digitalizado. Para os demais produtos, só tem a opção de 1 ou 2 relatórios.
+
+Então, pode considerar a mesma ideia desta parte do nosso sistema, para o que está fazendo: 
+> Adm ou Empresa (Work, Informatec, etc) 
+> Clientes - Lista
+> Contabilidade = Faturamentos 
+> Dados do Faturamento = Fatura + Demonstrativo + NF
+
+A Contabilidade é o que o é calculado pelo sistema e o Faturamento é a parte de envio para o cliente. 
+Ex.: A Ligiane calcula tudo o que o cliente realizou durante o período (custódia, movimentação, entre outras coisas) e inclui isso pela contabilidade... concluída esta parte ela encerra o Faturamento e este é enviado para a Stefânia, entrar com a parte de cobrança (enviar o demonstrativo para o cliente, gerar a NF e depois controlar o pagamento)
+
+Vou citar um exemplo do nosso serviço: 
+Fatura competência setembro/2018
+>>Item 1: X1 - Custódia de Caixas  // Qtde: 1000
+>>Item 2: C1 - Caixa de Papelão // Qtde: 20 
+>>Item 3: D1 - Movimentação de Caixa // Qtde: 33
 
 ----------------------------------------------------------
 // IMPORTS PADRÕES/COMPONENTES

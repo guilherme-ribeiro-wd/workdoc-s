@@ -1,127 +1,94 @@
+// ALTERAR USUARIO
+// IMPORTS PADRÕES/COMPONENTES
+import React from 'react';
+import LayoutForm from './LayoutForm';
 import DadosEndereco from './DadosEndereco';
 import DadosContTrab from './DadosContTrab';
-import React from 'react';
-import {
-    FormControl, FormGroup, ControlLabel, Button, Col, Form, Radio
-} from 'react-bootstrap';
+// IMPORTS CSS
+// IMPORTS AUXILIARES
+import { FormControl, FormGroup, ControlLabel, Button, Radio } from 'react-bootstrap';
+// IMPORTS PARA ICONES
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faCheckCircle, faTimesCircle } from '@fortawesome/free-solid-svg-icons';
-
+// 
 var $ = require("jquery");
 require('jquery-mask-plugin');
-
 library.add(faCheckCircle, faTimesCircle);
-const smL = 4;
-const smI = 7;
 
 export default class AlterarUsuario extends React.Component {
     constructor(props) {
         super(props);
     }
-
-    estadosOption(estados) {
-        const options = [];
-        for (let i = 0; i < estados.length; i++) {
-            options.push(<option key={i} value={estados[i]}>{estados[i]}</option>);
-        }
-        return options;
-    };
-
     render() {
         $(document).ready(function($) {
             $('#dtnasc-user-alt').mask('99/99/9999'); // FUNÇÃO VALIDA DATA - TODO
             $('#cpf-user-alt').mask('999.999.999-99'); // FUNÇÃO VALIDA CPF - TODO
         });
-
         return (
-                <Form horizontal>
-                    <fieldset id="alt-user">
-                        {/*COLOCAR UM ICONE INDICANDO QUE A TELA DE ALTERAR DADOS USUARIO*/}
-                        <legend>Alterar Dados Usuario</legend> 
-                        {/* FOTO DO USUARIO */} {/* VALOR VIRIA CARREGADO */}
-                        <FormGroup controlId="nome-user-alt">
-                            <Col componentClass={ControlLabel} sm={smL}>
+                <LayoutForm>
+                    {/* FOTO DO USUARIO */} {/* VALOR VIRIA CARREGADO */}
+                    <FormGroup controlId="nome-user-alt" className="fg_formaltusuario">
+                        <ControlLabel>
                             Nome
-                            </Col>
-                            <Col sm={smI}>
-                            {/* VALOR VIRIA CARREGADO */}
-                            <FormControl name="nome-user-alt" type="text" placeholder="Nome completo" />
-                            </Col>
-                        </FormGroup>
-                        <FormGroup controlId="dtnasc-user-alt" className="dtnasc">
-                            <Col componentClass={ControlLabel} sm={smL}>
+                        </ControlLabel>
+                        {/* VALOR VIRIA CARREGADO */}
+                        <FormControl type="text" placeholder="Nome completo" />
+                    </FormGroup>
+                    <FormGroup controlId="dtnasc-user-alt" className="fg_formaltusuario">
+                        <ControlLabel>
                             Data Nasc.
-                            </Col>
-                            <Col sm={smI}>
-                            {/* VALOR VIRIA CARREGADO */}
-                            <FormControl name="dtnasc-user-alt" type="text" placeholder="DD/MM/AAAA"/>
-                            </Col>
-                        </FormGroup>
-                        <FormGroup controlId="cpf-user-alt">
-                            <Col componentClass={ControlLabel} sm={smL}>
+                        </ControlLabel>
+                        {/* VALOR VIRIA CARREGADO */}
+                        <FormControl type="text" placeholder="DD/MM/AAAA"/>
+                    </FormGroup>
+                    <FormGroup controlId="cpf-user-alt" className="fg_formaltusuario">
+                        <ControlLabel>
                             CPF
-                            </Col>
-                            <Col sm={smI}>
-                            <FormControl id="cpf-user-alt" type="text" placeholder="CPF"/>
-                            </Col>
-                        </FormGroup>
-                        {/* CHAMA O COMPONENTE DADOS ENDEREÇO */}
-                        <DadosEndereco />
-                        {/* CHAMA O COMPONENTE DADOS CONT TRAB */}
-                        <DadosContTrab className="dado-cont-trab" />
-                        <FormGroup controlId="ativo-user-alt" className="ativo">
-                            <Col componentClass={ControlLabel} sm={smL}>
+                        </ControlLabel>
+                        <FormControl id="cpf-user-alt" type="text" placeholder="CPF"/>
+                    </FormGroup>
+                    {/* CHAMA O COMPONENTE DADOS ENDEREÇO */}
+                    <DadosEndereco />
+                    {/* CHAMA O COMPONENTE DADOS CONT TRAB */}
+                    <DadosContTrab />
+                    <FormGroup controlId="ativo-user-alt" className="fg_formaltusuario">
+                        <ControlLabel id="ativo">
                             Ativo?
-                            </Col>
-                            <Radio name="radio" inline checked>
-                                Sim
-                            </Radio>
-                            <Radio name="radio" inline>
-                                Não
-                            </Radio>
-                        </FormGroup>
-                        <FormGroup controlId="login-user-alt">
-                            <Col componentClass={ControlLabel} sm={smL}>
-                            Login
-                            </Col>
-                            <Col sm={smI}>
-                            {/* VALOR VIRIA CARREGADO */}
-                            <FormControl name="login-user-alt" type="text" placeholder="Login"/>
-                            </Col>
-                        </FormGroup>
-                        <FormGroup controlId="senha-user-alt">
-                            <Col componentClass={ControlLabel} sm={smL}>
+                        </ControlLabel>
+                        <Radio name="radio-ativo" inline checked>Sim</Radio>
+                        <Radio name="radio-ativo" inline>Não</Radio>
+                    </FormGroup>
+                    <FormGroup controlId="login-user-alt" className="fg_formaltusuario">
+                        <ControlLabel>Login</ControlLabel>
+                        {/* VALOR VIRIA CARREGADO */}
+                        <FormControl type="text" placeholder="Login"/>
+                    </FormGroup>
+                    <FormGroup controlId="senha-user-alt" className="fg_formaltusuario esq_senha">
+                        <ControlLabel>
                             Senha
-                            </Col>
-                            <Col sm={smI}>
-                            {/* VALOR VIRIA CARREGADO */}
-                            <FormControl name="senha-user-alt" type="password" placeholder="Senha"/>
-                            </Col>
-                        </FormGroup>
-                        <FormGroup controlId="confsenha-user-alt" className="conf-senha">
-                            <Col componentClass={ControlLabel} sm={smL}>
+                        </ControlLabel>
+                        {/* VALOR VIRIA CARREGADO */}
+                        <FormControl type="password" placeholder="Senha"/>
+                    </FormGroup>
+                    <FormGroup controlId="confsenha-user-alt" className="fg_formaltusuario dir_senha">
+                        <ControlLabel>
                             Conf. Senha
-                            </Col>
-                            <Col sm={smI}>
-                            {/* VALOR VIRIA CARREGADO */}
-                            <FormControl name="confsenha-user-alt" type="password" placeholder="Confirme a senha"/>
-                            </Col>
-                        </FormGroup>
-                        <FormGroup controlId="btnAlt">
-                            <Col smOffset={5} sm={smI}>
-                            <Button type="submit" className="btn-alt">Gravar</Button> 
-                            </Col>
-                            <FontAwesomeIcon icon="check-circle" className="icon-check"/>
-                        </FormGroup>
-                        <FormGroup controlId="btnCancel">
-                            <Col smOffset={5} sm={smI}>
-                            <Button type="submit" className="btn-cancel">Cancelar</Button> 
-                            </Col>
-                            <FontAwesomeIcon icon="times-circle" className="icon-cancel"/>
-                        </FormGroup>
-                    </fieldset>
-                </Form>
+                        </ControlLabel>
+                        {/* VALOR VIRIA CARREGADO */}
+                        <FormControl type="password" placeholder="Confirme a senha"/>
+                    </FormGroup>
+                    <FormGroup controlId="btn-alt" className="fg_formaltusuario inbtn">
+                        <Button type="submit" className="">
+                            Gravar <FontAwesomeIcon icon="check-circle" className="icon-check"/>
+                        </Button> 
+                    </FormGroup>
+                    <FormGroup controlId="btn-cancel" className="fg_formaltusuario inbtn">
+                        <Button type="submit" className="">
+                            Cancelar <FontAwesomeIcon icon="times-circle" className="icon-cancel"/>
+                        </Button> 
+                    </FormGroup>
+                </LayoutForm>
         )
     }
 }

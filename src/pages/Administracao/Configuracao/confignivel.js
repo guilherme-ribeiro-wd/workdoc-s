@@ -14,53 +14,48 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 library.add(faSearch);
-
 //
 const style = {
     overflowX: 'hidden'
 };
 
-export default class ConfigNivel extends React.Component {
-    render() {
-        return (
-            <div className="header_confnivel" style={style}>
-                <Header />
-                <LayoutPesquisa>
-                    <FormGroup controlId="id-usuario-config" className="formpesq_child">
-                        <ControlLabel>
-                            Cód. Usuário
-                        </ControlLabel>
-                        <FormControl className="" type="text" disabled />
-                    </FormGroup>
-                    
-                    <FormGroup controlId="nome-usuario-config" className="formpesq_child">
-                        <ControlLabel>
-                            Nome
-                        </ControlLabel>
-                        <FormControl type="text" placeholder="Nome" />
-                    </FormGroup>
-
-                    <FormGroup controlId="nome-usuario-config" className="formpesq_child">
-                        <ControlLabel>
-                            Empresa
-                        </ControlLabel>
-
-                        <FormControl componentClass="select">
-                            <option value="Sorocaba">Sorocaba</option>
-                            <option value="Piracicaba">Sorocaba</option>
-                            <option value="SJC">São José dos Campos</option>
-                        </FormControl>
-                    </FormGroup> 
-
-                    <FormGroup controlId="btn-usuario-config" className="formpesq_child">
-                        <Button type="" >
-                            <FontAwesomeIcon icon="search"/>
-                        </Button>
-                    </FormGroup>
-                </LayoutPesquisa>
-                <ConfigurarNivel />
-                <Footer />
-            </div>
-        );
-    }
+const ConfigNivel = () => {
+    return (
+        <div className="header_confnivel" style={style}>
+            <Header />
+            <LayoutPesquisa>
+                <FormGroup controlId="id-usuario-config" className="formpesq_child">
+                    <ControlLabel>
+                        Cód. Usuário
+                    </ControlLabel>
+                    <FormControl className="" type="text" disabled />
+                </FormGroup>
+                <FormGroup controlId="nome-usuario-config" className="formpesq_child">
+                    <ControlLabel>
+                        Nome
+                    </ControlLabel>
+                    <FormControl type="text" placeholder="Nome" />
+                </FormGroup>
+                <FormGroup controlId="nome-usuario-config" className="formpesq_child">
+                    <ControlLabel>
+                        Empresa
+                    </ControlLabel>
+                    <FormControl componentClass="select">
+                        <option value="Sorocaba">Sorocaba</option>
+                        <option value="Piracicaba">Sorocaba</option>
+                        <option value="SJC">São José dos Campos</option>
+                    </FormControl>
+                </FormGroup> 
+                <FormGroup controlId="btn-usuario-config" className="formpesq_child">
+                    <Button type="" >
+                        <FontAwesomeIcon icon="search"/>
+                    </Button>
+                </FormGroup>
+            </LayoutPesquisa>
+            <ConfigurarNivel />
+            <Footer />
+        </div>
+    );
 }
+
+export default ConfigNivel;

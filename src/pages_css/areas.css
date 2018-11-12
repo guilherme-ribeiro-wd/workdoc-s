@@ -13,15 +13,15 @@ h1 {
     left: 500px;
 }
 
-.areas-items ul {
+.areas_items ul {
     list-style: none;
 }
 
-.areas-items li:hover {
+.areas_items li:hover {
     transform: scale(0.8);
 }
 
-.areas-items li {
+.areas_items li {
     margin: 14px;
     position: relative;
     float: left;
@@ -34,12 +34,12 @@ h1 {
     transition: all .4s ease-in;
 }
 
-.areas-items li span {
+.areas_items li span {
     position: relative;
     left: -200px;
     opacity: 0;
 }
 
-/* .areas-items li span:hover {
+/* .areas_items li span:hover {
     opacity: 1;
 } */

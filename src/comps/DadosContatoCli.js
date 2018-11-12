@@ -1,15 +1,13 @@
 // RENDERIZA OS CAMPOS DE CONTATO DO CLIENTE
 // TELEFONE, RAMAL, EMAIL, CONTATO
 // INSC. ESTADUAL, INSC. MUNICIPAL, GRUPO
-
 // IMPORTS PADRÕES/COMPONENTES
 import React from 'react';
 // IMPORTS CSS
 import '../comps_css/DadosContatoCli.css'
 // IMPORTS AUXILIARES
-import { Form, FormControl, FormGroup, Col, ControlLabel } from 'react-bootstrap';
+import { Form, FormControl, FormGroup, ControlLabel } from 'react-bootstrap';
 // IMPORTS PARA ICONES
-
 
 export default class DadosContatoCli extends React.Component {
     render() {

@@ -16,11 +16,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faSearch, faCalculator } from '@fortawesome/free-solid-svg-icons';
 library.add(faSearch, faCalculator);
-
 // 
 const style = {
     overflowX: 'hidden'
-}
+};
+
+const btn_style = {
+    width: '120px'
+};
 
 export default class ListaFaturamento extends React.Component {
     constructor(props) {
@@ -69,22 +72,19 @@ export default class ListaFaturamento extends React.Component {
                         </ControlLabel>
                         <FormControl name="codcontab-pesq" type="text" placeholder="Código" />
                     </FormGroup>
-
                     <FormGroup controlId="compet-pesq" className="formpesq_child">
                         <ControlLabel>
                             Competência
                         </ControlLabel>
                         <FormControl name="compet-pesq" type="text" placeholder="Competência" />
                     </FormGroup>
-
                     <FormGroup controlId="btn-pesq" className="formpesq_child">
                         <Button type="" className="" title="Pesquisar">
                             <FontAwesomeIcon icon="search" />
                         </Button> 
                     </FormGroup>
-
                     <FormGroup controlId="btn-contab" className="formpesq_child">
-                        <Button type="" className="" title="Contabilidade">
+                        <Button type="" className="" title="Contabilidade" style={btn_style}>
                             Contabilidade <FontAwesomeIcon icon="calculator" />
                         </Button> 
                     </FormGroup>

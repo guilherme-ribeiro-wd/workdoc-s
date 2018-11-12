@@ -24,8 +24,10 @@ import ListaCliFaturamento from './pages/Fatura/listaClienteFaturamento'; // lis
 import DadosContTrab from './comps/DadosContTrab';
 import DadosEndereco from './comps/DadosEndereco';
 import DadosContatoCli from './comps/DadosContatoCli';
-import EmailTeste from './comps/Email';
-import Teste from './pages/Testes/teste';
+import EnviarEmail from './comps/EmailEnviar';
+import EmailEnviadosLista from './comps/EmailEnviadosLista';
+import ListaCliGestao from './pages/GestaoFinanceira/lista';
+// import Teste from './pages/Testes/teste';
 
 ReactDOM.render(
     <BrowserRouter>
@@ -45,15 +47,16 @@ ReactDOM.render(
             <Route path="/listausuario" component={ListaUsuario} />
             <Route path="/listafaturamento" component={ListaFaturamento} />
             <Route path="/listaclifaturamento" component={ListaCliFaturamento} />
-            <Route path="/principaladm" component={PrincipalAdm} />
+            <Route path="/Administracao/Principal" component={PrincipalAdm} />
             <Route path="/confignivel" component={ConfigNivel} />
             <Route path="/gerarnf" component={GerarNF} />
             {/* testes */}
             <Route path="/dadosendereco" component={DadosEndereco} />
             <Route path="/dadosconttrab" component={DadosContTrab} />
             <Route path="/dadoscontatocli" component={DadosContatoCli} />
-            <Route path="/teste" component={EmailTeste} />
-            <Route path="/testepage" component={Teste} />
+            <Route path="/listacligestao" component={ListaCliGestao} />
+            <Route path="/teste" component={EnviarEmail} />
+            <Route path="/testepage" component={EmailEnviadosLista} />
         </Switch>
     </BrowserRouter>,
     document.getElementById('root'));

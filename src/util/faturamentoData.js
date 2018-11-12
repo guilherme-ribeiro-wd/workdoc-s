@@ -7,7 +7,8 @@ import { faEnvelope, faBars, faFileAlt } from '@fortawesome/free-solid-svg-icons
 library.add(faFileAlt, faEnvelope, faBars)
 
 const style = {
-    marginLeft  : '4px'
+    marginLeft  : '5px',
+    width: '55px'
 }
 
 const range = len => {

@@ -1,6 +1,6 @@
 // IMPORTS PADRÕES/COMPONENTES
 import React from 'react';
-import LayoutFormTeste from '../comps/LayoutFormTeste';
+import LayoutForm from '../comps/LayoutForm';
 // IMPORTS CSS
 // IMPORTS AUXILIARES
 import { FormControl, FormGroup, ControlLabel, Button, Radio, Checkbox } from 'react-bootstrap';
@@ -28,7 +28,7 @@ export default class CadastroUsuario extends React.Component {
         });
 
         return (
-            <LayoutFormTeste>
+            <LayoutForm>
                 {/* FOTO DO USUARIO */}
                 <FormGroup controlId="id-user" className="fg_formcadusuario">
                     <ControlLabel>
@@ -115,16 +115,16 @@ export default class CadastroUsuario extends React.Component {
                 </FormGroup>
 
                 <FormGroup controlId="btnCadastrar" className="fg_formcadusuario inbtn">
-                    <Button type="" className="btn_conf_cad">
+                    <Button type="" className="">
                         Cadastrar <FontAwesomeIcon icon="check-circle" />
                     </Button>
                 </FormGroup>
                 <FormGroup controlId="btnCancel" className="fg_formcadusuario inbtn">
-                    <Button type="" className="btn_cancel_cad">
+                    <Button type="" className="">
                         Cancelar <FontAwesomeIcon icon="times-circle" />
                     </Button> 
                 </FormGroup>
-            </LayoutFormTeste>
+            </LayoutForm>
         );
     }
 }

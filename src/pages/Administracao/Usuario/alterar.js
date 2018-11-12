@@ -1,19 +1,21 @@
-// USUARIO ALTERAR
-
+// ALTERAR USUARIO
 import React from 'react';
 import Alterar from '../../../comps/AlterarUsuario';
 import Header from '../../../comps/NavHeader';
 import Footer from '../../../comps/Footer';
-import '../../../pages_css/Administracao/Cliente/alterar.css';
+// 
+const style = {
+    overflow: 'hidden'
+};
 
-export default class AltUsuario extends React.Component {
-    render() {
-        return (
-            <div name="header-altuser">
-                <Header />
-                <Alterar />
-                <Footer />
-            </div>
-        )
-    }
+const AltUsuario = () => {
+    return (
+        <div className="header_altuser" style={style}>
+            <Header />
+            <Alterar />
+            <Footer />
+        </div>
+    )
 }
+
+export default AltUsuario;

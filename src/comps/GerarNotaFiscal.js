@@ -1,15 +1,19 @@
-import { CnaeOpt, RecolhimentoOpt, LocalServOpt, TributacaoOpt, renderOpitions } from '../util/selectOpts';
+// GERAR NOTA FISCAL
+// IMPORTS PADRÕES/COMPONENTES
 import React from 'react';
+// IMPORTS CSS
+// IMPORTS AUXILIARES
+import { CnaeOpt, RecolhimentoOpt, LocalServOpt, TributacaoOpt, renderOpitions } from '../util/selectOpts';
+import { Button, Form, FormGroup, FormControl, ControlLabel, Checkbox, Radio } from 'react-bootstrap';
+import { reverse } from 'dns';
+// IMPORTS PARA ICONES
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faShareSquare, faListUl, faEye, faFileAlt } from '@fortawesome/free-solid-svg-icons';
-import { Button, Form, FormGroup, FormControl, ControlLabel, Col, Checkbox, Radio } from 'react-bootstrap';
-import { reverse } from 'dns';
+// 
 var $ = require("jquery");
 require('jquery-mask-plugin');
-
 library.add(faShareSquare, faListUl, faEye, faFileAlt);
-
 
 export default class GerarNotaFiscal extends React.Component {
 

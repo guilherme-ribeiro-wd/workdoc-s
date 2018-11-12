@@ -1,6 +1,6 @@
 /* PARENT SYTLE */
 .border_forms_cadastro {
-    width: 700px;
+    width: 800px;
     margin: 10px auto;
     border: 1px solid #e7e7e7;
 }
@@ -57,30 +57,65 @@
 .fg_formcadcliente {
     width: 300px;
 }
-
 /* <--- INCLUIR CLIENTE */
 /* ------------------------------------------------ */
 /* ---> INCLUIR ADMINISTRADORA */
-
-
+.fg_formcadadm {
+    width: 300px;
+}
 /* <--- INCLUIR ADMINISTRADORA */
 /* ------------------------------------------------ */
+/* ---> INCLUIR CONTATO CLIENTE */
+.fg_formcadcontatocli {
+    width: 300px;
+}
+/* <--- INCLUIR CONTATO CLIENTE */
+/* ---> INCLUIR GESTAO FINANCEIRA */
+.fg_formcadgestao {
+    width: 300px;
+}
+/* <--- */
+/* ------------------------------------------------ */
 /* ---> ALTERAR USUARIO */
+.fg_formaltusuario {
+    width: 300px;
+}
 
+.fg_formaltusuario label#ativo {
+    margin-right: 5px;
+}
 
+.esq_senha {
+    float: left;
+}
+
+.dir_senha {
+    float: right;
+}
 /* <--- ALTERAR USUARIO */
 /* ------------------------------------------------ */
 /* ---> ALTERAR CLIENTE */
+.fg_formaltcli {
+    width: 300px;
+}
 
+.fg_formaltcli label#tipocli,
+.fg_formaltcli label#ativo, 
+.fg_formaltcli label#tipoclihidden {
+    margin-right: 5px;
+}
 
+.fg_formaltcli label#tipoclihidden {
+    visibility: hidden;
+}
 /* <--- ALTERAR CLIENTE */
 /* ------------------------------------------------ */
 
 /* GERAL */
 .btn {
     font-size: 12px;
-    /* width: 100px;
-    height: 30px; */
+    width: 90px;
+    height: 30px;
 }
 
 .inbtn {
