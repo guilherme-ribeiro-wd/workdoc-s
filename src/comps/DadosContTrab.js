@@ -13,6 +13,26 @@ require('jquery-mask-plugin');
 // IMPORTS PARA ICONES
 
 export default class DadosContTrab extends React.Component {
+    constructor(props) {
+        super(props);
+        this.change = this.change.bind(this);
+        this.state = {
+            telContTrab: '',
+            nextelContTrab: '',
+            facebookContTrab: '',
+            emailContTrab: '',
+            codCentroCustoContTrab: '',
+            cargoContTrab: '',
+            deptoContTrab: '',
+        }
+    }
+
+    change = (e) => {
+        this.setState({
+            [e.target.name]: e.target.value
+        })
+    }
+
     render() {
         $(document).ready(function($){
             $('#tel').mask('+55 99 9999-9999')
@@ -24,44 +44,51 @@ export default class DadosContTrab extends React.Component {
                         <ControlLabel>
                             Telefone
                         </ControlLabel>
-                        <FormControl type="tel" placeholder="Telefone"/>
+                        <FormControl name="telContTrab" type="tel" placeholder="Telefone"
+                            value={this.state.telContTrab} onChange={e => this.change(e)} />
                     </FormGroup>
                     <FormGroup controlId="nextel" className="nextel fg_dadoscont_trab">
                         <ControlLabel>
                             Nextel
                         </ControlLabel>
-                        <FormControl type="tel" placeholder="Nextel"/>
+                        <FormControl name="nextelContTrab" type="tel" placeholder="Nextel"
+                            value={this.state.nextelContTrab} onChange={e => this.change(e)} />
                     </FormGroup>
                     <FormGroup controlId="fb" className="fb_ fg_dadoscont_trab">
                         <ControlLabel>
                             Facebook.com/
                         </ControlLabel>
-                        <FormControl type="text" placeholder="Facebook"/>
+                        <FormControl name="facebookContTrab" type="text" placeholder="Facebook"
+                            value={this.state.facebookContTrab} onChange={e => this.change(e)} />
                     </FormGroup>
                     <FormGroup controlId="email" className="email_ fg_dadoscont_trab">
                         <ControlLabel>
                             Email
                         </ControlLabel>
-                        <FormControl type="email" placeholder="Email"/>
+                        <FormControl name="emailContTrab" type="email" placeholder="Email"
+                            value={this.state.emailContTrab} onChange={e => this.change(e)} />
                     </FormGroup>
                     <FormGroup controlId="codcentro" className="codcentro fg_dadoscont_trab">
                         <ControlLabel>
                             Cód. Centro Custo
                         </ControlLabel>
-                        <FormControl type="text" placeholder="Código Centro de Custo"/>
+                        <FormControl name="codCentroCustoContTrab" type="text" placeholder="Código Centro de Custo"
+                            value={this.state.codCentroCustoContTrab} onChange={e => this.change(e)} />
                     </FormGroup>
                     <FormGroup controlId="cargo" className="cargo fg_dadoscont_trab">
                         <ControlLabel>
                             Cargo
                         </ControlLabel>
-                        <FormControl type="text" placeholder="Cargo"/>
+                        <FormControl name="cargoContTrab" type="text" placeholder="Cargo"
+                        value={this.state.cargoContTrab} onChange={e => this.change(e)} />
                     </FormGroup>
                     <FormGroup controlId="depto" className="depto fg_dadoscont_trab">
                         <ControlLabel>
                             Depto.
                         </ControlLabel>
                         {/* VALOR VIRIA CARREGADO */}
-                        <FormControl type="text" placeholder="Departamento"/>
+                        <FormControl name="deptoContTrab" type="text" placeholder="Departamento"
+                        value={this.state.deptoContTrab} onChange={e => this.change(e)} />
                     </FormGroup>
                 </Form>
             </div>

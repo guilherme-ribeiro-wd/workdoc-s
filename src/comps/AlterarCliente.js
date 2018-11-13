@@ -17,12 +17,43 @@ require('jquery-mask-plugin');
 library.add(faCheckCircle, faTimesCircle);
 
 export default class AlterarCliente extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            file: "",
+            imagePreviewUrl: "",
+        }
+    }
+
+    handleImageChange(e) {
+        e.preventDefault();
+    
+        let reader = new FileReader();
+        let file = e.target.files[0];
+    
+        reader.onloadend = () => {
+          this.setState({
+            file: file,
+            imagePreviewUrl: reader.result
+          });
+        }
+
+        reader.readAsDataURL(file);
+    }
+
     render() {
         $(document).ready(function($) {
             $('#cnpj-cliente-alt').mask('99.999.999/9999-99'); // FUNÇÃO VALIDAD CNPJ - TODO
             $('#cep-cliente-alt').mask('99999-999'); // FUNÇÃO BUSCA CEP - TODO
             $('#tel-cliente-alt').mask('+55 99 9999-9999'); 
         });
+        let {imagePreviewUrl} = this.state;
+        let $imagePreview = null;
+        if (imagePreviewUrl) {
+        $imagePreview = (<img id="logo" className="inlogo" src={imagePreviewUrl} alt="logo"/>);
+        } else {
+            $imagePreview = (<img id="logo" className="inlogo" src="http://www.agion-oros.eu/wp-content/uploads/2018/02/180x180.jpg" alt="logo"/>);
+        }
         return (
             <LayoutForm>
                 <FormGroup controlId="id-cliente-alt" className="fg_formaltcli">
@@ -52,6 +83,14 @@ export default class AlterarCliente extends React.Component {
                     </ControlLabel>
                     {/* VALOR VIRIA CARREGADO */}
                     <FormControl type="text" placeholder="__.___.___/____-__" />
+                </FormGroup>
+                <FormGroup controlId="logo-cliente-alt" className="logo">
+                    {$imagePreview}
+                    <label htmlFor="logo-cliente-alt" id="lblBtn" className="btn btn-default btn_uploadlogo inlogo">
+                        Enviar logo da empresa
+                    </label>
+                    <FormControl id="logo-cliente-alt" name="logo" type="file" accept="image/*" 
+                    onChange={e => this.handleImageChange(e)}/>
                 </FormGroup>
                 {/* CARREGA OS CAMPOS DE ENDEREÇO */}
                 <DadosEndereco />

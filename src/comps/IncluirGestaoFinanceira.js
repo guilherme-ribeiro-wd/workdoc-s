@@ -5,12 +5,12 @@ import React from 'react';
 import LayoutForm from './LayoutForm';
 // IMPORTS CSS
 // IMPORTS AUXILIARES
-import { FormGroup, FormControl, ControlLabel } from 'react-bootstrap';
+import { FormGroup, FormControl, ControlLabel, Button } from 'react-bootstrap';
 // IMPORTS PARA ICONES
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { } from '@fortawesome/free-solid-svg-icons';
+import { faCheckCircle, faTimesCircle } from '@fortawesome/free-solid-svg-icons';
 import { library } from '@fortawesome/fontawesome-svg-core';
-library.add();
+library.add(faCheckCircle, faTimesCircle);
 //
 var $ = require("jquery");
 require('jquery-mask-plugin');
@@ -18,6 +18,9 @@ require('jquery-mask-plugin');
 // ATUAL--->>>>>
 export default class CadGestaoFinanceira extends React.Component {
     render() {
+        $(document).ready(function($){
+            $('#valor-gestao').mask('R$ #.##0,00');
+        });
         return (
             <LayoutForm>
                 <FormGroup controlId="dtvencimento-gestao" className="fg_formcadgestao">
@@ -40,24 +43,24 @@ export default class CadGestaoFinanceira extends React.Component {
                 </FormGroup>
                 <FormGroup controlId="impostos-gestao" className="fg_formcadgestao">
                     <ControlLabel>
-                       Impostos?
+                       Valor Imposto
                     </ControlLabel>
                     <FormControl type="text" placeholder="" />
                 </FormGroup>
-                <FormGroup controlId="valor-gestao" className="fg_formcadgestao">
+                <FormGroup controlId="obs-gestao" className="fg_formcadgestao">
                     <ControlLabel>
                         Observações
                     </ControlLabel>
                     <FormControl type="text" placeholder=""  componentClass="textarea"/>
                 </FormGroup>
-                <FormGroup controlId="btn-cancel" className="fg_formcadgestao inbtn">
+                <FormGroup controlId="btn-cad" className="fg_formcadgestao inbtn">
                     <Button type="" className="">
-                        Cadastrar <FontAwesomeIcon icon="times-circle" className="icon-cancel-cli"/>
+                        Cadastrar <FontAwesomeIcon icon="check-circle" className="icon_checkcli"/>
                     </Button> 
                 </FormGroup>
                 <FormGroup controlId="btn-cancel" className="fg_formcadgestao inbtn">
                     <Button type="" className="">
-                        Cancelar <FontAwesomeIcon icon="times-circle" className="icon-cancel-cli"/>
+                        Cancelar <FontAwesomeIcon icon="times-circle" className="icon_cancelcli"/>
                     </Button> 
                 </FormGroup>
             </LayoutForm>

@@ -51,6 +51,11 @@
     font-size: 14px; /* padrao*/
 }
 
+.periodo_right label {
+    position: relative;
+    left: -75px;
+}
+
 /* <--- INCLUIR USUARIO */
 /* ------------------------------------------------ */
 /* ---> INCLUIR CLIENTE */
@@ -74,6 +79,17 @@
 .fg_formcadgestao {
     width: 300px;
 }
+
+#obs-gestao {
+    resize: none;
+    height: 150px;
+    width: 500px;
+}
+
+.icon_checkcli {
+    position: relative;
+    left: -5px;
+}
 /* <--- */
 /* ------------------------------------------------ */
 /* ---> ALTERAR USUARIO */
@@ -91,6 +107,8 @@
 
 .dir_senha {
     float: right;
+    position: relative;
+    left: -18px;
 }
 /* <--- ALTERAR USUARIO */
 /* ------------------------------------------------ */
@@ -108,6 +126,29 @@
 .fg_formaltcli label#tipoclihidden {
     visibility: hidden;
 }
+
+input#logo-cliente-alt {
+    visibility: hidden;
+}
+.btn_uploadlogo {
+    width: 175px !important;
+    margin-left: 3px;
+}
+
+img#logo {
+    max-width: 180px;
+    max-height: 180px;
+}
+
+.logo {
+    float: right;
+    margin-top: -270px;
+}
+
+.inlogo {
+    display: flow-root;
+    margin-bottom: 4px;
+}
 /* <--- ALTERAR CLIENTE */
 /* ------------------------------------------------ */
 
@@ -121,4 +162,28 @@
 .inbtn {
     text-align: center;
     display: inline-block;
+}
+
+/* FOTO USUARIO (INCLUIR/ALTERAR */
+input#foto-user {
+    visibility: hidden;
+}
+.btn_uploadfoto {
+    width: 175px !important;
+    margin-left: 3px;
+}
+
+img#foto {
+    max-width: 180px;
+    max-height: 180px;
+}
+
+.foto {
+    float: right;
+    margin-top: -200px;
+}
+
+.infoto {
+    display: flow-root;
+    margin-bottom: 4px;
 }

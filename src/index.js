@@ -20,13 +20,15 @@ import ConfigNivel from './pages/Administracao/Configuracao/confignivel';
 import GerarNF from './pages/NotaFiscal/gerarNotaFiscal';
 import ListaFaturamento from './pages/Fatura/listaFaturamento'; // lista de faturamento de um cliente
 import ListaCliFaturamento from './pages/Fatura/listaClienteFaturamento'; // lista dos clientes
+import CadGestaoFinac from './pages/GestaoFinanceira/incluir';
+import ListaCliGestao from './pages/GestaoFinanceira/lista';
 // IMPORTS TESTES
 import DadosContTrab from './comps/DadosContTrab';
 import DadosEndereco from './comps/DadosEndereco';
 import DadosContatoCli from './comps/DadosContatoCli';
 import EnviarEmail from './comps/EmailEnviar';
 import EmailEnviadosLista from './comps/EmailEnviadosLista';
-import ListaCliGestao from './pages/GestaoFinanceira/lista';
+import BreadcrumbTeste from './comps/Breadcrumb';
 // import Teste from './pages/Testes/teste';
 
 ReactDOM.render(
@@ -50,13 +52,16 @@ ReactDOM.render(
             <Route path="/Administracao/Principal" component={PrincipalAdm} />
             <Route path="/confignivel" component={ConfigNivel} />
             <Route path="/gerarnf" component={GerarNF} />
+            <Route path="/listacligestao" component={ListaCliGestao} />
+            <Route path="/incluirgestao" component={CadGestaoFinac} />
             {/* testes */}
             <Route path="/dadosendereco" component={DadosEndereco} />
             <Route path="/dadosconttrab" component={DadosContTrab} />
             <Route path="/dadoscontatocli" component={DadosContatoCli} />
-            <Route path="/listacligestao" component={ListaCliGestao} />
             <Route path="/teste" component={EnviarEmail} />
             <Route path="/testepage" component={EmailEnviadosLista} />
+            <Route path="/testebc" component={BreadcrumbTeste} />
+
         </Switch>
     </BrowserRouter>,
     document.getElementById('root'));

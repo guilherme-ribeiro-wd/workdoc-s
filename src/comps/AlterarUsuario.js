@@ -19,15 +19,41 @@ library.add(faCheckCircle, faTimesCircle);
 export default class AlterarUsuario extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            file: "",
+            imagePreviewUrl: "",
+        }
+    }
+
+    handleImageChange(e) {
+        e.preventDefault();
+    
+        let reader = new FileReader();
+        let file = e.target.files[0];
+    
+        reader.onloadend = () => {
+          this.setState({
+            file: file,
+            imagePreviewUrl: reader.result
+          });
+        }
+
+        reader.readAsDataURL(file);
     }
     render() {
         $(document).ready(function($) {
             $('#dtnasc-user-alt').mask('99/99/9999'); // FUNÇÃO VALIDA DATA - TODO
             $('#cpf-user-alt').mask('999.999.999-99'); // FUNÇÃO VALIDA CPF - TODO
         });
+        let {imagePreviewUrl} = this.state;
+        let $imagePreview = null;
+        if (imagePreviewUrl) {
+        $imagePreview = (<img id="foto" className="infoto" src={imagePreviewUrl} alt="logo"/>);
+        } else {
+            $imagePreview = (<img id="foto" className="infoto" src="http://www.agion-oros.eu/wp-content/uploads/2018/02/180x180.jpg" alt="logo"/>);
+        }
         return (
                 <LayoutForm>
-                    {/* FOTO DO USUARIO */} {/* VALOR VIRIA CARREGADO */}
                     <FormGroup controlId="nome-user-alt" className="fg_formaltusuario">
                         <ControlLabel>
                             Nome
@@ -47,6 +73,14 @@ export default class AlterarUsuario extends React.Component {
                             CPF
                         </ControlLabel>
                         <FormControl id="cpf-user-alt" type="text" placeholder="CPF"/>
+                    </FormGroup>
+                    <FormGroup controlId="foto-user" className="foto">
+                        {$imagePreview}
+                        <label htmlFor="foto-user" id="lblBtn" className="btn btn-default btn_uploadfoto infoto">
+                            Enviar foto
+                        </label>
+                        <FormControl id="foto-user" name="foto" type="file" accept="image/*" 
+                        onChange={e => this.handleImageChange(e)}/>
                     </FormGroup>
                     {/* CHAMA O COMPONENTE DADOS ENDEREÇO */}
                     <DadosEndereco />
@@ -79,12 +113,12 @@ export default class AlterarUsuario extends React.Component {
                         <FormControl type="password" placeholder="Confirme a senha"/>
                     </FormGroup>
                     <FormGroup controlId="btn-alt" className="fg_formaltusuario inbtn">
-                        <Button type="submit" className="">
+                        <Button type="" className="">
                             Gravar <FontAwesomeIcon icon="check-circle" className="icon-check"/>
                         </Button> 
                     </FormGroup>
                     <FormGroup controlId="btn-cancel" className="fg_formaltusuario inbtn">
-                        <Button type="submit" className="">
+                        <Button type="" className="">
                             Cancelar <FontAwesomeIcon icon="times-circle" className="icon-cancel"/>
                         </Button> 
                     </FormGroup>

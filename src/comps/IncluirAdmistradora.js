@@ -9,12 +9,31 @@ import { FormGroup, FormControl, ControlLabel, Button } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faCheckCircle, faTimesCircle } from '@fortawesome/free-solid-svg-icons';
+library.add(faCheckCircle, faTimesCircle);
 // 
 var $ = require("jquery");
 require('jquery-mask-plugin');
-library.add(faCheckCircle, faTimesCircle);
 
 export default class IncluirAdministradoras extends React.Component {
+    constructor(props) {
+        super(props);
+        this.change = this.change.bind(this);
+        this.state = {
+            codAdm: '',
+            nomeAdm: '',
+            rSocialAdm: '',
+            nomeFantAdm: '',
+            cnpjAdm: '',
+            telAdm: ''
+        }
+    }
+
+    change = (e) => {
+        this.setState({
+            [e.target.name]: e.target.value
+        })
+    }
+    
     render() {
         $(document).ready(function($){
             $('#cnpj-adm-cad').mask('99.999.999/9999-99');
@@ -26,31 +45,36 @@ export default class IncluirAdministradoras extends React.Component {
                     <ControlLabel>
                         Cód. Administradora
                     </ControlLabel>
-                    <FormControl type="text" placeholder="Código" maxLength="3" />
+                    <FormControl name="codAdm" type="text" placeholder="Código" maxLength="3"
+                        value={this.state.codAdm} onChange={e => this.change(e)} />
                 </FormGroup>
                 <FormGroup controlId="nome-adm-cad" className="fg_formcadadm">
                     <ControlLabel>
                         Nome Administradora
                     </ControlLabel>
-                    <FormControl type="text" placeholder="Nome Administradora" />
+                    <FormControl name="nomeAdm" type="text" placeholder="Nome Administradora"
+                    value={this.state.nomeAdm} onChange={e => this.change(e)} />
                 </FormGroup>
                 <FormGroup controlId="razao-adm-cad" className="fg_formcadadm">
                     <ControlLabel>
                         Razão Social
                     </ControlLabel>
-                    <FormControl type="text" placeholder="Razão Social" />
+                    <FormControl name="rSocialAdm" type="text" placeholder="Razão Social"
+                    value={this.state.rSocialAdm} onChange={e => this.change(e)} />
                 </FormGroup>
                 <FormGroup controlId="fant-adm-cad" className="fg_formcadadm">
                     <ControlLabel>
                         Nome Fantasia
                     </ControlLabel> 
-                    <FormControl type="text" placeholder="Nome Fantasia" />
+                    <FormControl name="nomeFantAdm" type="text" placeholder="Nome Fantasia"
+                    value={this.state.nomeFantAdm} onChange={e => this.change(e)} />
                 </FormGroup>
                 <FormGroup controlId="cnpj-adm-cad" className="fg_formcadadm">
                     <ControlLabel>
                         CNPJ
                     </ControlLabel>
-                    <FormControl type="text" placeholder="__.___.___/____-__" />
+                    <FormControl name="cnpjAdm" type="text" placeholder="__.___.___/____-__"
+                    value={this.state.cnpjAdm} onChange={e => this.change(e)} />
                 </FormGroup>
                 {/* CHAMA O COMPONENTE DADOS DO ENDERECO */}
                 <DadosEndereco />
@@ -58,7 +82,8 @@ export default class IncluirAdministradoras extends React.Component {
                     <ControlLabel>
                         Telefone
                     </ControlLabel>
-                    <FormControl type="text" placeholder="Telefone" />
+                    <FormControl name="telAdm" type="text" placeholder="Telefone"
+                        value={this.state.telAdm} onChange={e => this.change(e)} />
                 </FormGroup>
                 <FormGroup controlId="btn-alt" className="fg_formcadadm inbtn">
                     <Button type="" className="">
