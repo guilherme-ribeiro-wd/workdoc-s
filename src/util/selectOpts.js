@@ -38,6 +38,13 @@ export const NvlUsuarioOpt = [
     'Usuário Imagem', 'Usuário Indexação', 'Usuário Recepção'
 ];
 
+export const TipoPesqContab = [
+    'Todos', 'Adicional', 'Alocação de Pessoal', 
+    'Auditoria', 'Digitalização em Lote', 'Expurgo', 
+    'Gestão de Arquivos', 'Guarda-física', 'Digitalização RH',
+    'Outros'
+];
+
 export const renderOpitions = (arr) => {
     const options = [];
     options.push(<option value="Selecione...">Selecione...</option>)

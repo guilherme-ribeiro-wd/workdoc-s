@@ -5,9 +5,6 @@ import { faBuilding, faFile, faBox, faUsers } from '@fortawesome/free-solid-svg-
 library.add(faUsers, faBuilding, faBox, faFile);
 
 export default class SelecionarAdministradora extends React.Component {
-    constructor(props) {
-        super(props);
-    }
     render() {
         return (
             // TABELA ??????

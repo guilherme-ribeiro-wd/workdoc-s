@@ -36,10 +36,10 @@ export default class CadastroUsuario extends React.Component {
             senhaUsuario: '',
             confSenhaUsuario: '',
             atvDiaria: 'sim',
-            nvlUsuario: ['', '', '', 
-                            '', '', '', 
-                            '', '', '', 
-                            ''],
+            nvlUsuario: [false, false, false, 
+                        false, false, false, 
+                        false, false, false, 
+                        false],
             file: '',
             imagePreviewUrl: '',
         }
@@ -66,6 +66,17 @@ export default class CadastroUsuario extends React.Component {
 
         reader.readAsDataURL(file);
     }
+
+    handleCheckChange(e) {
+        const nvlUsuario = this.state.nvlUsuario;
+        let item = parseInt(e.target.name);
+        let isChecked = e.target.checked;
+
+        nvlUsuario[item] = isChecked;
+        // re-render
+        this.forceUpdate();
+    }
+
     render() {
         $(document).ready(function($) {
             $('#dtnasc-user').mask('99/99/9999'); // FUNÇÃO VALIDA DATA - TODO
@@ -167,19 +178,49 @@ export default class CadastroUsuario extends React.Component {
                         Nível de acesso
                     </ControlLabel>
                     <div className="border_chk_cadusuario">
-                        <Checkbox inline className="chk_nivel_cadusuario" name="nvl-1">Administrador Depósito</Checkbox> 
-                        <Checkbox inline className="chk_nivel_cadusuario" name="nvl-2">Atendente</Checkbox>
-                        <Checkbox inline className="chk_nivel_cadusuario" name="nvl-3">Gerente Cliente</Checkbox>
+                        <Checkbox inline className="chk_nivel_cadusuario" name="0" 
+                            checked={this.state.nvlUsuario[0]} onChange={e => this.handleCheckChange(e)}>
+                            Administrador Depósito
+                        </Checkbox> 
+                        <Checkbox inline className="chk_nivel_cadusuario" name="1"
+                            checked={this.state.nvlUsuario[1]} onChange={e => this.handleCheckChange(e)}>
+                            Atendente
+                        </Checkbox>
+                        <Checkbox inline className="chk_nivel_cadusuario" name="2"
+                            checked={this.state.nvlUsuario[2]} onChange={e => this.handleCheckChange(e)}>
+                            Gerente Cliente
+                        </Checkbox>
                         <ControlLabel></ControlLabel>
-                        <Checkbox inline className="chk_nivel_cadusuario" name="nvl-4">Contabilidade</Checkbox>
-                        <Checkbox inline className="chk_nivel_cadusuario" name="nvl-5">Usuário Indexação</Checkbox>
-                        <Checkbox inline className="chk_nivel_cadusuario" name="nvl-6">Usuário Expedição</Checkbox>
+                        <Checkbox inline className="chk_nivel_cadusuario" name="3"
+                            checked={this.state.nvlUsuario[3]} onChange={e => this.handleCheckChange(e)}>
+                            Contabilidade
+                        </Checkbox>
+                        <Checkbox inline className="chk_nivel_cadusuario" name="4"
+                            checked={this.state.nvlUsuario[4]} onChange={e => this.handleCheckChange(e)}>
+                            Usuário Indexação
+                        </Checkbox>
+                        <Checkbox inline className="chk_nivel_cadusuario" name="5"
+                            checked={this.state.nvlUsuario[5]} onChange={e => this.handleCheckChange(e)}>
+                            Usuário Expedição
+                        </Checkbox>
                         <ControlLabel></ControlLabel>
-                        <Checkbox inline className="chk_nivel_cadusuario" name="nvl-7">Digitador</Checkbox>
-                        <Checkbox inline className="chk_nivel_cadusuario" name="nvl-8">Usuário Cliente</Checkbox>
-                        <Checkbox inline className="chk_nivel_cadusuario" name="nvl-9">Usuário Imagem</Checkbox>
+                        <Checkbox inline className="chk_nivel_cadusuario" name="6"
+                            checked={this.state.nvlUsuario[6]} onChange={e => this.handleCheckChange(e)}>
+                            Digitador
+                        </Checkbox>
+                        <Checkbox inline className="chk_nivel_cadusuario" name="7"
+                            checked={this.state.nvlUsuario[7]} onChange={e => this.handleCheckChange(e)}>
+                            Usuário Cliente
+                        </Checkbox>
+                        <Checkbox inline className="chk_nivel_cadusuario" name="8"
+                            checked={this.state.nvlUsuario[8]} onChange={e => this.handleCheckChange(e)}>
+                            Usuário Imagem
+                        </Checkbox>
                         <ControlLabel></ControlLabel>
-                        <Checkbox inline className="chk_nivel_cadusuario" name="nvl-10">Usuário Recepção</Checkbox>
+                        <Checkbox inline className="chk_nivel_cadusuario" name="9"
+                            checked={this.state.nvlUsuario[9]} onChange={e => this.handleCheckChange(e)}>
+                            Usuário Recepção
+                        </Checkbox>
                     </div>
                 </FormGroup>
                 <FormGroup controlId="btnCadastrar" className="fg_formcadusuario inbtn">

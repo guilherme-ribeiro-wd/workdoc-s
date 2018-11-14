@@ -22,11 +22,12 @@ import ListaFaturamento from './pages/Fatura/listaFaturamento'; // lista de fatu
 import ListaCliFaturamento from './pages/Fatura/listaClienteFaturamento'; // lista dos clientes
 import CadGestaoFinac from './pages/GestaoFinanceira/incluir';
 import ListaCliGestao from './pages/GestaoFinanceira/lista';
+import EnviarEmail from './comps/EmailEnviar';
+import Movimentos from './pages/Contabilidade/movimentos';
 // IMPORTS TESTES
 import DadosContTrab from './comps/DadosContTrab';
 import DadosEndereco from './comps/DadosEndereco';
 import DadosContatoCli from './comps/DadosContatoCli';
-import EnviarEmail from './comps/EmailEnviar';
 import EmailEnviadosLista from './comps/EmailEnviadosLista';
 import BreadcrumbTeste from './comps/Breadcrumb';
 // import Teste from './pages/Testes/teste';
@@ -54,11 +55,12 @@ ReactDOM.render(
             <Route path="/gerarnf" component={GerarNF} />
             <Route path="/listacligestao" component={ListaCliGestao} />
             <Route path="/incluirgestao" component={CadGestaoFinac} />
+            <Route path="/enviaremail" component={EnviarEmail} />
             {/* testes */}
             <Route path="/dadosendereco" component={DadosEndereco} />
             <Route path="/dadosconttrab" component={DadosContTrab} />
             <Route path="/dadoscontatocli" component={DadosContatoCli} />
-            <Route path="/teste" component={EnviarEmail} />
+            <Route path="/movimentos" component={Movimentos} />
             <Route path="/testepage" component={EmailEnviadosLista} />
             <Route path="/testebc" component={BreadcrumbTeste} />
 

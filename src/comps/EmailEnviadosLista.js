@@ -16,9 +16,12 @@ import { makeData } from '../util/emailEnviadoData';
 // IMPORTS PARA ICONES
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faEye } from '@fortawesome/free-solid-svg-icons';
-library.add(faEye);
+import { faEye, faSearch, faPlus, faMinus } from '@fortawesome/free-solid-svg-icons';
+library.add(faEye, faSearch, faPlus, faMinus);
 //
+const style = {
+    overflowX: 'hidden',
+}
 
 export default class ListaEmailEnviados extends React.Component {
     constructor(props) {
@@ -35,22 +38,48 @@ export default class ListaEmailEnviados extends React.Component {
     render() {
         const { data } = this.state;
         const colunas = [{
+            width: 30,
             Header: '',
-            accessor: ''
+            accessor: 'btn'
         }, {
-            Header: '',
-            accessor: ''
+            Header: 'Cliente',
+            accessor: 'cliente'
         }, {
-            Header: '',
-            accessor: ''
+            Header: 'Competência',
+            accessor: 'competencia'
+        }, { 
+            Header: 'Produto',
+            accessor: 'produto'
+        }, { 
+            Header: 'Assunto',
+            accessor: 'assunto'
+        }, {
+            Header: 'Envio',
+            accessor: 'envio'
         }];
         return (
-            <div className="email_enviados">
+            <div className="header_emailenviados" style={style}>
                 <Header />
                 <LayoutPesquisa>
-                    
+                    <FormGroup controlId="cliente-ee-pesq" className="formpesq_child" >
+                        <ControlLabel>
+                            Cliente
+                        </ControlLabel>
+                        <FormControl type="text" placeholder="Cliente" />
+                    </FormGroup>
+                    <FormGroup controlId="competencia-ee-pesq" className="formpesq_child" >
+                        <ControlLabel>
+                            Competência
+                        </ControlLabel>
+                        <FormControl type="text" placeholder="Competência" />
+                    </FormGroup>
+                    <FormGroup controlId="btn-usuario-pesq" className="formpesq_child">
+                        <Button type="" className="" title="Pesquisar">
+                            <FontAwesomeIcon icon="search" />
+                        </Button> 
+                    </FormGroup>
                 </LayoutPesquisa>
-                <ReactTable data={data} column={colunas} className="-striped -highlight"
+                <ReactTable data={data} columns={colunas} className="-striped -highlight"
                 previousText={this.state.previous} nextText={this.state.next} 
                 pageText={this.state.page} ofText={this.state.of} rowsText={this.state.row}
                 showPaginationTop="true" showPaginationBottom="false" resizable="false" />
