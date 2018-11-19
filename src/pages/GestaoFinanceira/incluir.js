@@ -1,8 +1,8 @@
 // INCLUIR GESTÃO FINANCEIRA
 import React from 'react';
-import Cadastro from '../../comps/IncluirGestaoFinanceira';
-import Header from '../../comps/NavHeader';
-import Footer from '../../comps/Footer';
+import Cadastro from '../../components/IncluirGestaoFinanceira';
+import Header from '../../components/NavHeader';
+import Footer from '../../components/Footer';
 // 
 const style = {
     overflowX: 'hidden'

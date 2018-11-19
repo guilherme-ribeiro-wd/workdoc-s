@@ -1,7 +1,7 @@
 // CADASTRAR CLIENTE
 // IMPORTS PADRÕES/COMPONENTES
 import React from 'react';
-import LayoutForm from '../comps/LayoutForm';
+import LayoutForm from '../components/LayoutForm';
 // IMPORTS CSS
 // IMPORTS AUXILIARES
 import { FormGroup, FormControl, ControlLabel, Button} from 'react-bootstrap';

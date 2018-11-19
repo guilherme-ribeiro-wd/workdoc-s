@@ -4,7 +4,7 @@
 // IMPORTS PADRÕES/COMPONENTES
 import React from 'react';
 // IMPORTS CSS
-import '../comps_css/DadosContatoCli.css'
+import '../style/components_css/DadosContatoCli.css'
 // IMPORTS AUXILIARES
 import { Form, FormControl, FormGroup, ControlLabel } from 'react-bootstrap';
 // IMPORTS PARA ICONES

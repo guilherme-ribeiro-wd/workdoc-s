@@ -1,8 +1,8 @@
 // INCLUIR UM CONTATO DE UM CLIENTE
 import React from 'react';
-import Cadastro from '../../../comps/IncluirContatoCliente';
-import Header from '../../../comps/NavHeader';
-import Footer from '../../../comps/Footer';
+import Cadastro from '../../../components/IncluirContatoCliente';
+import Header from '../../../components/NavHeader';
+import Footer from '../../../components/Footer';
 // 
 const style = {
     overflowX: 'hidden'

@@ -5,7 +5,7 @@ import LogoAdm from '../img/logo_administracao.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faHome, faEllipsisH, faSyncAlt, faReply, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
-import '../comps_css/NavHeader.css';
+import '../style/components_css/NavHeader.css';
 
 library.add(faHome, faEllipsisH, faSyncAlt, faReply, faSignOutAlt);
 
@@ -15,9 +15,9 @@ export default class NavHeader extends React.Component {
             <div>
                 <PageHeader id="header" name="header" className="header">
                     <img src={LogoHeader} alt="logo-header" className="img-logo-header"/>
-                        <p>Nível: ---------</p>
-                        <p>Nome: --------</p>
-                        <p>Login: ---------</p>
+                        <p>Nível:{this.props.nivelUsr}</p>
+                        <p>Nome: {this.props.nomeUsr}</p>
+                        <p>Login: {this.props.loginUsr}</p>
                     <img src={LogoAdm} alt="logo-adm" className="img-logo-adm"/>
                 </PageHeader>
                 <Nav bsStyle="tabs" justified className="nav-opt">

@@ -22,14 +22,15 @@ import ListaFaturamento from './pages/Fatura/listaFaturamento'; // lista de fatu
 import ListaCliFaturamento from './pages/Fatura/listaClienteFaturamento'; // lista dos clientes
 import CadGestaoFinac from './pages/GestaoFinanceira/incluir';
 import ListaCliGestao from './pages/GestaoFinanceira/lista';
-import EnviarEmail from './comps/EmailEnviar';
+import EnviarEmail from './components/EmailEnviar';
 import Movimentos from './pages/Contabilidade/movimentos';
 // IMPORTS TESTES
-import DadosContTrab from './comps/DadosContTrab';
-import DadosEndereco from './comps/DadosEndereco';
-import DadosContatoCli from './comps/DadosContatoCli';
-import EmailEnviadosLista from './comps/EmailEnviadosLista';
-import BreadcrumbTeste from './comps/Breadcrumb';
+import DadosContTrab from './components/DadosContTrab';
+import DadosEndereco from './components/DadosEndereco';
+import DadosContatoCli from './components/DadosContatoCli';
+import EmailEnviadosLista from './components/EmailEnviadosLista';
+import BreadcrumbTeste from './components/Breadcrumb';
+import EmailInfo from './components/EmailInfo';
 // import Teste from './pages/Testes/teste';
 
 ReactDOM.render(
@@ -62,7 +63,7 @@ ReactDOM.render(
             <Route path="/dadoscontatocli" component={DadosContatoCli} />
             <Route path="/movimentos" component={Movimentos} />
             <Route path="/testepage" component={EmailEnviadosLista} />
-            <Route path="/testebc" component={BreadcrumbTeste} />
+            <Route path="/testebc" component={EmailInfo} />
 
         </Switch>
     </BrowserRouter>,

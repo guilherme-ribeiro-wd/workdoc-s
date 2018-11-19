@@ -1,8 +1,8 @@
 // ALTERAR CLIENTE 
 import React from 'react';
-import Alterar from '../../../comps/AlterarCliente';
-import Header from '../../../comps/NavHeader';
-import Footer from '../../../comps/Footer';
+import Alterar from '../../../components/AlterarCliente';
+import Header from '../../../components/NavHeader';
+import Footer from '../../../components/Footer';
 //
 const style = {
     overflowX: 'hidden'

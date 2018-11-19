@@ -1,12 +1,12 @@
 // LISTA USUARIOS
 // IMPORTS PADRÕES/COMPONENTES
 import React from 'react';
-import Header from '../../../comps/NavHeader';
-import LayoutPesquisa from '../../../comps/LayoutPesquisa';
-import Footer from '../../../comps/Footer';
+import Header from '../../../components/NavHeader';
+import LayoutPesquisa from '../../../components/LayoutPesquisa';
+import Footer from '../../../components/Footer';
 // IMPORT CSS
 import "react-table/react-table.css";
-import '../../../comps_css/ReactTableAux.css';
+import '../../../style/components_css/ReactTableAux.css';
 // IMPORT AUXILIARES
 import ReactTable from 'react-table';
 import { FormControl, FormGroup, ControlLabel, Button } from 'react-bootstrap';

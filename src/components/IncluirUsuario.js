@@ -1,6 +1,6 @@
 // IMPORTS PADRÕES/COMPONENTES
 import React from 'react';
-import LayoutForm from '../comps/LayoutForm';
+import LayoutForm from '../components/LayoutForm';
 // IMPORTS CSS
 // IMPORTS AUXILIARES
 import { FormControl, FormGroup, ControlLabel, Button, Radio, Checkbox } from 'react-bootstrap';

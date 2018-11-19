@@ -6,9 +6,9 @@ import Header from './NavHeader';
 import LayoutPesquisa from './LayoutPesquisa';
 import Footer from './Footer';
 // IMPORTS CSS
-import '../comps_css/Email.css';
+import '../style/components_css/Email.css';
 import "react-table/react-table.css";
-import '../comps_css/ReactTableAux.css';
+import '../style/components_css/ReactTableAux.css';
 // IMPORTS AUXILIARES
 import { FormGroup, FormControl, ControlLabel, Button } from 'react-bootstrap';
 import ReactTable from 'react-table';
@@ -16,8 +16,8 @@ import { makeData } from '../util/emailEnviadoData';
 // IMPORTS PARA ICONES
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faEye, faSearch, faPlus, faMinus } from '@fortawesome/free-solid-svg-icons';
-library.add(faEye, faSearch, faPlus, faMinus);
+import { faEye, faSearch } from '@fortawesome/free-solid-svg-icons';
+library.add(faEye, faSearch);
 //
 const style = {
     overflowX: 'hidden',

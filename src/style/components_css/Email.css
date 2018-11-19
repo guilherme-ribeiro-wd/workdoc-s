@@ -51,3 +51,19 @@
     background-color: #ccc;
     font-weight: bold;
 } */
+
+/* EMAIL INFO/ EMAIL INFO BTN */
+
+.email_info {
+    padding-top: 20px;
+}
+
+.close_info {
+    position: relative;
+    left: 350px;
+    top: -30px;
+}
+
+.close_info:hover, .btn_question:hover {
+    cursor: pointer;
+}

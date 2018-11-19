@@ -1,8 +1,8 @@
 // ALTERAR USUARIO
 import React from 'react';
-import Alterar from '../../../comps/AlterarUsuario';
-import Header from '../../../comps/NavHeader';
-import Footer from '../../../comps/Footer';
+import Alterar from '../../../components/AlterarUsuario';
+import Header from '../../../components/NavHeader';
+import Footer from '../../../components/Footer';
 // 
 const style = {
     overflow: 'hidden'

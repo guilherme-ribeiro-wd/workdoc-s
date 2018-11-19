@@ -1,7 +1,7 @@
 import React from 'react';
-import Header from '../../comps/NavHeader';
-import Footer from '../../comps/Footer';
-import Email from '../../comps/EmailEnviar';
+import Header from '../../components/NavHeader';
+import Footer from '../../components/Footer';
+import Email from '../../components/EmailEnviar';
 
 
 const Teste = () => {

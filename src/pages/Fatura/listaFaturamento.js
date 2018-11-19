@@ -1,11 +1,11 @@
 // LISTA FATURAMENTOS - CRITERIO PESQUISA - DE UM CLIENTE
 // IMPORTS PADRÕES/COMPONENTES
 import React from 'react';
-import Header from '../../comps/NavHeader';
-import LayoutPesquisa from '../../comps/LayoutPesquisa';
-import Footer from '../../comps/Footer';
+import Header from '../../components/NavHeader';
+import LayoutPesquisa from '../../components/LayoutPesquisa';
+import Footer from '../../components/Footer';
 // IMPORTS CSS
-import '../../comps_css/ReactTableAux.css';
+import '../../style/components_css/ReactTableAux.css';
 import "react-table/react-table.css";
 // IMPORTS AUXILIARES
 import ReactTable from 'react-table';

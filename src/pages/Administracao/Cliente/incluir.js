@@ -1,8 +1,8 @@
 // INCLUIR CLIENTE
 import React from 'react';
-import Cadastro from '../../../comps/IncluirCliente';
-import Header from '../../../comps/NavHeader';
-import Footer from '../../../comps/Footer';
+import Cadastro from '../../../components/IncluirCliente';
+import Header from '../../../components/NavHeader';
+import Footer from '../../../components/Footer';
 //
 const style = {
     overflowY: 'visible'

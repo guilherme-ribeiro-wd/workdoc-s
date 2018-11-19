@@ -1,10 +1,6 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import {  } from '@fortawesome/free-solid-svg-icons';
+import EmailInfoBtn from '../components/EmailInfoBtn';
 
-library.add();
 const range = len => {
     const arr = [];
     for (let i = 0; i < len; i++) {
@@ -16,7 +12,7 @@ const range = len => {
 
 const emailEnviadoData = () => {
     return {
-        btn: <div></div>,
+        btn: <EmailInfoBtn />,
         cliente: 'Teste',
         competencia: '2/2056',
         produto: 'Teste teste',

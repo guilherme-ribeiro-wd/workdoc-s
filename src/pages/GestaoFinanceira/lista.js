@@ -3,13 +3,13 @@
 // LISTA CLIENTE PARA GESTAO FINANCEIRA
 // IMPORTS PADRÕES/COMPONENTES
 import React from 'react';
-import Header from '../../comps/NavHeader';
-import LayoutPesquisa from '../../comps/LayoutPesquisa';
-import Footer from '../../comps/Footer';
-// import Gestao from '../../comps/GerarNotaFiscal'; ----> POP-UP FORM
+import Header from '../../components/NavHeader';
+import LayoutPesquisa from '../../components/LayoutPesquisa';
+import Footer from '../../components/Footer';
+// import Gestao from '../../components/GerarNotaFiscal'; ----> POP-UP FORM
 // IMPORTS CSS
 import "react-table/react-table.css";
-import '../../comps_css/ReactTableAux.css';
+import '../../style/components_css/ReactTableAux.css';
 // IMPORTS AUXILIARES
 import ReactTable from 'react-table';
 import { FormControl, FormGroup, ControlLabel, Button } from 'react-bootstrap';

@@ -5,7 +5,7 @@
 // IMPORTS PADRÕES/COMPONENTES
 import React from 'react';
 // IMPORTS CSS
-import '../comps_css/DadosContTrab.css'
+import '../style/components_css/DadosContTrab.css'
 // IMPORTS AUXILIARES
 import { Form, FormControl, FormGroup, ControlLabel } from 'react-bootstrap';
 var $ = require("jquery");

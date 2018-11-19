@@ -1,8 +1,8 @@
 // INCLUIR USUARIO
 import React from 'react';
-import Cadastro from '../../../comps/IncluirUsuario';
-import Header from '../../../comps/NavHeader';
-import Footer from '../../../comps/Footer';
+import Cadastro from '../../../components/IncluirUsuario';
+import Header from '../../../components/NavHeader';
+import Footer from '../../../components/Footer';
 // 
 const style = {
     overflowX: 'hidden'

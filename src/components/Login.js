@@ -18,7 +18,6 @@ export default class Login extends React.Component {
             path: '',
         }
     }
-    
 
     change = (e) => {
         e.preventDefault();

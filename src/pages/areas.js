@@ -1,6 +1,6 @@
 // AREAS DO SISTEMA
 import React from 'react';
-import '../pages_css/areas.css';
+import '../style/pages_css/areas.css';
 //
 import { Link } from 'react-router-dom';
 // IMAGENS

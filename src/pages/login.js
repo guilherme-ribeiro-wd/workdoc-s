@@ -1,7 +1,7 @@
 // LOGIN
 import React from 'react';
-import Login from '../comps/Login';
-import '../pages_css/login.css';
+import Login from '../components/Login';
+import '../style/pages_css/login.css';
 
 const LoginP = () => {
     return (

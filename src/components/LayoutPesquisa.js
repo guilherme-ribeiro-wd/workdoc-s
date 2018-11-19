@@ -2,7 +2,7 @@
 // LISTA CLIENTE, LISTA USUARIO, LISTA CLIENTE FATURAMENTO, LISTA FATURAMENTO
 import React from 'react';
 import { Form } from 'react-bootstrap';
-import '../comps_css/LayoutPesquisa.css';
+import '../style/components_css/LayoutPesquisa.css';
 
 const LayoutPesquisa = (props) => {
     return (

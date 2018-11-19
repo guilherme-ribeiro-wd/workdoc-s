@@ -25,7 +25,7 @@ const range = len => {
 const movimentoCliData = () => {
     return {
         btnExcluir: <div>
-                        <Button style={times}><FontAwesomeIcon icon="times" color="red" /></Button>
+                        <Button style={times} title={`excluir faturamento 13635?`}><FontAwesomeIcon icon="times" color="red" /></Button>
                     </div>,
         cod: '13635',
         datas: '23/02/2018 00:00 -> 26/02/2018 23:55',

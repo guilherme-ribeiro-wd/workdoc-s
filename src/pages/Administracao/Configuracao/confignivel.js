@@ -1,12 +1,12 @@
 //CONFIGURA NÍVEL DO USUÁRIO
 // IMPORTS PADRÕES/COMPONENTES
 import React from 'react';
-import Header from '../../../comps/NavHeader';
-import LayoutPesquisa from '../../../comps/LayoutPesquisa';
-import { ConfigurarNivel } from '../../../comps/ConfigurarNivel';
-import Footer from '../../../comps/Footer';
+import Header from '../../../components/NavHeader';
+import LayoutPesquisa from '../../../components/LayoutPesquisa';
+import { ConfigurarNivel } from '../../../components/ConfigurarNivel';
+import Footer from '../../../components/Footer';
 // IMPORTS CSS
-import '../../../pages_css/Administracao/Configuracao/confignivel.css';
+import '../../../style/pages_css/Administracao/Configuracao/confignivel.css';
 // IMPORTS AUXILIARES
 import { FormControl, ControlLabel, FormGroup, Button } from 'react-bootstrap';
 // IMPORTS PARA ICONES

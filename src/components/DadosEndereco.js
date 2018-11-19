@@ -3,7 +3,7 @@
 // IMPORTS PADRÕES/COMPONENTES
 import React from 'react';
 // IMPORTS CSS
-import '../comps_css/DadosEndereco.css';
+import '../style/components_css/DadosEndereco.css';
 // IMPORTS AUXILIARES
 import { Form, FormControl, FormGroup, ControlLabel } from 'react-bootstrap';
 import { Estados, renderOpitions } from '../util/selectOpts';

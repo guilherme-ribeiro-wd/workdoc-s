@@ -1,9 +1,9 @@
 // EXIBE AS ADMINISTRADORAS PARA SELECIONAR E IR PRA DASHBOARD
 import React from 'react';
-import Header from '../../comps/NavHeader';
-import Footer from '../../comps/Footer';
-import SelAdm from '../../comps/SelecionarAdministradora';
-import '../../pages_css/Administracao/selecionarAdm.css';
+import Header from '../../components/NavHeader';
+import Footer from '../../components/Footer';
+import SelAdm from '../../components/SelecionarAdministradora';
+import '../../style/pages_css/Administracao/selecionarAdm.css';
 // IMAGENS
 import logo1 from '../../img/logotipo-sel.gif'
 import logo2 from '../../img/logotipo-sel2.gif';

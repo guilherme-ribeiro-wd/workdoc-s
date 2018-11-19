@@ -1,12 +1,12 @@
 // LISTA MOVIMENTOS DE UM  CLIENTE ESPECIFICO
 // IMPORTS PADRÕES/COMPONENTES
 import React from 'react';
-import Header from '../../comps/NavHeader';
-import LayoutPesquisa from '../../comps/LayoutPesquisa';
-import Footer from '../../comps/Footer';
+import Header from '../../components/NavHeader';
+import LayoutPesquisa from '../../components/LayoutPesquisa';
+import Footer from '../../components/Footer';
 // IMPORT CSS
 import "react-table/react-table.css";
-import '../../comps_css/ReactTableAux.css';
+import '../../style/components_css/ReactTableAux.css';
 // IMPORT AUXILIARES
 import ReactTable from 'react-table';
 import { FormControl, FormGroup, ControlLabel, Button } from 'react-bootstrap';
@@ -16,7 +16,7 @@ import { makeData } from '../../util/movimentoCliData';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faSearch, faPlus } from '@fortawesome/free-solid-svg-icons';
-import img from '../../img/none.gif';
+import img from '../../img/none.gif'; // img que é renderizada no lugar do botão caso o faturamento ja esteja fechado
 library.add(faSearch, faPlus);
 // 
 const style = {
@@ -95,13 +95,14 @@ export default class Movimentos extends React.Component {
                     </FormGroup>
                 </LayoutPesquisa>
                 <div className="canvas">
-                    {/* <GraficoMovs />*/}
+                    {/* <GraficoMovs />  COMPONENTE QUE RENDERIZA O CANVAS?*/}
                 </div>
-                <div>
+                <div className="table_movs">
                     <ReactTable data={data} columns={colunas} className="-striped -highlight"
                     previousText={this.state.previous} nextText={this.state.next} 
                     pageText={this.state.page} ofText={this.state.of} rowsText={this.state.row}
                     showPaginationTop="true" showPaginationBottom="false" resizable="false" />
+                    {/* add linha com a soma total da pagina/lista  */}
                     <Footer />
                 </div>
             </div>

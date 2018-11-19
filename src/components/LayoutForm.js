@@ -1,6 +1,6 @@
 import React from 'react';
 import { Form } from 'react-bootstrap';
-import '../comps_css/LayoutForm.css';
+import '../style/components_css/LayoutForm.css';
 
 const LayoutForm = (props) => {
     return (
