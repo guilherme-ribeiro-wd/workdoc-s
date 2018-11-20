@@ -58,10 +58,30 @@
     padding-top: 20px;
 }
 
+.email_info_header {
+    background-color: #184aeea4;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 430px;
+    height: 30px;
+}
+
+.email_info_header p {
+    display: inline-block;
+    font-weight: bold;
+    padding: 6px;
+}
+
+.email_info_content p {
+    display: inline-block;
+    margin-right: 16px;
+}
+
 .close_info {
     position: relative;
     left: 350px;
-    top: -30px;
+    top: -65px;
 }
 
 .close_info:hover, .btn_question:hover {

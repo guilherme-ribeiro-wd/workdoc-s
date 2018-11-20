@@ -20,9 +20,38 @@ export default class AlterarUsuario extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            file: "",
-            imagePreviewUrl: "",
+            nomeUsuario: 'okay', // valor viria carregado
+            dtNascUsuario: '23/33/2658', // valor viria carregado
+            cpfUsuario: '456464',
+            ativoUsuario: 'sim',
+            loginUsuario: 'zeiasj', // valor viria carregado
+            senhaUsuario: 's5s5s5s', // valor viria carregado
+            confSenhaUsuario: 's5s5s5s', // valor viria carregado
+            // state dados endereco
+            cepEnder: '6',
+            enderecoEnder: '7',
+            numeroEnder: '8',
+            complementoEnder: '9',
+            bairroEnder: '10',
+            cidadeEnder: '11',
+            estadoEnder: 'Rio de Janeiro',
+            // state dados contato trabalho
+            telContTrab: '6',
+            nextelContTrab: 'o',
+            facebookContTrab: 'r',
+            emailContTrab: 'i',
+            codCentroCustoContTrab: 'n',
+            cargoContTrab: 't',
+            deptoContTrab: 'h',
+            file: "", // foto usuario
+            imagePreviewUrl: "", // foto usuario
         }
+    }
+
+    changeHandler = (e) => {
+        this.setState({
+            [e.target.name]: e.target.value
+        })
     }
 
     handleImageChange(e) {
@@ -44,6 +73,7 @@ export default class AlterarUsuario extends React.Component {
         $(document).ready(function($) {
             $('#dtnasc-user-alt').mask('99/99/9999'); // FUNÇÃO VALIDA DATA - TODO
             $('#cpf-user-alt').mask('999.999.999-99'); // FUNÇÃO VALIDA CPF - TODO
+            $('#tel').mask('+55 99 9999-9999')
         });
         let {imagePreviewUrl} = this.state;
         let $imagePreview = null;
@@ -58,21 +88,22 @@ export default class AlterarUsuario extends React.Component {
                         <ControlLabel>
                             Nome
                         </ControlLabel>
-                        {/* VALOR VIRIA CARREGADO */}
-                        <FormControl type="text" placeholder="Nome completo" />
+                        <FormControl name="nomeUsuario" type="text" placeholder="Nome completo"
+                            value={this.state.nomeUsuario} onChange={e => this.changeHandler(e)} />
                     </FormGroup>
                     <FormGroup controlId="dtnasc-user-alt" className="fg_formaltusuario">
                         <ControlLabel>
                             Data Nasc.
                         </ControlLabel>
-                        {/* VALOR VIRIA CARREGADO */}
-                        <FormControl type="text" placeholder="DD/MM/AAAA"/>
+                        <FormControl name="dtNascUsuario" type="text" placeholder="DD/MM/AAAA"
+                            value={this.state.dtNascUsuario} onChange={e => this.changeHandler(e)} />
                     </FormGroup>
                     <FormGroup controlId="cpf-user-alt" className="fg_formaltusuario">
                         <ControlLabel>
                             CPF
                         </ControlLabel>
-                        <FormControl id="cpf-user-alt" type="text" placeholder="CPF"/>
+                        <FormControl name="cpfUsuario" id="cpf-user-alt" type="text" placeholder="CPF"
+                            value={this.state.cpfUsuario} onChange={e => this.changeHandler(e)} />
                     </FormGroup>
                     <FormGroup controlId="foto-user" className="foto">
                         {$imagePreview}
@@ -82,35 +113,60 @@ export default class AlterarUsuario extends React.Component {
                         <FormControl id="foto-user" name="foto" type="file" accept="image/*" 
                         onChange={e => this.handleImageChange(e)}/>
                     </FormGroup>
-                    {/* CHAMA O COMPONENTE DADOS ENDEREÇO */}
-                    <DadosEndereco />
+                    <DadosEndereco 
+                        changed={this.changeHandler} 
+                        cepEnder={this.state.cepEnder} 
+                        enderecoEnder={this.state.enderecoEnder} 
+                        numeroEnder={this.state.numeroEnder}
+                        complementoEnder={this.state.complementoEnder}
+                        bairroEnder={this.state.bairroEnder}
+                        cidadeEnder={this.state.cidadeEnder}
+                        estadoEnder={this.state.estadoEnder} />
                     {/* CHAMA O COMPONENTE DADOS CONT TRAB */}
-                    <DadosContTrab />
+                    <DadosContTrab
+                        changed={this.changeHandler}
+                        telContTrab={this.state.telContTrab}
+                        nextelContTrab={this.state.nextelContTrab}
+                        facebookContTrab={this.state.facebookContTrab}
+                        emailContTrab={this.state.emailContTrab}
+                        codCentroCustoContTrab={this.state.codCentroCustoContTrab}
+                        cargoContTrab={this.state.cargoContTrab}
+                        deptoContTrab={this.state.deptoContTrab} />
                     <FormGroup controlId="ativo-user-alt" className="fg_formaltusuario">
                         <ControlLabel id="ativo">
                             Ativo?
                         </ControlLabel>
-                        <Radio name="radio-ativo" inline checked>Sim</Radio>
-                        <Radio name="radio-ativo" inline>Não</Radio>
+                        <Radio name="ativoUsuario" inline value="sim" 
+                            checked={this.state.ativoUsuario === "sim"}
+                            onChange={e => this.changeHandler(e)}>
+                            Sim
+                        </Radio>
+                        <Radio name="ativoUsuario" inline value="nao" 
+                            checked={this.state.ativoUsuario === "nao"}
+                            onChange={e => this.changeHandler(e)}>
+                            Não
+                        </Radio>
                     </FormGroup>
                     <FormGroup controlId="login-user-alt" className="fg_formaltusuario">
-                        <ControlLabel>Login</ControlLabel>
-                        {/* VALOR VIRIA CARREGADO */}
-                        <FormControl type="text" placeholder="Login"/>
+                        <ControlLabel>
+                            Login
+                        </ControlLabel>
+                        <FormControl name="loginUsuario" type="login" placeholder="Login"
+                            value={this.state.loginUsuario} onChange={e => this.changeHandler(e)} />
                     </FormGroup>
                     <FormGroup controlId="senha-user-alt" className="fg_formaltusuario esq_senha">
                         <ControlLabel>
                             Senha
                         </ControlLabel>
-                        {/* VALOR VIRIA CARREGADO */}
-                        <FormControl type="password" placeholder="Senha"/>
+                        <FormControl name="senhaUsuario" type="password" placeholder="Senha"
+                            value={this.state.senhaUsuario} onChange={e => this.changeHandler(e)} />
                     </FormGroup>
                     <FormGroup controlId="confsenha-user-alt" className="fg_formaltusuario dir_senha">
                         <ControlLabel>
                             Conf. Senha
                         </ControlLabel>
-                        {/* VALOR VIRIA CARREGADO */}
-                        <FormControl type="password" placeholder="Confirme a senha"/>
+                        <FormControl name="confSenhaUsuario" type="password" placeholder="Confirme a senha"
+                            value={this.state.confSenhaUsuario} onChange={e => this.changeHandler(e)} />
                     </FormGroup>
                     <FormGroup controlId="btn-alt" className="fg_formaltusuario inbtn">
                         <Button type="" className="">

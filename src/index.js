@@ -57,12 +57,13 @@ ReactDOM.render(
             <Route path="/listacligestao" component={ListaCliGestao} />
             <Route path="/incluirgestao" component={CadGestaoFinac} />
             <Route path="/enviaremail" component={EnviarEmail} />
+            <Route path="/listaemailenviado" component={EmailEnviadosLista} />
             {/* testes */}
             <Route path="/dadosendereco" component={DadosEndereco} />
             <Route path="/dadosconttrab" component={DadosContTrab} />
             <Route path="/dadoscontatocli" component={DadosContatoCli} />
             <Route path="/movimentos" component={Movimentos} />
-            <Route path="/testepage" component={EmailEnviadosLista} />
+            <Route path="/testepage" component={BreadcrumbTeste} />
             <Route path="/testebc" component={EmailInfo} />
 
         </Switch>

@@ -1,10 +1,5 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { faDollarSign } from '@fortawesome/free-solid-svg-icons';
-
-library.add(faDollarSign);
+import { BtnLista } from '../components/BotoesLista';
 
 const style = {
     float: 'right',
@@ -16,7 +11,6 @@ const range = len => {
     for (let i = 0; i < len; i++) {
         arr.push(i);
     }
-
     return arr;
 }
 
@@ -25,9 +19,7 @@ const faturamentoClienteData = () => {
         cliente: 'Teste',
         obs: 'Teste',
         pedido: 'Teste',
-        btn: <div>
-                <Button style={style}><FontAwesomeIcon icon="dollar-sign"/> Faturamentos</Button>
-            </div>
+        btn: <BtnLista nameBtn="Faturamentos" iconBtn="dollar-sign" style={style} /> 
     };
 };
 

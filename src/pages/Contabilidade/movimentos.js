@@ -16,7 +16,6 @@ import { makeData } from '../../util/movimentoCliData';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faSearch, faPlus } from '@fortawesome/free-solid-svg-icons';
-import img from '../../img/none.gif'; // img que é renderizada no lugar do botão caso o faturamento ja esteja fechado
 library.add(faSearch, faPlus);
 // 
 const style = {

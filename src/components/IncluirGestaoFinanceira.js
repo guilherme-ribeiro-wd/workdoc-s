@@ -19,7 +19,7 @@ require('jquery-mask-plugin');
 export default class CadGestaoFinanceira extends React.Component {
     constructor(props) {
         super(props);
-        this.change = this.change.bind(this);
+        this.changeHandler = this.changeHandler.bind(this);
         this.state = {
             dtVencimentoGF: '',
             dtPagamentoGF: '',
@@ -29,7 +29,7 @@ export default class CadGestaoFinanceira extends React.Component {
         }
     }
 
-    change = (e) => {
+    changeHandler = (e) => {
         this.setState({
             [e.target.name]: e.target.value
         })
@@ -49,35 +49,35 @@ export default class CadGestaoFinanceira extends React.Component {
                         Data Vencimento
                     </ControlLabel>
                     <FormControl type="text" placeholder="" name="dtVencimentoGF" 
-                        value={this.state.dtVencimentoGF} onChange={e => this.change(e)} />
+                        value={this.state.dtVencimentoGF} onChange={e => this.changeHandler(e)} />
                 </FormGroup>
                 <FormGroup controlId="dtpgto-gestao" className="fg_formcadgestao">
                     <ControlLabel>
                         Data Pagamento
                     </ControlLabel>
                     <FormControl type="text" name="dtPagamentoGF"
-                        value={this.state.dtPagamentoGF} onChange={e => this.change(e)} />
+                        value={this.state.dtPagamentoGF} onChange={e => this.changeHandler(e)} />
                 </FormGroup>
                 <FormGroup controlId="valor-gestao" className="fg_formcadgestao">
                     <ControlLabel>
                         Valor Total
                     </ControlLabel>
                     <FormControl type="text" name="valorTotalGF"
-                        value={this.state.valorTotalGF} onChange={e => this.change(e)} />
+                        value={this.state.valorTotalGF} onChange={e => this.changeHandler(e)} />
                 </FormGroup>
                 <FormGroup controlId="impostos-gestao" className="fg_formcadgestao">
                     <ControlLabel>
                        Valor Imposto
                     </ControlLabel>
                     <FormControl type="text" name="valorImpostosGF"
-                        value={this.state.valorImpostosGF} onChange={e => this.change(e)} />
+                        value={this.state.valorImpostosGF} onChange={e => this.changeHandler(e)} />
                 </FormGroup>
                 <FormGroup controlId="obs-gestao" className="fg_formcadgestao">
                     <ControlLabel>
                         Observações
                     </ControlLabel>
                     <FormControl type="text" componentClass="textarea" name="obsGF"
-                        value={this.state.obsGF} onChange={e => this.change(e)} />
+                        value={this.state.obsGF} onChange={e => this.changeHandler(e)} />
                 </FormGroup>
                 <FormGroup controlId="btn-cad" className="fg_formcadgestao inbtn">
                     <Button type="" className="">

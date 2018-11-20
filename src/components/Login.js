@@ -11,7 +11,7 @@ library.add(faUser, faLock, faSignInAlt);
 export default class Login extends React.Component {
     constructor(props) {
         super(props);
-        this.change = this.change.bind(this);
+        this.changeHandler = this.changeHandler.bind(this);
         this.state = {
             usuario: '',
             senha: '',
@@ -19,7 +19,7 @@ export default class Login extends React.Component {
         }
     }
 
-    change = (e) => {
+    changeHandler = (e) => {
         e.preventDefault();
         this.setState({
             [e.target.name]: e.target.value
@@ -44,14 +44,14 @@ export default class Login extends React.Component {
                     <FormGroup controlId="user-usuario" className="user_usuario">
                         <ControlLabel>Usuário</ControlLabel>
                         <FormControl name="usuario" className="usuario_login" type="text" placeholder="Usuário"
-                        value={this.state.usuario} onChange={e => this.change(e)}/>
+                        value={this.state.usuario} onChange={e => this.changeHandler(e)}/>
                     <FontAwesomeIcon icon="user" className="icon_user"/>
                     </FormGroup>
 
                     <FormGroup controlId="user-senha" className="user_senha">
                     <ControlLabel>Senha</ControlLabel>
                     <FormControl type="password" name="senha" className="senha_login" placeholder="Senha"
-                    value={this.state.senha} onChange={e => this.change(e)}/>
+                    value={this.state.senha} onChange={e => this.changeHandler(e)}/>
                     <FontAwesomeIcon icon="lock" className="icon_pwd"/>
                     </FormGroup>
                     {/* BUG POIS QUANDO O PATH É SETADO PARA ALGUM VALOR, ELE NECESSITA DE OUTRO CLICK */}

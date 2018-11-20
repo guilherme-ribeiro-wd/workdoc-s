@@ -1,0 +1,18 @@
+/* MOVIMENTO CLI DATA */
+.span_btn {
+    position: relative;
+    left: 50%;
+    top: 0%;
+    margin-top: -4.81500px;
+    margin-left: -4.81500px;
+}
+
+.span_btn:hover {
+    cursor: pointer;
+}
+
+.mov_btn {
+    margin-right: 10px;
+}
+
+/*  */

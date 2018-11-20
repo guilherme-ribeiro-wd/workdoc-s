@@ -81,7 +81,6 @@ ADD BOTÃO GERAR DEMONSTRATIVO DO FATURAMENTO/FATURA = Botão Enviar Demonstrati
     - ENTENDE-SE QUE AO CLICAR NESSE BOTÃO DE UM FATURAMENTO ESPECIFICO O ARQUIVO É GERADO E A TELA DE ENVIAR EMAIL É ACESSADA. 
 }
 
-
 ----------------------------------------------------------
 PERGUNTAS:
 Estou com algumas dúvidas aqui em relação a Gestão Financeira.
@@ -128,3 +127,4 @@ Fatura competência setembro/2018
 // IMPORTS PARA ICONES
 
 
+ROTA -> LEGEND/FIELDSET -> BREADCUMBS;

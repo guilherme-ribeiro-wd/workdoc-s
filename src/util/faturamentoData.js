@@ -1,14 +1,9 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { faEnvelope, faBars, faFileAlt } from '@fortawesome/free-solid-svg-icons';
-
-library.add(faFileAlt, faEnvelope, faBars)
+import { BtnLista } from '../components/BotoesLista';
 
 const style = {
     marginLeft  : '5px',
-    width: '55px'
+    width: '48px'
 }
 
 const range = len => {
@@ -16,7 +11,6 @@ const range = len => {
     for (let i = 0; i < len; i++) {
         arr.push(i);
     }
-
     return arr;
 }
 
@@ -28,11 +22,9 @@ const faturamentoData = () => {
         prevPag: 44,
         tipoContrato: 'sdas',
         total: 23131,
-        btn: <div>
-                <Button style={style} title="Gerar nota fiscal do faturamento"><FontAwesomeIcon icon="file-alt"/></Button>
-                <Button style={style} title="Envio de demonstrativo para o cliente"><FontAwesomeIcon icon="envelope"/></Button>
-                <Button style={style} title="Lista de notas fiscais geradas"><FontAwesomeIcon icon="bars"/></Button>
-            </div>
+        btn: [<BtnLista titleBtn="Gerar nota fiscal do faturamento" iconBtn="file-alt" style={style}/>,
+            <BtnLista titleBtn="Envio de demonstrativo para o cliente" iconBtn="envelope" style={style}/>,
+            <BtnLista titleBtn="Lista de notas fiscais geradas" iconBtn="bars" style={style}/>,]
     };
 };
 

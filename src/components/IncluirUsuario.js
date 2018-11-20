@@ -8,10 +8,10 @@ import { FormControl, FormGroup, ControlLabel, Button, Radio, Checkbox } from 'r
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faCheckCircle, faTimesCircle } from '@fortawesome/free-solid-svg-icons';
+library.add(faCheckCircle, faTimesCircle);
 // 
 var $ = require("jquery");
 require('jquery-mask-plugin');
-library.add(faCheckCircle, faTimesCircle);
 
 const width = {
     width: '300px'
@@ -24,7 +24,7 @@ const styleFoto = {
 export default class CadastroUsuario extends React.Component {
     constructor(props) {
         super(props);
-        this.change = this.change.bind(this);
+        this.changeHandler = this.changeHandler.bind(this);
         this.state = {
             codUsuario: '',
             nomeUsuario: '',
@@ -40,12 +40,12 @@ export default class CadastroUsuario extends React.Component {
                         false, false, false, 
                         false, false, false, 
                         false],
-            file: '',
-            imagePreviewUrl: '',
+            file: "",
+            imagePreviewUrl: "",
         }
     }
 
-    change = (e) => {
+    changeHandler = (e) => {
         this.setState({
             [e.target.name]: e.target.value
         })
@@ -96,21 +96,21 @@ export default class CadastroUsuario extends React.Component {
                         Cód. Usuário
                     </ControlLabel>
                     <FormControl name="codUsuario" type="text" placeholder="" disabled
-                        value={this.state.codUsuario} onChange={e => this.change(e)} />
+                        value={this.state.codUsuario} onChange={e => this.changeHandler(e)} />
                 </FormGroup>
                 <FormGroup controlId="nome-user" className="fg_formcadusuario">
                     <ControlLabel>
                         Nome
                     </ControlLabel>
                     <FormControl name="nomeUsuario" type="text" placeholder="Nome completo"
-                        value={this.state.nomeUsuario} onChange={e => this.change(e)} />
+                        value={this.state.nomeUsuario} onChange={e => this.changeHandler(e)} />
                 </FormGroup>
                 <FormGroup controlId="dtnasc-user" className="fg_formcadusuario">
                     <ControlLabel>
                         Data Nasc.
                     </ControlLabel>
                     <FormControl name="dtNascUsuario" type="text" placeholder="DD/MM/AAAA" 
-                        value={this.state.dtNascUsuario} onChange={e => this.change(e)} />
+                        value={this.state.dtNascUsuario} onChange={e => this.changeHandler(e)} />
                 </FormGroup>
                 <FormGroup controlId="foto-user" className="foto" style={styleFoto}>
                     {$imagePreview}
@@ -125,51 +125,51 @@ export default class CadastroUsuario extends React.Component {
                         Período
                     </ControlLabel>      
                     <FormControl name="perInicioUsuario" id="inicioper-user" type="text" placeholder="Ínicio"
-                        value={this.state.perInicioUsuario} onChange={e => this.change(e)} />
+                        value={this.state.perInicioUsuario} onChange={e => this.changeHandler(e)} />
                 </FormGroup>
                 <FormGroup className="periodo_right" style={width}> 
                     <ControlLabel>à</ControlLabel>
                     <FormControl name="perTerminoUsuario" id="terminoper-user" type="text" placeholder="Término"
-                        value={this.state.perTerminoUsuario} onChange={e => this.change(e)} />
+                        value={this.state.perTerminoUsuario} onChange={e => this.changeHandler(e)} />
                 </FormGroup>
                 <FormGroup controlId="depto-user" className="depto_user fg_formcadusuario">
                     <ControlLabel>
                         Departamento
                     </ControlLabel>
                     <FormControl name="deptoUsuario" type="text" placeholder="Departamento"
-                        value={this.state.deptoUsuario} onChange={e => this.change(e)} />
+                        value={this.state.deptoUsuario} onChange={e => this.changeHandler(e)} />
                 </FormGroup>
                 <FormGroup controlId="login-user" className="fg_formcadusuario">
                     <ControlLabel>
                         Login
                     </ControlLabel>
                     <FormControl name="loginUsuario" type="text" placeholder="Login"
-                        value={this.state.loginUsuario} onChange={e => this.change(e)} />
+                        value={this.state.loginUsuario} onChange={e => this.changeHandler(e)} />
                 </FormGroup>
                 <FormGroup controlId="senha-user" className="fg_formcadusuario">
                     <ControlLabel>
                         Senha
                     </ControlLabel>
                     <FormControl name="senhaUsuario" type="password" placeholder="Senha"
-                        value={this.state.senhaUsuario} onChange={e => this.change(e)} />
+                        value={this.state.senhaUsuario} onChange={e => this.changeHandler(e)} />
                 </FormGroup>
                 <FormGroup controlId="confsenha-user" className="fg_formcadusuario">
                     <ControlLabel>
                         Conf. Senha
                     </ControlLabel>
                     <FormControl name="confSenhaUsuario" type="password" placeholder="Confirme a senha"
-                        value={this.state.confSenhaUsuario} onChange={e => this.change(e)} />
+                        value={this.state.confSenhaUsuario} onChange={e => this.changeHandler(e)} />
                 </FormGroup>
                 <FormGroup controlId="atvdia-user" className="fg_formcadusuario">
                     <ControlLabel id="pad">
                         Preencher atividade diária?
                     </ControlLabel>
                     <Radio name="atvDiaria" inline value="sim" 
-                        checked={this.state.atvDiaria === 'sim'} onChange={e => this.change(e)} >
+                        checked={this.state.atvDiaria === 'sim'} onChange={e => this.changeHandler(e)} >
                         Sim
                     </Radio>{' '}
                     <Radio name="atvDiaria" inline value="nao" 
-                        checked={this.state.atvDiaria === 'nao'} onChange={e => this.change(e)} >
+                        checked={this.state.atvDiaria === 'nao'} onChange={e => this.changeHandler(e)} >
                         Não
                     </Radio>
                 </FormGroup>

@@ -1,17 +1,5 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { faFileAlt, faFileExcel, faTimes } from '@fortawesome/free-solid-svg-icons';
-library.add(faFileAlt, faFileExcel, faTimes);
-
-const times = {
-    width: '40px'
-}
-
-const style = {
-    marginLeft: '5px'
-}
+import { BtnExcluirMov, BtnLista } from '../components/BotoesLista';
 
 const range = len => {
     const arr = [];
@@ -24,9 +12,7 @@ const range = len => {
 
 const movimentoCliData = () => {
     return {
-        btnExcluir: <div>
-                        <Button style={times} title={`excluir faturamento 13635?`}><FontAwesomeIcon icon="times" color="red" /></Button>
-                    </div>,
+        btnExcluir: <BtnExcluirMov />,
         cod: '13635',
         datas: '23/02/2018 00:00 -> 26/02/2018 23:55',
         tipoContrato: 'Teste',
@@ -34,10 +20,8 @@ const movimentoCliData = () => {
         prevPgto: '20/02/2200',
         valorComImpostos: 'R$ 3001,01',
         status: 'Fechado',
-        editar: <div>
-                    <Button><FontAwesomeIcon icon="file-alt" /> Dados</Button>
-                    <Button style={style}><FontAwesomeIcon icon="file-excel" /> Planilha</Button>
-                </div>
+        editar: [<BtnLista nameBtn="Dados" iconBtn="file-alt"/>,
+                    <BtnLista nameBtn="Planilha" iconBtn="file-excel"/>]
     };
 };
 
